@@ -47,20 +47,15 @@ jobs:
         run: |
           git push origin main
 
-      - name: Debug Notify Discord
+      - name: Notify Discord (first 10 articles)
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          echo "=== DEBUG: Webhook URL ==="
-          echo "$DISCORD_WEBHOOK_URL"
-          echo "=== DEBUG: Payload Preview ==="
-          jq -R -s '.' data/latest.txt | head -n 5
-          echo "... (省略)"
-          echo "=== Sending to Discord ==="
-          response=$(curl -s -o /tmp/discord_resp.txt -w "%{http_code}" \
-            -H "Content-Type: application/json" \
-            -d "{\"content\":$(jq -R -s @json data/latest.txt)}" \
-            "$DISCORD_WEBHOOK_URL")
-          echo "HTTP status: $response"
-          echo "Discord response body:"
-          cat /tmp/discord_resp.txt
+          # 最新10行だけを切り出し
+          content="$(head -n 10 data/latest.txt)"
+          # JSONエスケープしてペイロード作成
+          payload=$(jq -Rn --arg c "$content" '{content: $c}')
+          # 送信
+          curl -H "Content-Type: application/json" \
+               -d "$payload" \
+               "$DISCORD_WEBHOOK_URL"
