@@ -26,6 +26,7 @@ jobs:
 
       - name: Fetch CoinDesk RSS and save
         run: |
+          mkdir -p data
           source .venv/bin/activate
           python news_fetcher.py > data/latest.txt
 
@@ -39,13 +40,13 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: \${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Notify Discord
         env:
-          DISCORD_WEBHOOK_URL: \${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          payload=\$(jq -R -s '{content: .}' data/latest.txt)
+          payload=$(jq -R -s '{content: .}' data/latest.txt)
           curl -H "Content-Type: application/json" \
-               -d "\$payload" \
-               "\$DISCORD_WEBHOOK_URL"
+               -d "$payload" \
+               "$DISCORD_WEBHOOK_URL"
