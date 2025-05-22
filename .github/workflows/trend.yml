@@ -35,11 +35,6 @@ jobs:
           source .venv/bin/activate
           python news_fetcher.py
 
-      - name: Ensure log file exists
-        run: |
-          mkdir -p data
-          touch data/log.jsonl
-
       - name: Commit Logs
         run: |
           git config user.name "github-actions[bot]"
@@ -50,7 +45,7 @@ jobs:
 
   summarize:
     needs: fetch
-    if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * *'
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * *') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -65,7 +60,6 @@ jobs:
 
       - name: Summarize Keywords
         run: |
-          python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
           python summarize.py > data/summary.txt
