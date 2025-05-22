@@ -15,10 +15,10 @@ def load_recent(hours: int = 24):
                 ts = datetime.fromisoformat(obj['timestamp'])
                 if ts >= cutoff:
                     recent.append(obj)
-        except FileNotFoundError:
-            # ログファイルがない場合は空リストを返却
-            return []
-        return recent
+        return recent # ここを修正 (tryブロックの中にインデント)
+    except FileNotFoundError:
+        # ログファイルがない場合は空リストを返却
+        return []
 
 # キーワード出現頻度を集計し文字列で返却
 def summarize(entries):
