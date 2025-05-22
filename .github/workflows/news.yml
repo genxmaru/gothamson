@@ -1,0 +1,51 @@
+name: Fetch and Notify News
+
+on:
+  schedule:
+    - cron: '0 * * * *'        # 毎時0分（UTC）
+  workflow_dispatch:          # 手動実行トリガー
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install feedparser
+
+      - name: Fetch CoinDesk RSS and save
+        run: |
+          source .venv/bin/activate
+          python news_fetcher.py > data/latest.txt
+
+      - name: Commit fetched news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/latest.txt
+          git commit -m "chore: update latest CoinDesk news" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: \${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify Discord
+        env:
+          DISCORD_WEBHOOK_URL: \${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          payload=\$(jq -R -s '{content: .}' data/latest.txt)
+          curl -H "Content-Type: application/json" \
+               -d "\$payload" \
+               "\$DISCORD_WEBHOOK_URL"
