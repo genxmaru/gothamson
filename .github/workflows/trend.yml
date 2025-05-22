@@ -35,6 +35,11 @@ jobs:
           source .venv/bin/activate
           python news_fetcher.py
 
+      - name: Ensure log file exists
+        run: |
+          mkdir -p data
+          touch data/log.jsonl
+
       - name: Commit Logs
         run: |
           git config user.name "github-actions[bot]"
@@ -74,4 +79,3 @@ jobs:
           curl -H "Content-Type: application/json" \
                -d "$payload" \
                "$DISCORD_WEBHOOK_URL"
-# ← ここに示した workflow の全文を貼り付け
