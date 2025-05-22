@@ -1,3 +1,6 @@
+2025-05-22 | CoinDesk | 'Major Wake-Up Call': How $400M Coinbase Breach Exposes Crypto's Dark Side | https://www.coindesk.com/business/2025/05/22/major-wake-up-call-how-usd400m-coinbase-breach-exposes-crypto-s-dark-side
+2025-05-22 | CoinDesk | Centrifuge Expands Tokenized RWAs to Solana, Starting With $400M Treasury Fund | https://www.coindesk.com/markets/2025/05/22/centrifuge-expands-tokenized-rwas-to-solana-starting-with-400m-treasury-fund
+2025-05-22 | CoinDesk | Democrats Threaten Lawsuits, Join Protests Ahead of Trump Memecoin Dinner | https://www.coindesk.com/policy/2025/05/22/democrats-threaten-lawsuits-join-protests-ahead-of-trump-memecoin-dinner
 2025-05-22 | CoinDesk | Major TradFi Institutions to Pursue Tokenization Efforts on Solana | https://www.coindesk.com/business/2025/05/22/major-tradfi-institutions-to-pursue-tokenization-efforts-on-solana
 2025-05-22 | CoinDesk | Justin Sun-Linked Wallet Leading Access to Trump Dinner Tagged as Belonging to HTX | https://www.coindesk.com/business/2025/05/22/justin-sun-linked-wallet-leading-access-to-trump-dinner-tagged-as-belonging-to-htx
 2025-05-22 | CoinDesk | Kraken To List Tokenized Version of Nvidia, Apple, Tesla Shares | https://www.coindesk.com/markets/2025/05/22/kraken-to-list-tokenized-version-of-nvidia-apple-tesla-shares
@@ -20,6 +23,3 @@
 2025-05-22 | CoinDesk | Crypto Trader Opens $1.1B Long Bitcoin Bet on Hyperliquid Using 40X Leverage | https://www.coindesk.com/markets/2025/05/22/crypto-trader-opens-11b-long-bitcoin-bet-on-hyperliquid-using-40x-leverage
 2025-05-22 | CoinDesk | King Dollar Falls, Bitcoin Marches Toward Sound Money Highs | https://www.coindesk.com/markets/2025/05/22/king-dollar-falls-bitcoin-marches-toward-sound-money-highs
 2025-05-22 | CoinDesk | Bitcoin Pizza Day Is Now a $1.1B Celebration | https://www.coindesk.com/markets/2025/05/22/bitcoin-pizza-day-is-now-a-11b-celebration
-2025-05-22 | CoinDesk | Bitcoin Options Open Interest Hit Record $42.5B on Deribit as Traders Eye Next Bull Target for BTC | https://www.coindesk.com/markets/2025/05/22/bitcoin-options-open-interest-hit-record-425b-on-deribit-as-traders-eye-next-bull-target-for-btc
-2025-05-22 | CoinDesk | Bitcoin's Rally to Record Highs Puts Focus on $115K Where an 'Invisible Hand' May Slow Bull Run | https://www.coindesk.com/markets/2025/05/22/bitcoin-s-rally-to-record-highs-puts-focus-on-usd115k-where-an-invisible-hand-may-slow-bull-run
-2025-05-22 | CoinDesk | SHIB Holds Strong Above Key Support as Volume Spikes Nearly 4x | https://www.coindesk.com/markets/2025/05/22/shib-holds-strong-above-key-support-as-volume-spikes-nearly-4x
