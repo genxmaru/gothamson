@@ -1,3 +1,8 @@
+2025-05-22 | CoinDesk | Texas Moves Closer to Setting Up Strategic Bitcoin Reserve as Bill Passes House | https://www.coindesk.com/policy/2025/05/22/texas-moves-closer-to-setting-up-strategic-bitcoin-reserve-as-bill-passes-house
+2025-05-22 | CoinDesk | CoinDesk 20 Performance Update: Index Gains 4.5% with All Assets Trading Higher | https://www.coindesk.com/coindesk-indices/2025/05/22/coindesk-20-performance-update-index-gains-45-with-all-assets-trading-higher
+2025-05-22 | CoinDesk | What You Didn’t Know About Laszlo Hanyecz, the Bitcoin Pizza Day Legend | https://www.coindesk.com/tech/2025/05/22/what-you-didnt-know-about-laszlo-hanyecz-the-bitcoin-pizza-day-legend
+2025-05-22 | CoinDesk | Bitcoin Project Roxom Global Raises $17.9M to Build BTC Treasury, Create Media Network | https://www.coindesk.com/business/2025/05/22/roxom-global-raises-179m-to-build-btc-treasury-back-247-media-network
+2025-05-22 | CoinDesk | U.S. Stablecoin Bill Approval Could Trigger a Long-Term Crypto Bull Market: Bitwise | https://www.coindesk.com/markets/2025/05/22/us-stablecoin-bill-approval-could-trigger-a-long-term-crypto-bull-market-bitwise
 2025-05-22 | CoinDesk | Strategy Plans $2.1B Sale of Its Perpetual Strife Preferred Stock | https://www.coindesk.com/markets/2025/05/22/strategy-plans-21b-sale-of-its-perpetual-strife-preferred-stock
 2025-05-22 | CoinDesk | Sui's Biggest Liquidity Provider, Cetus, Hit By $260M Hack; Sui-Based Tokens Plummet 90% | https://www.coindesk.com/markets/2025/05/22/sui-networks-cetus-protocol-hit-in-apparent-hack-sending-token-prices-down-90
 2025-05-22 | CoinDesk | Why Are Bitcoin Traders Aggressively Shorting as BTC Hits New Record High? | https://www.coindesk.com/markets/2025/05/22/why-are-bitcoin-traders-aggressively-shorting-as-btc-hits-new-record-high
@@ -18,8 +23,3 @@
 2025-05-21 | CoinDesk | Stablecoins Are About to Hit ‘Critical Mass’ While 2027 Seen as Pivotal Year | https://www.coindesk.com/policy/2025/05/21/stablecoins-are-about-to-hit-critical-mass-as-2027-seen-as-pivotal-year
 2025-05-21 | CoinDesk | Bitcoin Miners Sold Record Amount of BTC Ahead of May's Price Surge | https://www.coindesk.com/markets/2025/05/21/bitcoin-miners-sold-record-amount-of-btc-ahead-of-mays-price-surge
 2025-05-21 | CoinDesk | Bitcoin Backs Off Quickly From Record High as Interest Rate Surge Hits Risk Assets | https://www.coindesk.com/markets/2025/05/21/bitcoin-backs-off-quickly-from-record-high-as-interest-rate-surge-hits-risk-assets
-2025-05-21 | CoinDesk | The Protocol: Solana to Get Major Design Overhaul | https://www.coindesk.com/tech/2025/05/21/the-protocol-solana-to-get-major-design-overhaul
-2025-05-21 | CoinDesk | U.S. CFTC's Johnson Says She'll Also Exit, Leaving an Empty House for Incoming Chair | https://www.coindesk.com/policy/2025/05/21/u-s-cftc-s-johnson-says-she-ll-also-exit-leaving-an-empty-house-for-incoming-chair
-2025-05-21 | CoinDesk | Hong Kong Joins Global Race With New Stablecoin Licensing Bill | https://www.coindesk.com/policy/2025/05/21/hong-kong-joins-global-race-with-new-stablecoin-licensing-bill
-2025-05-21 | CoinDesk | Sam Altman’s World Raises $135M in Token Sale to a16z and Bain Capital Crypto | https://www.coindesk.com/tech/2025/05/21/sam-altmans-world-raises-135m-in-token-sale-to-a16z-and-bain-capital-crypto
-2025-05-21 | CoinDesk | Bitcoin Overtakes Amazon as the Fifth Largest Asset, Hitting $2.16T Market Cap | https://www.coindesk.com/markets/2025/05/21/bitcoin-overtakes-amazon-as-the-fifth-largest-asset-hitting-usd2-16t-market-cap
