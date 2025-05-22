@@ -5,12 +5,18 @@ on:
     - cron: '0 * * * *'        # 毎時0分（UTC）
   workflow_dispatch:          # 手動実行トリガー
 
+permissions:
+  contents: write             # リポジトリへの書き込みを許可
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}   # 認証情報を明示的に渡す
+          persist-credentials: true            # git push に GITHUB_TOKEN を使わせる
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
@@ -38,10 +44,9 @@ jobs:
           git commit -m "chore: update latest CoinDesk news" || echo "No changes to commit"
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+        if: ${{ steps.Commit_fetched_news.outcome == 'success' }}
+        run: |
+          git push origin main
 
       - name: Notify Discord
         env:
