@@ -44,18 +44,17 @@ jobs:
           git commit -m "chore: update latest CoinDesk news" || echo "No changes to commit"
 
       - name: Push changes
-        run: |
-          git push origin main
+        run: git push origin main
 
-      - name: Notify Discord (first 10 articles)
+      - name: Notify Discord (latest 5 articles)
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          # 最新10行だけを切り出し
-          content="$(head -n 10 data/latest.txt)"
-          # JSONエスケープしてペイロード作成
+          # 最新5行だけ切り出し
+          content="$(head -n 5 data/latest.txt)"
+          # JSONペイロード作成
           payload=$(jq -Rn --arg c "$content" '{content: $c}')
-          # 送信
+          # Discordへ送信
           curl -H "Content-Type: application/json" \
                -d "$payload" \
                "$DISCORD_WEBHOOK_URL"
