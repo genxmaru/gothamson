@@ -58,10 +58,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Create venv & install deps
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+
       - name: Summarize Keywords
         run: |
           source .venv/bin/activate
-          pip install --upgrade pip
           python summarize.py > data/summary.txt
 
       - name: Notify Discord Summary
