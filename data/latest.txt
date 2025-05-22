@@ -1,3 +1,5 @@
+2025-05-22 | CoinDesk | Strategy Plans $2.1B Sale of Its Perpetual Strife Preferred Stock | https://www.coindesk.com/markets/2025/05/22/strategy-plans-21b-sale-of-its-perpetual-strife-preferred-stock
+2025-05-22 | CoinDesk | Sui's Biggest Liquidity Provider, Cetus, Hit By $260M Hack; Sui-Based Tokens Plummet 90% | https://www.coindesk.com/markets/2025/05/22/sui-networks-cetus-protocol-hit-in-apparent-hack-sending-token-prices-down-90
 2025-05-22 | CoinDesk | Why Are Bitcoin Traders Aggressively Shorting as BTC Hits New Record High? | https://www.coindesk.com/markets/2025/05/22/why-are-bitcoin-traders-aggressively-shorting-as-btc-hits-new-record-high
 2025-05-22 | CoinDesk | Crypto Daybook Americas: All Signs Point Up as Bitcoin Hits Record High | https://www.coindesk.com/daybook-us/2025/05/22/crypto-daybook-americas-all-signs-point-up-as-bitcoin-hits-record-high
 2025-05-22 | CoinDesk | MARA Will Deploy 500 BTC With Crypto Broker Two Prime to Generate Yields | https://www.coindesk.com/business/2025/05/22/mara-to-deploy-500-btc-with-two-prime-for-generating-yields
@@ -21,5 +23,3 @@
 2025-05-21 | CoinDesk | Hong Kong Joins Global Race With New Stablecoin Licensing Bill | https://www.coindesk.com/policy/2025/05/21/hong-kong-joins-global-race-with-new-stablecoin-licensing-bill
 2025-05-21 | CoinDesk | Sam Altman’s World Raises $135M in Token Sale to a16z and Bain Capital Crypto | https://www.coindesk.com/tech/2025/05/21/sam-altmans-world-raises-135m-in-token-sale-to-a16z-and-bain-capital-crypto
 2025-05-21 | CoinDesk | Bitcoin Overtakes Amazon as the Fifth Largest Asset, Hitting $2.16T Market Cap | https://www.coindesk.com/markets/2025/05/21/bitcoin-overtakes-amazon-as-the-fifth-largest-asset-hitting-usd2-16t-market-cap
-2025-05-21 | CoinDesk | Chainlink Gains as Exchange Outflows Point to Strong Accumulation | https://www.coindesk.com/markets/2025/05/21/chainlink-link-gains-as-exchange-outflows-point-to-strong-accumulation
-2025-05-21 | CoinDesk | Bitcoin Hits New Record High, Surging to $109.4K | https://www.coindesk.com/markets/2025/05/21/bitcoin-hits-new-record-high-surging-to-1094k
