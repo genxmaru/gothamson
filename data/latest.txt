@@ -1,3 +1,4 @@
+2025-05-23 | CoinDesk | Major U.S. Banks Mull Jointly Launching Stablecoin: WSJ | https://www.coindesk.com/business/2025/05/23/major-us-banks-mull-jointly-launching-stablecoin-wsj
 2025-05-23 | CoinDesk | Bitcoin Enters Strongest Accumulation Phase Since January as BTC Price Passes $110K | https://www.coindesk.com/markets/2025/05/23/bitcoin-enters-strongest-accumulation-phase-since-january-as-btc-price-passes-110k
 2025-05-23 | CoinDesk | Justin Sun Defends TRUMP After Presidential Dinner, Says 'Memecoins Have Merit' | https://www.coindesk.com/markets/2025/05/23/justin-sun-defends-trump-after-presidential-dinner-says-memecoins-have-merit
 2025-05-23 | CoinDesk | XRP Could Rocket to $8 as Focus Shifts to Crypto Majors After Bitcoin's Record Run: Traders | https://www.coindesk.com/markets/2025/05/23/xrp-could-rocket-to-8-as-focus-shifts-to-crypto-majors-after-bitcoins-record-run-traders
@@ -22,4 +23,3 @@
 2025-05-22 | CoinDesk | Sui's Biggest Liquidity Provider Hacked for $223M, Causing Sui-Based Tokens to Plummet | https://www.coindesk.com/markets/2025/05/22/sui-networks-cetus-protocol-hit-in-apparent-hack-sending-token-prices-down-90
 2025-05-22 | CoinDesk | Why Are Bitcoin Traders Aggressively Shorting as BTC Hits New Record High? | https://www.coindesk.com/markets/2025/05/22/why-are-bitcoin-traders-aggressively-shorting-as-btc-hits-new-record-high
 2025-05-22 | CoinDesk | Crypto Daybook Americas: All Signs Point Up as Bitcoin Hits Record High | https://www.coindesk.com/daybook-us/2025/05/22/crypto-daybook-americas-all-signs-point-up-as-bitcoin-hits-record-high
-2025-05-22 | CoinDesk | MARA Will Deploy 500 BTC With Crypto Broker Two Prime to Generate Yields | https://www.coindesk.com/business/2025/05/22/mara-to-deploy-500-btc-with-two-prime-for-generating-yields
