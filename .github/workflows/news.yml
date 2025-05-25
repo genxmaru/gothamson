@@ -38,13 +38,13 @@ jobs:
           source .venv/bin/activate
           python news_fetcher.py
 
-      - name: Commit Keyword Logs
+      - name: Commit Hourly Logs and Processed Articles
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git add data/hourly_keyword_counts.jsonl data/processed_articles.json data/keyword_trends.db
-          # data/keyword_trends.dbはdb_manager.pyで作成・更新される
-          git commit -m "chore: update hourly keyword counts, processed articles log, and keyword trends DB" || echo "No changes to commit"
+          git add data/hourly_keyword_counts.jsonl data/processed_articles.json
+          # ここから data/keyword_trends.db を削除
+          git commit -m "chore: update hourly keyword counts and processed articles log" || echo "No changes to commit"
           git push origin main
 
   summarize_and_notify:
@@ -76,8 +76,7 @@ jobs:
         run: |
           source .venv/bin/activate
           python -c "import db_manager; db_manager.init_db()"
-          # データベースの存在をGitHub Actionsに認識させるためaddしておく
-          git add data/keyword_trends.db || true
+          # ここではまだgit addしない。コミットは後でまとめて行う。
 
       - name: Run Summarizer and Get Report
         id: run_summarizer # このステップの出力を参照するためにIDを付与
@@ -98,12 +97,18 @@ jobs:
           content="${{ steps.run_summarizer.outputs.summary_report }}"
           
           # JSONペイロードを作成
-          # DiscordのWebhookに送信するため、generate_simple_text_payloadを使用
-          # リッチなEmbedにしたい場合は、notification_helper.pyでEmbedを作成する関数を呼び出すようにsummarizer.pyを修正し、
-          # そのJSON出力をここで受け取るように変更する必要があります。
           payload=$(jq -Rn --arg c "$content" '{content: $c}')
           
           # Discordへ送信
           curl -H "Content-Type: application/json" \
                -d "$payload" \
                "$DISCORD_WEBHOOK_URL"
+      
+      - name: Commit Summary and Database Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/keyword_trends.db # DBはsummarizeジョブで更新される
+          # summary_report.txt は一時ファイルなのでコミットしない
+          git commit -m "chore: update daily keyword trends DB" || echo "No changes to commit"
+          git push origin main
