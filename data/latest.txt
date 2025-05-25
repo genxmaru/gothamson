@@ -1,3 +1,4 @@
+2025-05-25 | CoinDesk | Solana Plunges 5% as Midnight Sell-Off Signals Institutional Exit | https://www.coindesk.com/markets/2025/05/25/solana-plunges-5-as-midnight-sell-off-signals-institutional-exit
 2025-05-24 | CoinDesk | Judge Overturns Convictions in Mango Markets Exploiter’s Crypto Fraud Case | https://www.coindesk.com/business/2025/05/24/judge-overturns-convictions-in-mango-markets-exploiters-crypto-fraud-case
 2025-05-24 | CoinDesk | Swiss watchmaker Franck Muller Unveils Limited Edition Solana Watch | https://www.coindesk.com/markets/2025/05/24/swiss-watchmaker-franck-muller-unveils-limited-edition-solana-watch
 2025-05-24 | CoinDesk | A Small Food Firm Buys 21 bitcoin, Jumping on BTC Treasury Trend, Shares Fall Anyways | https://www.coindesk.com/markets/2025/05/24/a-small-food-firm-buys-21-bitcoin-jumping-on-btc-treasury-trend-shares-fall-anyways
@@ -22,4 +23,3 @@
 2025-05-22 | CoinDesk | BlockTrust IRA Brings Quant Trading Tools to Crypto Retirement Accounts | https://www.coindesk.com/markets/2025/05/22/blocktrust-ira-brings-quant-trading-tools-to-crypto-retirement-accounts
 2025-05-22 | CoinDesk | 'Major Wake-Up Call': How $400M Coinbase Breach Exposes Crypto's Dark Side | https://www.coindesk.com/business/2025/05/22/major-wake-up-call-how-usd400m-coinbase-breach-exposes-crypto-s-dark-side
 2025-05-22 | CoinDesk | Centrifuge Expands Tokenized RWAs to Solana, Starting With $400M Treasury Fund | https://www.coindesk.com/markets/2025/05/22/centrifuge-expands-tokenized-rwas-to-solana-starting-with-400m-treasury-fund
-2025-05-22 | CoinDesk | Democrats Threaten Lawsuits, Join Protests Ahead of Trump Memecoin Dinner | https://www.coindesk.com/policy/2025/05/22/democrats-threaten-lawsuits-join-protests-ahead-of-trump-memecoin-dinner
