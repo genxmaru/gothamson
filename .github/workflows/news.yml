@@ -1,8 +1,9 @@
-name: Fetch and Notify News
+name: News Flow Automation
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'    # 毎時0分にフェッチ＆ログ追記
+    - cron: '0 0 * * *'    # 毎日0時（UTC）にサマリー実行 (将来的に週次・月次も追加)
   workflow_dispatch:
 
 permissions:
@@ -12,13 +13,13 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
 
-      - name: Set up Python 3.11
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
@@ -27,34 +28,44 @@ jobs:
         run: |
           python -m venv .venv
           source .venv/bin/activate
-          pip install --upgrade pip
-          pip install feedparser
+          pip install --upgrade pip feedparser
 
-      - name: Fetch CoinDesk RSS and save
+      - name: Fetch & Log Keywords
         run: |
-          mkdir -p data
           source .venv/bin/activate
-          python news_fetcher.py > data/latest.txt
+          python news_fetcher.py
 
-      - name: Commit fetched news
+      - name: Commit Keyword Logs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git add data/latest.txt
-          git commit -m "chore: update latest CoinDesk news" || echo "No changes to commit"
+          git add data/hourly_keyword_counts.jsonl data/processed_articles.json
+          git commit -m "chore: update hourly keyword counts and processed articles log" || echo "No changes to commit"
+          git push origin main
 
-      - name: Push changes
-        run: git push origin main
+  summarize_and_notify:
+    needs: fetch
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.schedule == '0 0 * * *') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Notify Discord (latest 5 articles)
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Create venv & install deps
         run: |
-          # 最新5行だけ切り出し
-          content="$(head -n 5 data/latest.txt)"
-          # JSONペイロード作成
-          payload=$(jq -Rn --arg c "$content" '{content: $c}')
-          # Discordへ送信
-          curl -H "Content-Type: application/json" \
-               -d "$payload" \
-               "$DISCORD_WEBHOOK_URL"
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+
+      # --- ここにsummarizer.pyとnotification_helper.pyの実行ステップが将来追加されます ---
+      - name: Placeholder for Summarize and Notify
+        run: |
+          echo "Summarization and notification will be implemented in the next steps."
+          echo "This job runs daily or on manual trigger."
