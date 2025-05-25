@@ -1,0 +1,10 @@
+[
+  {
+    "name": "CoinDesk",
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "name": "TechCrunch Crypto",
+    "url": "https://techcrunch.com/category/cryptocurrency/feed/"
+  }
+]
