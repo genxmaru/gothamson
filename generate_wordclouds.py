@@ -1,20 +1,20 @@
 import sqlite3
 import os
-import json # jsonモジュールをインポート
+import json
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta, timezone
 
 # ログファイルとDBファイルのパス
 KEYWORD_TRENDS_DB = os.path.join(os.path.dirname(__file__), 'data', 'keyword_trends.db')
-WORDCLOUD_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'wordclouds')
+WORDCLOUD_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'data', 'wordclouds') # dataディレクトリの下にwordcloudsを置くように修正しました
 
 # 日本語フォントのパス (GitHub ActionsのUbuntu環境で利用可能なフォント)
 # IPAexゴシックは多くのLinux環境で利用可能
 # 環境によっては以下を試す
 # FONT_PATH = '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf' # 汎用的なフォント
 # FONT_PATH = '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc' # Noto Sans CJK
-FONT_PATH = '/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf' 
+FONT_PATH = '/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf'  
 
 
 def get_latest_trends(db_path, trend_type, source_name):
@@ -36,7 +36,7 @@ def get_latest_trends(db_path, trend_type, source_name):
                 SELECT MAX(date) FROM daily_trends WHERE trend_type = ? AND source_name = ?
             )
             ORDER BY count DESC
-            LIMIT 100 # ワードクラウドに表示するキーワード数。多すぎると見づらくなる。
+            LIMIT 100
         ''', (trend_type, source_name, trend_type, source_name))
         
         for keyword, count in cursor.fetchall():
@@ -129,4 +129,6 @@ if __name__ == "__main__":
     # GitHub ActionsのStep OutputにJSON文字列を書き込む
     # GITHUB_OUTPUTへの書き込み形式は "name=value"
     # ここでは改行文字を含まないよう、1行でJSON文字列を渡す
-    print(f"wordcloud_paths={json.dumps(generated_image_paths)}")
+    # この部分は、news.yml の Get Word Cloud URLs and Notify Discord ステップで処理されるため、
+    # Pythonスクリプトからは削除しても機能しますが、デバッグのために残しています。
+    # print(f"wordcloud_paths={json.dumps(generated_image_paths)}")
