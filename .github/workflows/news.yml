@@ -35,11 +35,12 @@ jobs:
           pip install --upgrade pip feedparser
 
       - name: Fetch & Log Keywords
+        # ★ここを修正★ 絶対パスへのcdとPython実行
         run: |
+          cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
-          python "${{ github.workspace }}/news_fetcher.py" # ★ここを修正★
-
+          python news_fetcher.py # カレントディレクトリがルートなので、ファイル名だけでOK
+      
       - name: Commit Hourly Logs and Processed Articles
         run: |
           git config user.name "github-actions[bot]"
@@ -76,17 +77,19 @@ jobs:
           # sudo apt-get update && sudo apt-get install -y jq
 
       - name: Initialize Database (if not exists)
+        # ★ここを修正★ 絶対パスへのcdとPython実行
         run: |
+          cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
-          python "${{ github.workspace }}/db_manager.py" # ★ここを修正★
+          python db_manager.py # カレントディレクトリがルートなので、ファイル名だけでOK
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
+        # ★ここを修正★ 絶対パスへのcdとPython実行
         run: |
+          cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
-          python "${{ github.workspace }}/summarizer.py" > summary_report.txt # ★ここを修正★
+          python summarizer.py > summary_report.txt # カレントディレクトリがルートなので、ファイル名だけでOK
           echo "summary_report<<EOF" >> $GITHUB_OUTPUT
           cat summary_report.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
