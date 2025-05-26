@@ -20,8 +20,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # コミット権限用
           persist-credentials: true
-          fetch-depth: 0 # ★追加★ 全履歴をフェッチ
-          ref: ${{ github.ref }} # ★追加★ 現在のブランチを明示的にチェックアウト
+          fetch-depth: 0 # 全履歴をフェッチ
+          ref: ${{ github.ref }} # 現在のブランチを明示的にチェックアウト
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -37,7 +37,7 @@ jobs:
       - name: Fetch & Log Keywords
         run: |
           source .venv/bin/activate
-          python news_fetcher.py
+          python ./news_fetcher.py # ★ここを修正: ./ を追加 ★
 
       - name: Commit Hourly Logs and Processed Articles
         run: |
@@ -58,8 +58,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0 # ★追加★ 全履歴をフェッチ
-          ref: ${{ github.ref }} # ★追加★ 現在のブランチを明示的にチェックアウト
+          fetch-depth: 0 # 全履歴をフェッチ
+          ref: ${{ github.ref }} # 現在のブランチを明示的にチェックアウト
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -77,16 +77,15 @@ jobs:
       - name: Initialize Database (if not exists)
         run: |
           source .venv/bin/activate
-          python -c "import db_manager; db_manager.init_db()"
-          # データベースの存在をGitHub Actionsに認識させるためaddしておく
-          git add data/keyword_trends.db || true
+          # python -c "import db_manager; db_manager.init_db()"
+          # 上記行をコメントアウトし、明示的なパスで実行する
+          python ./db_manager.py # ★ここを修正: ./ を追加 (init_dbは__main__ブロックで実行される) ★
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
         run: |
           source .venv/bin/activate
-          # summarizer.pyの出力をGitHub Actionsの出力としてキャプチャ
-          python summarizer.py > summary_report.txt
+          python ./summarizer.py > summary_report.txt # ★ここを修正: ./ を追加 ★
           echo "summary_report<<EOF" >> $GITHUB_OUTPUT
           cat summary_report.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
