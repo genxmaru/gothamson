@@ -72,27 +72,14 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
+          # jq はデフォルトでインストールされている可能性が高いが、もしエラーが出たら以下のコメントアウトを外す
+          # sudo apt-get update && sudo apt-get install -y jq
 
       - name: Initialize Database (if not exists)
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
           python db_manager.py
-
-      # ★★★ここからデバッグステップを追加★★★
-      - name: Debug: Check current directory and files
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Listing files in current directory:"
-          ls -F
-          echo "Listing files in ${{ github.workspace }}:"
-          ls -F "${{ github.workspace }}"
-          echo "Checking if summarizer.py exists in current directory:"
-          test -f summarizer.py && echo "summarizer.py exists in current directory." || echo "summarizer.py NOT found in current directory."
-          echo "Checking if summarizer.py exists in GITHUB_WORKSPACE:"
-          test -f "${{ github.workspace }}/summarizer.py" && echo "summarizer.py exists in GITHUB_WORKSPACE." || echo "summarizer.py NOT found in GITHUB_WORKSPACE."
-          echo "Path of summarizer.py: $(realpath summarizer.py 2>/dev/null || echo 'Not found')"
-      # ★★★デバッグステップここまで★★★
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
