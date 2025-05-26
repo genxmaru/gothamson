@@ -1255,5 +1255,33 @@
         "last_processed": "2025-05-26T20:33:43.265205+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/crypto-industry-groups-urge-sec-to-clarify-staking-stance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:58:18.732453+00:00",
+        "keywords": [
+            "Solana",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Stablecoin",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/cambodia-crypto-scam-officials-19b-network/": {
+        "last_processed": "2025-05-26T20:58:18.732453+00:00",
+        "keywords": [
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Security",
+            "Stablecoin",
+            "Treasury",
+            "Exploit"
+        ],
+        "source": "CryptoNews"
     }
 }
