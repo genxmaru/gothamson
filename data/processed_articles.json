@@ -1,64 +1,1259 @@
 {
-  "https://www.coindesk.com/markets/2025/05/25/ethereum-surges-after-holding-usd2-477-fueled-by-very-heavy-trading-volume": "2025-05-25T20:36:11.373057+00:00",
-  "https://www.coindesk.com/markets/2025/05/25/xrp-plunges-below-usd2-30-amid-heavy-selling-pressure": "2025-05-25T20:36:11.373138+00:00",
-  "https://www.coindesk.com/markets/2025/05/25/bitcoin-drops-below-usd107-5k-as-trump-tariff-threat-triggers-crypto-sell-off": "2025-05-25T20:36:11.373223+00:00",
-  "https://www.coindesk.com/markets/2025/05/25/chart-of-the-week-bitcoin-soars-but-wen-lambo-crowd-is-missing-from-the-rally": "2025-05-25T20:36:11.373310+00:00",
-  "https://www.coindesk.com/markets/2025/05/25/solana-plunges-5-as-midnight-sell-off-signals-institutional-exit": "2025-05-25T20:36:11.373404+00:00",
-  "https://www.coindesk.com/business/2025/05/24/judge-overturns-convictions-in-mango-markets-exploiters-crypto-fraud-case": "2025-05-25T20:36:11.373485+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/swiss-watchmaker-franck-muller-unveils-limited-edition-solana-watch": "2025-05-25T20:36:11.373563+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/a-small-food-firm-buys-21-bitcoin-jumping-on-btc-treasury-trend-shares-fall-anyways": "2025-05-25T20:36:11.373654+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/dogecoin-slides-below-usd0-23-but-finds-support-as-buyer-demand-rebuilds": "2025-05-25T20:36:11.373734+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/shib-slides-5-but-finds-support-as-loyal-holders-hold-their-ground": "2025-05-25T20:36:11.373812+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/polygon-co-founder-mihailo-bjelic-exits-layer-2": "2025-05-25T20:36:11.373880+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/crypto-bulls-lose-500m-as-bitcoin-hovers-around-108k-after-trumps-tariff-threats": "2025-05-25T20:36:11.373965+00:00",
-  "https://www.coindesk.com/markets/2025/05/24/dogecoin-cardanos-ada-xrp-fall-7-in-weekend-bloodbath": "2025-05-25T20:36:11.374040+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/strategy-slumps-6-leading-crypto-names-lower-as-bitcoin-treasury-strategies-are-questioned": "2025-05-25T20:36:11.374128+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/crypto-market-sees-usd300m-liquidations-as-trump-tariff-threats-flush-late-bulls": "2025-05-25T20:36:11.374210+00:00",
-  "https://www.coindesk.com/coindesk-indices/2025/05/23/coindesk-20-performance-update-index-declines-3-2-as-all-assets-trade-lower": "2025-05-25T20:36:11.374293+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/semler-scientific-bolsters-bitcoin-holdings-with-usd50m-acquisition": "2025-05-25T20:36:11.374393+00:00",
-  "https://www.coindesk.com/business/2025/05/23/crypto-lender-ledn-goes-full-bitcoin-maxi-as-it-seeks-to-reduce-client-asset-risk": "2025-05-25T20:36:11.374481+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/good-vibes-shattered-as-trump-revives-trade-war-bitcoin-tumbles-below-usd109k": "2025-05-25T20:36:11.374567+00:00",
-  "https://www.coindesk.com/daybook-us/2025/05/23/crypto-daybook-americas-bitcoin-market-cap-tops-usd2-2t-as-derivatives-sentiment-signal-more-upside": "2025-05-25T20:36:11.374660+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/cftcs-plans-for-crypto-perpetual-trading-puts-focus-on-hyperliquids-hype": "2025-05-25T20:36:11.374739+00:00",
-  "https://www.coindesk.com/business/2025/05/23/major-us-banks-mull-jointly-launching-stablecoin-wsj": "2025-05-25T20:36:11.374811+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/bitcoin-enters-strongest-accumulation-phase-since-january-as-btc-price-passes-110k": "2025-05-25T20:36:11.374895+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/justin-sun-defends-trump-after-presidential-dinner-says-memecoins-have-merit": "2025-05-25T20:36:11.374979+00:00",
-  "https://www.coindesk.com/markets/2025/05/23/xrp-could-rocket-to-8-as-focus-shifts-to-crypto-majors-after-bitcoins-record-run-traders": "2025-05-25T20:36:11.375071+00:00",
-  "https://techcrunch.com/2025/05/25/48-hours-left-what-you-wont-want-to-miss-at-the-20th-techcrunch-disrupt-in-october/": "2025-05-25T20:36:11.451927+00:00",
-  "https://techcrunch.com/2025/05/25/last-24-hours-techcrunch-disrupt-2025-early-bird-deals-will-fly-away-after-today/": "2025-05-25T20:36:11.452365+00:00",
-  "https://techcrunch.com/2025/05/23/tick-tock-just-3-days-left-to-save-up-to-900-on-your-techcrunch-disrupt-2025-pass/": "2025-05-25T20:36:11.452772+00:00",
-  "https://techcrunch.com/2025/05/22/4-days-left-up-to-900-off-your-ticket-and-90-off-for-your-1-at-techcrunch-disrupt-2025/": "2025-05-25T20:36:11.453213+00:00",
-  "https://techcrunch.com/2025/05/21/techcrunch-disrupt-2025-early-bird-savings-end-on-may-25/": "2025-05-25T20:36:11.453604+00:00",
-  "https://techcrunch.com/2025/05/21/coinbase-says-its-data-breach-affects-at-least-69000-customers/": "2025-05-25T20:36:11.453781+00:00",
-  "https://techcrunch.com/2025/05/20/youve-got-6-days-to-save-900-on-techcrunch-disrupt-2025-tickets/": "2025-05-25T20:36:11.454191+00:00",
-  "https://techcrunch.com/2025/05/19/clocks-ticking-save-up-to-900-on-techcrunch-disrupt-2025-tickets-before-prices-rise/": "2025-05-25T20:36:11.454602+00:00",
-  "https://techcrunch.com/2025/05/18/crypto-elite-increasingly-worried-about-their-personal-safety/": "2025-05-25T20:36:11.455070+00:00",
-  "https://techcrunch.com/2025/05/13/robinhood-grows-its-footprint-in-canada-by-acquiring-wonderfi/": "2025-05-25T20:36:11.455590+00:00",
-  "https://techcrunch.com/2025/05/07/stripe-unveils-ai-foundation-model-for-payments-reveals-deeper-partnership-with-nvidia/": "2025-05-25T20:36:11.456084+00:00",
-  "https://techcrunch.com/2025/05/01/moviepass-explores-a-daily-fantasy-platform-tailored-for-film-enthusiasts/": "2025-05-25T20:36:11.456546+00:00",
-  "https://techcrunch.com/2025/04/24/speak-at-techcrunch-disrupt-2025-applications-now-open/": "2025-05-25T20:36:11.456970+00:00",
-  "https://techcrunch.com/2025/04/24/revolut-the-45b-neobank-posts-1b-profit-in-2024/": "2025-05-25T20:36:11.457408+00:00",
-  "https://techcrunch.com/2025/04/18/a-new-kids-show-will-come-with-a-crypto-wallet-when-it-debuts-this-fall/": "2025-05-25T20:36:11.457867+00:00",
-  "https://techcrunch.com/2025/04/08/blackbird-gobbles-up-50m-for-its-blockchain-based-payment-loyalty-app-for-restaurants/": "2025-05-25T20:36:11.458356+00:00",
-  "https://techcrunch.com/2025/04/03/could-web3-change-the-game-in-the-coming-tariff-wars/": "2025-05-25T20:36:11.458771+00:00",
-  "https://techcrunch.com/2025/04/02/stablecoin-issuer-circle-takes-another-stab-at-a-public-listing/": "2025-05-25T20:36:11.459229+00:00",
-  "https://techcrunch.com/2025/03/24/us-lifts-sanctions-on-tornado-cash-a-crypto-mixer-linked-to-north-korean-money-laundering/": "2025-05-25T20:36:11.459421+00:00",
-  "https://techcrunch.com/2025/03/24/step-into-the-spotlight-apply-to-speak-at-techcrunch-disrupt-2025/": "2025-05-25T20:36:11.459877+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/shib-surges-5-after-mid-day-dip-defying-economic-tensions": "2025-05-26T07:32:12.790174+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/bitcoin-regains-usd110k-after-weekend-sell-off-ada-doge-lead-uptick-in-crypto-majors": "2025-05-26T07:32:12.790271+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/trx-surges-1-25-as-high-volume-support-zone-propels-price-higher": "2025-05-26T07:32:12.790351+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/james-wynn-the-trader-who-bet-1b-on-bitcoin-is-now-long-pepe": "2025-05-26T08:45:53.356580+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/bearish-bets-on-strategy-look-alluring-says-10x-research-as-mstr-diverges-from-bitcoin-s-bull-run": "2025-05-26T08:45:53.356687+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/dogecoin-extends-rally-as-whale-accumulation-signals-growing-confidence": "2025-05-26T09:49:19.983860+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/monero-s-market-cap-flips-litecoin-and-toncoin-as-xmr-enters-top-25-tokens": "2025-05-26T11:18:12.175199+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/strategy-buys-4020-bitcoin-for-427m-brings-total-stash-to-over-580000-btc": "2025-05-26T12:46:52.029261+00:00",
-  "https://www.coindesk.com/business/2025/05/26/pakistan-taps-surplus-power-capacity-to-fuel-bitcoin-mining-ai-data-centers": "2025-05-26T12:46:52.029360+00:00",
-  "https://www.coindesk.com/policy/2025/05/26/u-s-crypto-investor-charged-with-kidnapping-and-torturing-victim-over-bitcoin": "2025-05-26T12:46:52.029446+00:00",
-  "https://www.coindesk.com/policy/2025/05/23/in-final-days-of-senate-stablecoin-debate-trump-s-crypto-ties-to-remain-in-spotlight": "2025-05-26T13:31:58.544408+00:00",
-  "https://techcrunch.com/2025/05/26/vote-for-the-sessions-you-want-to-see-at-techcrunch-disrupt-2025/": "2025-05-26T14:23:08.173347+00:00",
-  "https://www.coindesk.com/business/2025/05/26/dubai-unveils-real-estate-tokenization-platform-on-xrp-ledger-amid-usd16b-initiative": "2025-05-26T16:28:00.470159+00:00",
-  "https://www.coindesk.com/policy/2025/05/26/sam-bankman-frieds-prison-sentence-could-be-cut-by-over-4-years-business-insider": "2025-05-26T16:28:00.470274+00:00",
-  "https://www.coindesk.com/markets/2025/05/26/ethereum-surges-5-to-break-usd2-550-resistance-amid-institutional-confidence": "2025-05-26T16:28:00.470364+00:00",
-  "https://www.coindesk.com/tech/2025/05/26/binance-square-starts-livestream-for-traders-taking-on-other-social-media-platforms": "2025-05-26T16:28:00.470452+00:00",
-  "https://www.coindesk.com/business/2025/05/26/trump-media-seeks-to-raise-3b-for-crypto-purchase-ft": "2025-05-26T18:30:58.936600+00:00"
+    "https://www.coindesk.com/markets/2025/05/25/ethereum-surges-after-holding-usd2-477-fueled-by-very-heavy-trading-volume": "2025-05-25T20:36:11.373057+00:00",
+    "https://www.coindesk.com/markets/2025/05/25/xrp-plunges-below-usd2-30-amid-heavy-selling-pressure": "2025-05-25T20:36:11.373138+00:00",
+    "https://www.coindesk.com/markets/2025/05/25/bitcoin-drops-below-usd107-5k-as-trump-tariff-threat-triggers-crypto-sell-off": "2025-05-25T20:36:11.373223+00:00",
+    "https://www.coindesk.com/markets/2025/05/25/chart-of-the-week-bitcoin-soars-but-wen-lambo-crowd-is-missing-from-the-rally": "2025-05-25T20:36:11.373310+00:00",
+    "https://www.coindesk.com/markets/2025/05/25/solana-plunges-5-as-midnight-sell-off-signals-institutional-exit": "2025-05-25T20:36:11.373404+00:00",
+    "https://www.coindesk.com/business/2025/05/24/judge-overturns-convictions-in-mango-markets-exploiters-crypto-fraud-case": "2025-05-25T20:36:11.373485+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/swiss-watchmaker-franck-muller-unveils-limited-edition-solana-watch": "2025-05-25T20:36:11.373563+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/a-small-food-firm-buys-21-bitcoin-jumping-on-btc-treasury-trend-shares-fall-anyways": "2025-05-25T20:36:11.373654+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/dogecoin-slides-below-usd0-23-but-finds-support-as-buyer-demand-rebuilds": "2025-05-25T20:36:11.373734+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/shib-slides-5-but-finds-support-as-loyal-holders-hold-their-ground": "2025-05-25T20:36:11.373812+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/polygon-co-founder-mihailo-bjelic-exits-layer-2": "2025-05-25T20:36:11.373880+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/crypto-bulls-lose-500m-as-bitcoin-hovers-around-108k-after-trumps-tariff-threats": "2025-05-25T20:36:11.373965+00:00",
+    "https://www.coindesk.com/markets/2025/05/24/dogecoin-cardanos-ada-xrp-fall-7-in-weekend-bloodbath": "2025-05-25T20:36:11.374040+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/strategy-slumps-6-leading-crypto-names-lower-as-bitcoin-treasury-strategies-are-questioned": "2025-05-25T20:36:11.374128+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/crypto-market-sees-usd300m-liquidations-as-trump-tariff-threats-flush-late-bulls": "2025-05-25T20:36:11.374210+00:00",
+    "https://www.coindesk.com/coindesk-indices/2025/05/23/coindesk-20-performance-update-index-declines-3-2-as-all-assets-trade-lower": "2025-05-25T20:36:11.374293+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/semler-scientific-bolsters-bitcoin-holdings-with-usd50m-acquisition": "2025-05-25T20:36:11.374393+00:00",
+    "https://www.coindesk.com/business/2025/05/23/crypto-lender-ledn-goes-full-bitcoin-maxi-as-it-seeks-to-reduce-client-asset-risk": "2025-05-25T20:36:11.374481+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/good-vibes-shattered-as-trump-revives-trade-war-bitcoin-tumbles-below-usd109k": "2025-05-25T20:36:11.374567+00:00",
+    "https://www.coindesk.com/daybook-us/2025/05/23/crypto-daybook-americas-bitcoin-market-cap-tops-usd2-2t-as-derivatives-sentiment-signal-more-upside": "2025-05-25T20:36:11.374660+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/cftcs-plans-for-crypto-perpetual-trading-puts-focus-on-hyperliquids-hype": "2025-05-25T20:36:11.374739+00:00",
+    "https://www.coindesk.com/business/2025/05/23/major-us-banks-mull-jointly-launching-stablecoin-wsj": "2025-05-25T20:36:11.374811+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/bitcoin-enters-strongest-accumulation-phase-since-january-as-btc-price-passes-110k": "2025-05-25T20:36:11.374895+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/justin-sun-defends-trump-after-presidential-dinner-says-memecoins-have-merit": "2025-05-25T20:36:11.374979+00:00",
+    "https://www.coindesk.com/markets/2025/05/23/xrp-could-rocket-to-8-as-focus-shifts-to-crypto-majors-after-bitcoins-record-run-traders": "2025-05-25T20:36:11.375071+00:00",
+    "https://techcrunch.com/2025/05/25/48-hours-left-what-you-wont-want-to-miss-at-the-20th-techcrunch-disrupt-in-october/": "2025-05-25T20:36:11.451927+00:00",
+    "https://techcrunch.com/2025/05/25/last-24-hours-techcrunch-disrupt-2025-early-bird-deals-will-fly-away-after-today/": "2025-05-25T20:36:11.452365+00:00",
+    "https://techcrunch.com/2025/05/23/tick-tock-just-3-days-left-to-save-up-to-900-on-your-techcrunch-disrupt-2025-pass/": "2025-05-25T20:36:11.452772+00:00",
+    "https://techcrunch.com/2025/05/22/4-days-left-up-to-900-off-your-ticket-and-90-off-for-your-1-at-techcrunch-disrupt-2025/": "2025-05-25T20:36:11.453213+00:00",
+    "https://techcrunch.com/2025/05/21/techcrunch-disrupt-2025-early-bird-savings-end-on-may-25/": "2025-05-25T20:36:11.453604+00:00",
+    "https://techcrunch.com/2025/05/21/coinbase-says-its-data-breach-affects-at-least-69000-customers/": "2025-05-25T20:36:11.453781+00:00",
+    "https://techcrunch.com/2025/05/20/youve-got-6-days-to-save-900-on-techcrunch-disrupt-2025-tickets/": "2025-05-25T20:36:11.454191+00:00",
+    "https://techcrunch.com/2025/05/19/clocks-ticking-save-up-to-900-on-techcrunch-disrupt-2025-tickets-before-prices-rise/": "2025-05-25T20:36:11.454602+00:00",
+    "https://techcrunch.com/2025/05/18/crypto-elite-increasingly-worried-about-their-personal-safety/": "2025-05-25T20:36:11.455070+00:00",
+    "https://techcrunch.com/2025/05/13/robinhood-grows-its-footprint-in-canada-by-acquiring-wonderfi/": "2025-05-25T20:36:11.455590+00:00",
+    "https://techcrunch.com/2025/05/07/stripe-unveils-ai-foundation-model-for-payments-reveals-deeper-partnership-with-nvidia/": "2025-05-25T20:36:11.456084+00:00",
+    "https://techcrunch.com/2025/05/01/moviepass-explores-a-daily-fantasy-platform-tailored-for-film-enthusiasts/": "2025-05-25T20:36:11.456546+00:00",
+    "https://techcrunch.com/2025/04/24/speak-at-techcrunch-disrupt-2025-applications-now-open/": "2025-05-25T20:36:11.456970+00:00",
+    "https://techcrunch.com/2025/04/24/revolut-the-45b-neobank-posts-1b-profit-in-2024/": "2025-05-25T20:36:11.457408+00:00",
+    "https://techcrunch.com/2025/04/18/a-new-kids-show-will-come-with-a-crypto-wallet-when-it-debuts-this-fall/": "2025-05-25T20:36:11.457867+00:00",
+    "https://techcrunch.com/2025/04/08/blackbird-gobbles-up-50m-for-its-blockchain-based-payment-loyalty-app-for-restaurants/": "2025-05-25T20:36:11.458356+00:00",
+    "https://techcrunch.com/2025/04/03/could-web3-change-the-game-in-the-coming-tariff-wars/": "2025-05-25T20:36:11.458771+00:00",
+    "https://techcrunch.com/2025/04/02/stablecoin-issuer-circle-takes-another-stab-at-a-public-listing/": "2025-05-25T20:36:11.459229+00:00",
+    "https://techcrunch.com/2025/03/24/us-lifts-sanctions-on-tornado-cash-a-crypto-mixer-linked-to-north-korean-money-laundering/": "2025-05-25T20:36:11.459421+00:00",
+    "https://techcrunch.com/2025/03/24/step-into-the-spotlight-apply-to-speak-at-techcrunch-disrupt-2025/": "2025-05-25T20:36:11.459877+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/shib-surges-5-after-mid-day-dip-defying-economic-tensions": "2025-05-26T07:32:12.790174+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/bitcoin-regains-usd110k-after-weekend-sell-off-ada-doge-lead-uptick-in-crypto-majors": "2025-05-26T07:32:12.790271+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/trx-surges-1-25-as-high-volume-support-zone-propels-price-higher": "2025-05-26T07:32:12.790351+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/james-wynn-the-trader-who-bet-1b-on-bitcoin-is-now-long-pepe": "2025-05-26T08:45:53.356580+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/bearish-bets-on-strategy-look-alluring-says-10x-research-as-mstr-diverges-from-bitcoin-s-bull-run": "2025-05-26T08:45:53.356687+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/dogecoin-extends-rally-as-whale-accumulation-signals-growing-confidence": "2025-05-26T09:49:19.983860+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/monero-s-market-cap-flips-litecoin-and-toncoin-as-xmr-enters-top-25-tokens": "2025-05-26T11:18:12.175199+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/strategy-buys-4020-bitcoin-for-427m-brings-total-stash-to-over-580000-btc": "2025-05-26T12:46:52.029261+00:00",
+    "https://www.coindesk.com/business/2025/05/26/pakistan-taps-surplus-power-capacity-to-fuel-bitcoin-mining-ai-data-centers": "2025-05-26T12:46:52.029360+00:00",
+    "https://www.coindesk.com/policy/2025/05/26/u-s-crypto-investor-charged-with-kidnapping-and-torturing-victim-over-bitcoin": "2025-05-26T12:46:52.029446+00:00",
+    "https://www.coindesk.com/policy/2025/05/23/in-final-days-of-senate-stablecoin-debate-trump-s-crypto-ties-to-remain-in-spotlight": "2025-05-26T13:31:58.544408+00:00",
+    "https://techcrunch.com/2025/05/26/vote-for-the-sessions-you-want-to-see-at-techcrunch-disrupt-2025/": "2025-05-26T14:23:08.173347+00:00",
+    "https://www.coindesk.com/business/2025/05/26/dubai-unveils-real-estate-tokenization-platform-on-xrp-ledger-amid-usd16b-initiative": "2025-05-26T16:28:00.470159+00:00",
+    "https://www.coindesk.com/policy/2025/05/26/sam-bankman-frieds-prison-sentence-could-be-cut-by-over-4-years-business-insider": "2025-05-26T16:28:00.470274+00:00",
+    "https://www.coindesk.com/markets/2025/05/26/ethereum-surges-5-to-break-usd2-550-resistance-amid-institutional-confidence": "2025-05-26T16:28:00.470364+00:00",
+    "https://www.coindesk.com/tech/2025/05/26/binance-square-starts-livestream-for-traders-taking-on-other-social-media-platforms": "2025-05-26T16:28:00.470452+00:00",
+    "https://www.coindesk.com/business/2025/05/26/trump-media-seeks-to-raise-3b-for-crypto-purchase-ft": "2025-05-26T18:30:58.936600+00:00",
+    "https://cointelegraph.com/news/price-predictions-5-26-spx-dxy-btc-eth-xrp-bnb-sol-doge-ada-hype?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Exchange",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/trump-media-group-raise-3b-buy-bitcoin-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "NFT",
+            "Stablecoin",
+            "Decentralized",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-bulls-start-memorial-day-blitz-on-110k-will-spot-follow-when-us-markets-open?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "ETF",
+            "Futures",
+            "Leverage",
+            "Liquidation",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/decentralized-ai-bittensor-dna-fund-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Mining",
+            "Staking",
+            "Liquidity",
+            "Decentralized",
+            "Centralized",
+            "Institutional",
+            "Venture Capital",
+            "Fund",
+            "Consensus",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/elon-musk-confirms-x-money-beta-testing-launch-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/blackrock-issues-rare-warning-is-bitcoins-future-at-risk-from-quantum-tech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Private Key",
+            "Wallet",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Fork",
+            "Consensus"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ai-needs-better-human-data-not-bigger-models?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Blockchain",
+            "AI",
+            "Security",
+            "Decentralized",
+            "Governance"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/crypto-south-korea-elections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin",
+            "Centralized",
+            "Fiat",
+            "Institutional",
+            "Retail",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/fake-airdrops-and-how-to-avoid-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "AI",
+            "DeFi",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Smart Contract",
+            "Security",
+            "Decentralized",
+            "Private Key",
+            "Wallet",
+            "Governance",
+            "Exploit",
+            "Airdrop"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/how-to-set-up-stop-loss-and-take-profit-orders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Liquidity",
+            "Security",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining",
+            "Compliance",
+            "Stablecoin",
+            "Private Key",
+            "Wallet",
+            "Exploit",
+            "Institutional",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-all-time-high-by-japanese-bond-market-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Exchange",
+            "Fiat",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/how-to-read-bitcoin-candlestick-charts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Leverage"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/pakistan-appoints-special-asstant-to-pm-on-blockchain-and-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Mining",
+            "Security",
+            "Compliance",
+            "CBDC",
+            "Decentralized",
+            "Governance",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/solana-seguindo-o-bitcoin-atividade-da-rede-e-padrao-grafico-apontam-para-sol-a-us-300?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Altcoin",
+            "Staking",
+            "Decentralized",
+            "Wallet",
+            "Liquid Staking"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/strategy-bags-bitcoin-price-record-past-110?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/hedera-launches-hackathon-in-africa-to-uncover-emerging-talents?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "Metaverse",
+            "Compliance",
+            "Stablecoin",
+            "RWA",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ethereum-alternative-sweden-cashless-plans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "Security",
+            "Decentralized",
+            "Centralized",
+            "Fiat",
+            "Options",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-levels-to-watch-as-trump-delays-eu-tarif?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/kiyosaki-wood-eric-trump-predict-1m-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Altcoin",
+            "Fiat",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/xrp-price-top-is-in-network-metrics-rally-at-risk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Cryptocurrency"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/btc-price-seeks-155k-trigger-5-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Exchange",
+            "Liquidity",
+            "Centralized",
+            "ETF",
+            "Derivatives"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/crypto-token-vesting-unlocks-june-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "NFT",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/stablecoin-scam-zero-transfer-phishing-2-5m-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "AI",
+            "Cryptocurrency",
+            "Compliance",
+            "Stablecoin",
+            "Private Key",
+            "Wallet",
+            "Exploit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/crypto-etps-hit-3-3-billion-ytd-total-record-10-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Altcoin",
+            "Exchange",
+            "Staking",
+            "Stablecoin",
+            "Treasury",
+            "Fund",
+            "ETF",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/trump-crypto-dinner-guests-say-food-was-worst-ever?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/researchers-claim-chatgpt-rebelled-against-shutdown-request-in-test?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ddc-enterprise-21-bitcoin-plan-5000-btc-three-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/nvidia-plans-cheaper-ai-chips-china-reuters?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/us-speaker-shrugs-off-trump-crypto-dinner-as-democrats-demand-answers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/twitter-user-claims-tradingview-has-ignored-a-fibonacci-retracement-bug-for-5-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/u-s-banking-groups-urge-sec-to-scrap-cyber-disclosure-rule-citing-national-security-risks/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Exchange",
+            "Security",
+            "Regulation",
+            "Compliance",
+            "Governance",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-media-plans-3b-raise-to-buy-bitcoin-and-crypto-assets-as-ethics-firestorm-looms/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "NFT",
+            "Cryptocurrency",
+            "Liquidity",
+            "Stablecoin",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/binance-coin-price-prediction-traders-losing-patience-but-whales-may-be-setting-a-trap/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Exchange",
+            "Decentralized",
+            "Wallet",
+            "Retail"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bonk-whales-172-breakout-vs-wif/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/cz-yzi-labs-avalan-bitcoin-defi-investment/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "Exchange",
+            "Liquidity",
+            "Security",
+            "Regulation",
+            "Stablecoin",
+            "Institutional",
+            "Fund"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/mind-of-pepe-presale-10-4m-surge/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI",
+            "Exchange",
+            "Staking",
+            "Liquidity",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/chainlink-66b-300-percent-jump/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Web3",
+            "DeFi",
+            "Cryptocurrency",
+            "Decentralized",
+            "RWA",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/sam-bankman-fried-to-be-released-in-2044-over-4-years-early/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity",
+            "KYC"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/crypto-price-prediction-today-26-may-xrp-cardano-pi-coin-solx/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Mining",
+            "Staking",
+            "Liquidity",
+            "Layer 2",
+            "Decentralized",
+            "Institutional",
+            "Scalability",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/xrp-price-prediction-16b-real-estate-project-goes-live-on-xrp-ledger-500-xrp-coming-soon/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Solana",
+            "AI",
+            "Cryptocurrency",
+            "Altcoin",
+            "Regulation",
+            "Institutional",
+            "ETF",
+            "RWA"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/strategy-buys-btc-427m-boosts-holdings/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/solana-price-prediction-the-sol-ecosystem-just-got-an-upgrade-and-it-might-be-the-most-bullish-one-yet/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Cryptocurrency",
+            "Compliance",
+            "Wallet",
+            "KYC",
+            "RWA"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/is-this-the-next-microstrategy-asian-food-giant-quietly-launches-a-1b-bitcoin-accumulation-plan/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Staking",
+            "Liquidity",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "ETF",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/whats-happening-in-crypto-today-daily-crypto-news-digest/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "NFT",
+            "DAO",
+            "Cryptocurrency",
+            "Mining",
+            "Stablecoin",
+            "Wallet",
+            "Insurance",
+            "Institutional",
+            "Fund",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/how-start-bitcoin-cloud-mining-2025-with-hashfly/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/vitalik-buterin-ethereum-can-be-a-financial-lifeline-amid-cashless-concerns/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "AI",
+            "Security",
+            "Decentralized",
+            "Centralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/why-is-crypto-up-today-may-26-2025/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Altcoin",
+            "Exchange",
+            "Stablecoin",
+            "Halving",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "ETF",
+            "Scalability",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/2-5m-gone-in-hours-victim-hit-twice-in-sophisticated-stablecoin-phishing-scam/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Compliance",
+            "Stablecoin",
+            "Private Key",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/rich-dad-poor-dad-author-bitcoin-is-the-easiest-way-to-get-rich-even-0-01-btc-could-be-life-changing/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Decentralized",
+            "Fiat",
+            "Institutional",
+            "Derivatives",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/japans-remixpoint-approves-7m-bitcoin-buy-holdings-hit-84m/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/mexc-exec-warns-capital-is-fleeing-the-old-guard-bitcoin-stands-firm/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/etf-weekly-recap-euphoric-week-for-bitcoin-and-ether-funds-with-3-billion-in-combined-inflows/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Institutional",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/qcp-flags-cryptos-maturity-as-trump-tariffs-reignite-global-trade-uncertainty/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/new-ethereum-fork-lightchain-ai-decentralized-ecosystem-making-splash/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "AI",
+            "Decentralized",
+            "Fork"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/hyperliquid-achieves-10-1-billion-open-interest-high-as-hype-token-surges/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/el-salvador-overtakes-north-korea-in-bitcoin-holdings-after-lazarus-groups-reduction/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/xrp-price-watch-consolidation-or-collapse-meanwhile-nexchain-surges-with-3m-presale-raise/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/coinbase-hit-with-class-action-over-alleged-disclosure-failures-and-data-breach/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security",
+            "Compliance",
+            "CBDC"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/xrp-price-watch-market-hangs-in-the-balance-near-key-support/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/htx-community-turns-3-powering-the-future-of-web3-content-community-engagement/": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322123/coinbase-investor-lawsuit-damages-data-breach": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Exchange"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322122/elon-musk-x-money-coming-soon-beta-dogecoin": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/resources/what-is-a-corporate-bitcoin-treasury-the-strategy-behind-companies-holding-crypto": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322110/professor-coin-how-crypto-derivatives-have-impacted-digital-markets": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Derivatives"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322106/cambodias-19-billion-financial-scam-empire-fueled-by-crypto-says-watchdog-group": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Leverage"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322108/trump-media-3-billion-raise-buy-bitcoin-crypto": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322091/strategy-shrugs-off-lawsuit-buys-more-bitcoin": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322057/caladan-targets-us-market-nyc-office-trumps-pro-crypto-pivot": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322071/altcoins-avax-hype-wld-fly-as-bitcoin-hovers-near-all-time-high": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322062/australian-senator-slams-bitcoin-as-ponzi-scheme": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322058/rich-dad-poor-dad-author-people-buying-bitcoin": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322054/crypto-industry-responding-cftcs-call-perpetuals": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322051/tom-brady-crypto-investment-ai-startup": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322049/crypto-investor-charged-kidnapping-torturing-man-nyc-bitcoin": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322047/bitcoin-rebounds-as-trump-extends-eu-tariff-deadline-us-futures-tick-higher": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Futures"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322015/this-week-crypto-games-off-grid-steam-ember-sword": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "NFT"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/320512/why-bitcoin-skepticism-persists-adam-back": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321821/7-ways-protect-yourself-crypto-attacks": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321841/same-prompt-different-laura-ai-racial-patterning": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321861/wall-street-gets-ethereum-digital-oil-etherealize": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321910/anthropic-claude-4-review-creative-genius-trapped-by-old-limitations": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321389/buy-burger-bitcoin-beware-tax-risks": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321898/walletconnect-token-lands-on-solana-with-wct-airdrop": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Solana",
+            "Airdrop"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321868/public-keys-coinbase-mstr-strategy-bitcoin-stablecoins-wall-street": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321869/bitcoin-ethereum-etfs-1-billion-combined-single-day": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Exchange"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321849/trump-crypto-dinner-vips-dumped-coins": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/Nv3c2mR8/danny-ryan-and-vivek-raman-on-why-ethereum-is-winning-wall-streets-tokenization-race": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Ethereum",
+            "Institutional",
+            "Tokenization"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321862/semler-scientific-buys-bitcoin-law-firm-targets": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321838/off-grid-avalanche-nft-sales-steam-expansion": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "NFT"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321839/solana-meme-coin-trump-crypto-dinner-flopped": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321814/inside-rug-radios-whirlwind-tour-of-dubai": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/go1l84qc/btc-dips-from-ath-us-banks-consider-stablecoin-hype-leads-l1s-again": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "DeFi",
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321779/a-new-frontier-delorean-launches-on-chain-car-marketplace-with-patrick-stewart": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "NFT"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321777/ethereum-xrp-drop-altcoins-brace-new-trump-tariffs-on-eu-apple": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321768/man-gets-six-years-for-laundering-1m-into-bitcoin-for-scammers-and-drug-dealers": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321767/bitcoin-rally-wavers-as-trump-drops-50-eu-tariff-bombshell": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321752/melania-trump-uses-ai-to-narrate-her-new-memoir": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/321750/global-darknet-bust-200m-digital-asset-cash-seizures": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Digital Asset"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/FfiuQaOA/btc-hits-ath-infofi-battle-begins-texas-passes-btc-bill": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Exploit",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/s8sitejl/glider-co-founder-brian-huang-on-making-crypto-accessible-for-everyone": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Blockchain",
+            "Retail"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/U3OljS7Q/btc-nears-ath-infofi-battle-begins-texas-passes-btc-bill": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Regulation",
+            "Stablecoin",
+            "ETF",
+            "RWA"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/Wc93vtEG/under-exposed-ep-26-moodys-and-macro-eth-fakeout-and-trading-roundtable": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/DdlAEGUO/eth-leads-majors-sol-etfs-delayed-bybit-allows-stock-trading": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Custody",
+            "ETF",
+            "Latency"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/NcfWDEwQ/bitcoins-highest-weekly-close-moodys-downgrades-us-mini-crash-hits-alts": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "NFT",
+            "DeFi",
+            "Altcoin",
+            "Security",
+            "Tokenization"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/LtTpnmEa/coinbase-user-data-hacked-ftx-repayments-coming-bond-yields-soar": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/FmrXwC9Q/crypto-falls-10y-back-above-45-believe-app-pauses-launches": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Stablecoin",
+            "Audit",
+            "ETF"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/Vin9tHYi/under-exposed-ep-25": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/a7PcDMYu/crypto-dips-coinbase-joins-sp-500-cpi-today": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Tokenization",
+            "Cross-chain"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/CM19e8fq/eth-soars-us-china-nearer-to-trade-deal-wif-hits-1-2b": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Exchange",
+            "Exploit",
+            "ETF",
+            "Futures"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/puNxfm8x/eth-soars-after-pectra-upgrade-china-tariffs-may-drop-pepe-leads-memes": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/iEpSMJpx/btc-nears-100k-trade-deal-optimism-stripe-allows-stablecoin-accounts": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Liquidity",
+            "Stablecoin",
+            "Treasury",
+            "Custody"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/dAaa6kq6/crypto-rallies-us-china-trade-talks-to-begin-fomc-decision-today": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Stablecoin",
+            "CBDC",
+            "Treasury",
+            "ETF",
+            "Airdrop"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/MFdfWAVQ/under-exposed-ep-24-the-retail-rally-trumps-policy-impact-crypto-ai-2": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Retail"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/bxvtquhk/crypto-legislation-worries-gold-starts-rallying-again-cftc-to-trial-tokenisation": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "Stablecoin",
+            "ETF"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/1JQzQQAd/btc-retreats-nvidia-considering-btc-treasury-sol-fixes-zero-day": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Stablecoin",
+            "Treasury",
+            "Exploit",
+            "ETF",
+            "TradFi"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/oZc7E2jw/binance-founder-cz-talks-life-inside-prison-trump-presidency-and-the-state-of-crypto": {
+        "last_processed": "2025-05-26T20:33:43.265205+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    }
 }
