@@ -1311,5 +1311,35 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/dubai-launches-first-licensed-tokenized-real-estate-project-in-mena-region?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T22:15:49.158233+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Liquidity",
+            "Retail",
+            "Tokenization",
+            "RWA",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/dubai-launches-tokenized-real-estate-platform-eyes-16b-in-property-digitization-by-2033/": {
+        "last_processed": "2025-05-26T22:15:49.158233+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Tokenization"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://decrypt.co/322156/inside-trump-crypto-dinner": {
+        "last_processed": "2025-05-26T22:15:49.158233+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
