@@ -37,7 +37,8 @@ jobs:
       - name: Fetch & Log Keywords
         run: |
           source .venv/bin/activate
-          python ./news_fetcher.py # ★ここを修正: ./ を追加 ★
+          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
+          python "${{ github.workspace }}/news_fetcher.py" # ★ここを修正★
 
       - name: Commit Hourly Logs and Processed Articles
         run: |
@@ -77,15 +78,15 @@ jobs:
       - name: Initialize Database (if not exists)
         run: |
           source .venv/bin/activate
-          # python -c "import db_manager; db_manager.init_db()"
-          # 上記行をコメントアウトし、明示的なパスで実行する
-          python ./db_manager.py # ★ここを修正: ./ を追加 (init_dbは__main__ブロックで実行される) ★
+          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
+          python "${{ github.workspace }}/db_manager.py" # ★ここを修正★
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
         run: |
           source .venv/bin/activate
-          python ./summarizer.py > summary_report.txt # ★ここを修正: ./ を追加 ★
+          # GITHUB_WORKSPACE 環境変数を使って絶対パスを指定
+          python "${{ github.workspace }}/summarizer.py" > summary_report.txt # ★ここを修正★
           echo "summary_report<<EOF" >> $GITHUB_OUTPUT
           cat summary_report.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
