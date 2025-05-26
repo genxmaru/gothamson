@@ -20,6 +20,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # コミット権限用
           persist-credentials: true
+          fetch-depth: 0 # ★追加★ 全履歴をフェッチ
+          ref: ${{ github.ref }} # ★追加★ 現在のブランチを明示的にチェックアウト
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,7 +32,6 @@ jobs:
         run: |
           python -m venv .venv
           source .venv/bin/activate
-          # feedparserはnews_fetcher.pyが使用
           pip install --upgrade pip feedparser
 
       - name: Fetch & Log Keywords
@@ -43,13 +44,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
           git add data/hourly_keyword_counts.jsonl data/processed_articles.json
-          # ここから data/keyword_trends.db を削除
           git commit -m "chore: update hourly keyword counts and processed articles log" || echo "No changes to commit"
           git push origin main
 
   summarize_and_notify:
     needs: fetch # fetchジョブが完了してから実行
-    # 毎日0時（UTC）または手動実行時にこのジョブをトリガー
     if: ${{ github.event_name == 'workflow_dispatch' || (github.event.schedule == '0 0 * * *') }}
     runs-on: ubuntu-latest
     env:
@@ -59,6 +58,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # ★追加★ 全履歴をフェッチ
+          ref: ${{ github.ref }} # ★追加★ 現在のブランチを明示的にチェックアウト
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -69,37 +70,32 @@ jobs:
         run: |
           python -m venv .venv
           source .venv/bin/activate
-          # db_manager.py, summarizer.py, notification_helper.pyが使用
           pip install --upgrade pip
+          # jq はデフォルトでインストールされている可能性が高いが、もしエラーが出たら以下のコメントアウトを外す
+          # sudo apt-get update && sudo apt-get install -y jq
 
       - name: Initialize Database (if not exists)
         run: |
           source .venv/bin/activate
           python -c "import db_manager; db_manager.init_db()"
-          # ここではまだgit addしない。コミットは後でまとめて行う。
+          # データベースの存在をGitHub Actionsに認識させるためaddしておく
+          git add data/keyword_trends.db || true
 
       - name: Run Summarizer and Get Report
-        id: run_summarizer # このステップの出力を参照するためにIDを付与
+        id: run_summarizer
         run: |
           source .venv/bin/activate
           # summarizer.pyの出力をGitHub Actionsの出力としてキャプチャ
-          # ここでは日次レポートのみを生成
           python summarizer.py > summary_report.txt
           echo "summary_report<<EOF" >> $GITHUB_OUTPUT
           cat summary_report.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
         
       - name: Notify Discord Summary
-        # summary_reportファイルが存在し、内容が空でない場合にのみ通知
         if: success() && steps.run_summarizer.outputs.summary_report != ''
         run: |
-          # summarizer.pyが出力したテキストを直接Discordに送信
           content="${{ steps.run_summarizer.outputs.summary_report }}"
-          
-          # JSONペイロードを作成
           payload=$(jq -Rn --arg c "$content" '{content: $c}')
-          
-          # Discordへ送信
           curl -H "Content-Type: application/json" \
                -d "$payload" \
                "$DISCORD_WEBHOOK_URL"
@@ -108,7 +104,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git add data/keyword_trends.db # DBはsummarizeジョブで更新される
-          # summary_report.txt は一時ファイルなのでコミットしない
+          git add data/keyword_trends.db
           git commit -m "chore: update daily keyword trends DB" || echo "No changes to commit"
           git push origin main
