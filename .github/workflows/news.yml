@@ -79,14 +79,15 @@ jobs:
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          python db_manager.py
+          PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          python summarizer.py > summary_report.txt
+          # ここを summarize.py に修正
+          PYTHONPATH="${{ github.workspace }}" python summarize.py > summary_report.txt # ★ここを summarize.py に修正★
           echo "summary_report<<EOF" >> $GITHUB_OUTPUT
           cat summary_report.txt >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
