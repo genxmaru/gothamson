@@ -31,8 +31,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m venv .venv
-          source .venv/bin/activate
-          pip install --upgrade pip feedparser
+          source .venv/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt # ★この行に修正★
 
       - name: Fetch & Log Keywords
         run: |
@@ -70,6 +71,7 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
+          pip install -r requirements.txt # ★この行を追加★
           # jq はデフォルトでインストールされている可能性が高いが、もしエラーが出たら以下のコメントアウトを外す
           # sudo apt-get update && sudo apt-get install -y jq
 
