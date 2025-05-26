@@ -53,7 +53,7 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || (github.event.schedule == '0 0 * * *') }}
     runs-on: ubuntu-latest
     env:
-      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # Discord Webhook URLをシークレットから取得
+      # DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # この行はもう不要なので削除してもOK
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -81,25 +81,85 @@ jobs:
           source .venv/bin/activate
           PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
-      - name: Run Summarizer and Get Report
+      - name: Run Summarizer and Get Report # ★ここも修正★ summarize.pyの出力を直接キャプチャ
         id: run_summarizer
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # ここを summarize.py に修正
-          PYTHONPATH="${{ github.workspace }}" python summarize.py > summary_report.txt # ★ここを summarize.py に修正★
-          echo "summary_report<<EOF" >> $GITHUB_OUTPUT
-          cat summary_report.txt >> $GITHUB_OUTPUT
+          echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT # 出力名を変更
+          PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT # summarize.pyの出力を直接書き込む
           echo "EOF" >> $GITHUB_OUTPUT
         
-      - name: Notify Discord Summary
-        if: success() && steps.run_summarizer.outputs.summary_report != ''
+      - name: Notify Discord 24H Trends # ★ここから追加・置き換え★
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_24H }} # 24H用Webhook
         run: |
-          content="${{ steps.run_summarizer.outputs.summary_report }}"
-          payload=$(jq -Rn --arg c "$content" '{content: $c}')
-          curl -H "Content-Type: application/json" \
-               -d "$payload" \
-               "$DISCORD_WEBHOOK_URL"
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          # 24Hトレンド部分を抽出
+          content_24h=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---24H/,/---REPORT_SPLIT---1MON/p' | sed '1d;$d')
+          
+          # Discordメッセージの文字数制限 (2000文字) を考慮し、必要に応じてトリミング
+          if [ $(echo -n "$content_24h" | wc -c) -gt 1990 ]; then
+            echo "Warning: 24H report content exceeds 2000 characters. Trimming..."
+            content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_24h" ]; then # 内容が空でない場合のみ送信
+            payload=$(jq -Rn --arg c "$content_24h" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "24H trends report is empty, skipping Discord notification."
+          fi
+
+      - name: Notify Discord 1MON Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---1MON')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_1MON }} # 1MON用Webhook
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          # 1MONトレンド部分を抽出
+          content_1m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---1MON/,/---REPORT_SPLIT---3MON/p' | sed '1d;$d')
+
+          if [ $(echo -n "$content_1m" | wc -c) -gt 1990 ]; then
+            echo "Warning: 1MON report content exceeds 2000 characters. Trimming..."
+            content_1m=$(echo "$content_1m" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_1m" ]; then # 内容が空でない場合のみ送信
+            payload=$(jq -Rn --arg c "$content_1m" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "1MON trends report is empty, skipping Discord notification."
+          fi
+
+      - name: Notify Discord 3MON Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---3MON')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }} # 3MON用Webhook
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          # 3MONトレンド部分を抽出
+          # 最終セクションなので、最後のSPLITマーカーからEOFまで
+          content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
+
+          if [ $(echo -n "$content_3m" | wc -c) -gt 1990 ]; then
+            echo "Warning: 3MON report content exceeds 2000 characters. Trimming..."
+            content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_3m" ]; then # 内容が空でない場合のみ送信
+            payload=$(jq -Rn --arg c "$content_3m" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "3MON trends report is empty, skipping Discord notification."
+          fi # ★ここまで追加・置き換え★
       
       - name: Commit Summary and Database Changes
         run: |
