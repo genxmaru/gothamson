@@ -1283,5 +1283,33 @@
             "Exploit"
         ],
         "source": "CryptoNews"
+    },
+    "https://cointelegraph.com/news/bitcoin-stalls-at-110k-but-institutional-investors-continue-gobbling-up-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-26T21:18:17.873231+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Custody",
+            "Institutional",
+            "ETF",
+            "Derivatives",
+            "Futures",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/elon-musk-confirms-x-money-payment-service-will-launch-in-limited-beta/": {
+        "last_processed": "2025-05-26T21:18:17.873231+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322128/quantum-computers-break-bitcoin-20-times-easier-google": {
+        "last_processed": "2025-05-26T21:18:17.873231+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
