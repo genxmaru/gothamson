@@ -1,115 +1,123 @@
 import json
 from datetime import datetime, timedelta, timezone
-from collections import Counter
 import os
-import db_manager # db_manager.pyをインポート
+import sqlite3
 
-# --- 設定ファイルのパス ---
-KEYWORDS_CONFIG_PATH = "config/keywords.json"
+# ログファイルとDBファイルのパス
+HOURLY_KEYWORD_COUNTS_LOG = os.path.join(os.path.dirname(__file__), 'data', 'hourly_keyword_counts.jsonl')
+KEYWORD_TRENDS_DB = os.path.join(os.path.dirname(__file__), 'data', 'keyword_trends.db')
 
-# --- データファイルのパス ---
-HOURLY_LOG_PATH = "data/hourly_keyword_counts.jsonl"
+def get_utc_now():
+    """現在のUTC時刻を取得する"""
+    return datetime.now(timezone.utc)
 
-# --- Discord通知を生成する関数をインポート (後で作成) ---
-# from notification_helper import generate_discord_embed_payload
+def calculate_time_ranges(now):
+    """トレンド集計期間を計算する"""
+    return {
+        "24h": now - timedelta(hours=24),
+        "1m": now - timedelta(days=30),  # 約1ヶ月
+        "3m": now - timedelta(days=90)   # 約3ヶ月
+    }
 
-def load_config(filepath):
-    """指定されたJSONファイルを読み込む"""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)
+def load_hourly_keyword_counts(since_timestamp):
+    """指定されたタイムスタンプ以降の hourly_keyword_counts をロードする"""
+    all_hourly_counts = []
+    if not os.path.exists(HOURLY_KEYWORD_COUNTS_LOG):
+        return all_hourly_counts
 
-def load_hourly_logs(start_time_utc):
-    """指定された開始時刻以降の時間ごとのキーワードログを読み込む"""
-    logs = []
-    if not os.path.exists(HOURLY_LOG_PATH):
-        return logs
-
-    with open(HOURLY_LOG_PATH, 'r', encoding='utf-8') as f:
+    with open(HOURLY_KEYWORD_COUNTS_LOG, 'r', encoding='utf-8') as f:
         for line in f:
             try:
                 entry = json.loads(line)
-                log_timestamp = datetime.fromisoformat(entry['timestamp']).astimezone(timezone.utc)
-                if log_timestamp >= start_time_utc:
-                    logs.append(entry)
+                entry_timestamp = datetime.fromisoformat(entry['timestamp'])
+                if entry_timestamp >= since_timestamp:
+                    all_hourly_counts.append(entry)
             except json.JSONDecodeError:
-                continue # 不正なJSON行はスキップ
-    return logs
+                continue # 不正な行はスキップ
+    return all_hourly_counts
 
-def aggregate_keyword_counts(logs):
-    """読み込んだログからキーワードの合計出現回数を集計する"""
-    total_counts = Counter()
-    for log_entry in logs:
-        if 'keyword_counts' in log_entry:
-            for keyword, count in log_entry['keyword_counts'].items():
-                total_counts[keyword] += count
-    return total_counts
-
-def get_top_keywords_text(aggregated_counts, num_top=10):
-    """集計されたキーワードからトップNを整形して返す"""
-    if not aggregated_counts:
-        return "該当期間のキーワードはありません。"
-
-    lines = []
-    for keyword, count in aggregated_counts.most_common(num_top):
-        lines.append(f"- {keyword}: {count}件")
-    return "\n".join(lines)
-
-def get_trend_summary(period_hours, keywords_list):
+def aggregate_trends(hourly_counts_data, time_ranges):
     """
-    指定された期間のキーワード集計を行い、データベースに保存し、通知テキストを生成する。
+    時間範囲とソース別にキーワードトレンドを集計する
+    戻り値の構造:
+    {
+        "24h": {
+            "Total": {"Keyword1": Count, ...},
+            "Source1": {"Keyword1": Count, ...},
+            "Source2": {"Keyword1": Count, ...},
+            ...
+        },
+        "1m": { ... },
+        "3m": { ... }
+    }
     """
-    now_utc = datetime.now(timezone.utc)
-    start_time_utc = now_utc - timedelta(hours=period_hours)
-    period_type_str = ""
-    if period_hours == 24:
-        period_type_str = "daily"
-    elif period_hours == 24 * 7:
-        period_type_str = "weekly"
-    elif period_hours == 24 * 30: # 約1ヶ月
-        period_type_str = "monthly"
-    else:
-        period_type_str = f"{period_hours}h"
+    aggregated_data = {period: {"Total": {}} for period in time_ranges}
 
-    print(f"Aggregating {period_type_str} trends from {start_time_utc} to {now_utc}...")
+    for entry in hourly_counts_data:
+        entry_timestamp = datetime.fromisoformat(entry['timestamp'])
+        
+        for period, start_time in time_ranges.items():
+            if entry_timestamp >= start_time:
+                # 全体でのカウントを更新
+                for source_name, source_counts in entry.get('sources', {}).items():
+                    for keyword, count in source_counts.items():
+                        aggregated_data[period]["Total"][keyword] = \
+                            aggregated_data[period]["Total"].get(keyword, 0) + count
+                        
+                        # ソース別のカウントを更新
+                        if source_name not in aggregated_data[period]:
+                            aggregated_data[period][source_name] = {}
+                        aggregated_data[period][source_name][keyword] = \
+                            aggregated_data[period][source_name].get(keyword, 0) + count
+    
+    # 各期間で上位N件を抽出（必要であれば）
+    for period in aggregated_data:
+        for source_or_total in aggregated_data[period]:
+            sorted_keywords = sorted(
+                aggregated_data[period][source_or_total].items(), 
+                key=lambda item: item[1], 
+                reverse=True
+            )
+            # ここでは上位10件に制限
+            aggregated_data[period][source_or_total] = dict(sorted_keywords[:10])
 
-    hourly_logs = load_hourly_logs(start_time_utc)
-    aggregated_counts = aggregate_keyword_counts(hourly_logs)
+    return aggregated_data
 
-    # データベースに保存
-    db_manager.insert_keyword_counts(now_utc.isoformat(), period_type_str, aggregated_counts)
-    print(f"Saved {period_type_str} counts to DB.")
+def save_daily_trends_to_db(trends_data, current_time):
+    """日次トレンドデータをSQLiteデータベースに保存する"""
+    conn = None
+    try:
+        conn = sqlite3.connect(KEYWORD_TRENDS_DB)
+        cursor = conn.cursor()
 
-    # Discord通知用のテキストを生成
-    title_prefix = {
-        "daily": "過去24時間のトレンド",
-        "weekly": "過去1週間のトレンド",
-        "monthly": "過去1ヶ月のトレンド"
-    }.get(period_type_str, f"過去{period_hours}時間のトレンド")
+        # テーブル作成（存在しない場合のみ）
+        # trend_type: '24h', '1m', '3m'
+        # source_name: ニュースサイト名 ('Total'を含む)
+        # keyword: キーワード
+        # count: 出現回数
+        # date: 集計日 (YYYY-MM-DD)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS daily_trends (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                trend_type TEXT NOT NULL,
+                source_name TEXT NOT NULL,
+                keyword TEXT NOT NULL,
+                count INTEGER NOT NULL,
+                date TEXT NOT NULL,
+                UNIQUE(trend_type, source_name, keyword, date) ON CONFLICT REPLACE
+            )
+        ''')
+        conn.commit()
 
-    summary_text = f"### {title_prefix}\n"
-    summary_text += get_top_keywords_text(aggregated_counts, num_top=10) # トップ10キーワードを表示
-
-    return summary_text
-
-if __name__ == '__main__':
-    # データベースの初期化を確認（既に存在すればスキップされる）
-    db_manager.init_db()
-
-    # 各期間の集計と通知テキスト生成
-    # (ワークフローのトリガーに合わせて実行する期間を決定)
-
-    # 例: 手動実行時や毎日実行時に日次レポートを生成
-    daily_summary = get_trend_summary(24, load_config(KEYWORDS_CONFIG_PATH))
-    print("\n" + daily_summary)
-
-    # 例: 手動実行時や毎週実行時に週次レポートを生成
-    # weekly_summary = get_trend_summary(24 * 7, load_config(KEYWORDS_CONFIG_PATH))
-    # print("\n" + weekly_summary)
-
-    # 例: 手動実行時や毎月実行時に月次レポートを生成
-    # monthly_summary = get_trend_summary(24 * 30, load_config(KEYWORDS_CONFIG_PATH))
-    # print("\n" + monthly_summary)
-
-    # --- Discord通知の実行は、workflow_dispatchまたはcronジョブに紐付けて行われます ---
-    # 実際には、このスクリプトが生成したテキストをワークフローのCurlコマンドで送信します。
-    # generate_discord_embed_payload関数はnotification_helper.pyで定義し、ここでインポートして使用します。
+        # データを挿入
+        for trend_type, periods_data in trends_data.items():
+            for source_name, keywords_counts in periods_data.items():
+                for keyword, count in keywords_counts.items():
+                    cursor.execute('''
+                        INSERT INTO daily_trends (trend_type, source_name, keyword, count, date)
+                        VALUES (?, ?, ?, ?, ?)
+                    ''', (trend_type, source_name, keyword, count, current_time.strftime('%Y-%m-%d')))
+        conn.commit()
+        print("Saved daily counts to DB.")
+    except sqlite3.Error as e:
+        print(f
