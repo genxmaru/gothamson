@@ -160,6 +160,95 @@ jobs:
           else
             echo "3MON trends report is empty, skipping Discord notification."
           fi # ★ここまで追加・置き換え★
+
+          - name: Notify Discord 3MON Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---3MON')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }} # 3MON用Webhook
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          # 3MONトレンド部分を抽出
+          # 最終セクションなので、最後のSPLITマーカーからEOFまで
+          content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
+
+          if [ $(echo -n "$content_3m" | wc -c) -gt 1990 ]; then
+            echo "Warning: 3MON report content exceeds 2000 characters. Trimming..."
+            content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_3m" ]; then # 内容が空でない場合のみ送信
+            payload=$(jq -Rn --arg c "$content_3m" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "3MON trends report is empty, skipping Discord notification."
+          fi
+      # ★ここから新しいワードクラウド関連のステップを追加★
+      - name: Generate Word Clouds
+        run: |
+          cd "${{ github.workspace }}"
+          source .venv/bin/activate
+          # ワードクラウドの出力ディレクトリを作成
+          mkdir -p data/wordclouds
+          PYTHONPATH="${{ github.workspace }}" python generate_wordclouds.py
+      
+      - name: Commit Word Clouds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/wordclouds/*.png
+          git commit -m "chore: add generated word cloud images" || echo "No new word cloud images to commit"
+          git push origin main
+      
+      - name: Get Word Cloud URLs and Notify Discord
+        if: success()
+        run: |
+          # GitHubにプッシュされた画像のURLを構築
+          # リポジトリ名とブランチ名を取得
+          REPO_NAME="${{ github.repository }}"
+          BRANCH_NAME="${{ github.ref_name }}"
+          
+          # wordcloudsディレクトリ内のすべてのPNG画像を検索
+          IMAGE_PATHS=$(find data/wordclouds -name "*.png")
+          
+          # 各画像のDiscord通知メッセージを構築
+          DISCORD_MESSAGE=""
+          for IMAGE_PATH in $IMAGE_PATHS; do
+            IMAGE_BASENAME=$(basename "$IMAGE_PATH")
+            # GitHub rawコンテンツのURLを構築
+            IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
+            # ファイル名を整形してタイトルにする（例: wordcloud_24h_total_20240527.png -> 24時間トレンド 全体 20240527）
+            TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
+            
+            DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
+            DISCORD_MESSAGE+="$IMAGE_URL\n\n"
+          done
+          
+          # Discordメッセージの文字数制限 (2000文字) を考慮し、必要に応じてトリミング
+          if [ $(echo -n "$DISCORD_MESSAGE" | wc -c) -gt 1990 ]; then
+            echo "Warning: Discord image report content exceeds 2000 characters. Trimming..."
+            DISCORD_MESSAGE=$(echo "$DISCORD_MESSAGE" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$DISCORD_MESSAGE" ]; then
+            # Discord Webhook URLは、この通知専用のものを定義するか、既存のものを再利用
+            # ここでは新しいシークレット DISCORD_WEBHOOK_URL_WORDCLOUDS を推奨
+            payload=$(jq -Rn --arg c "$DISCORD_MESSAGE" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}" # 新しいWebhook URL
+          else
+            echo "No word cloud images generated, skipping Discord notification."
+          fi
+      # ★ここまで新しいワードクラウド関連のステップを追加★
+      - name: Commit Summary and Database Changes # ★これは元々あったステップなので、変更なしでこの位置にくる★
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/keyword_trends.db
+          git commit -m "chore: update daily keyword trends DB" || echo "No changes to commit"
+          git push origin main
       
       - name: Commit Summary and Database Changes
         run: |
