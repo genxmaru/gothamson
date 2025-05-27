@@ -1598,5 +1598,74 @@
             "CBDC"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/france-arrests-suspects-linked-crypto-kidnappings-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Security",
+            "Wallet"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/paris-based-blockchain-group-plans-72m-bitcoin-purchase-after-bond-sale/": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Exchange",
+            "Treasury",
+            "Institutional",
+            "Venture Capital",
+            "Fund",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/exclusives/everyone-is-a-target-big-threat-overshadows-bitcoin-conference/": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security",
+            "Private Key",
+            "Wallet",
+            "Cold Storage",
+            "Custody",
+            "Cross-chain"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/alpaca-finance-shuts-down-after-4-years/": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "DeFi",
+            "Exchange",
+            "Yield Farming",
+            "Liquidity",
+            "Stablecoin",
+            "Decentralized",
+            "Governance",
+            "Venture Capital",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/sam-bankman-fried-reportedly-could-be-released-four-years-early/": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fund"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322228/jupiter-price-surges-amid-expansion-bitcoin-tailwinds": {
+        "last_processed": "2025-05-27T07:17:10.826996+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana"
+        ],
+        "source": "Decrypt"
     }
 }
