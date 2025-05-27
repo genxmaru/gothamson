@@ -2397,5 +2397,72 @@
             "Cryptocurrency"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/explained/93-of-all-bitcoin-is-already-mined-heres-what-that-means?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Liquidity",
+            "Security",
+            "Halving",
+            "Consensus"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ethereum-flashes-altseason-signal-eth-price-4-1k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Altcoin",
+            "Halving",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/sharplink-deal-consensys-pipe-stock-468/": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Regulation",
+            "Compliance",
+            "Decentralized",
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/trump-media-secures-2-5b-to-build-bitcoin-treasury-with-institutional-firepower/": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/blackrocks-updated-bitcoin-etf-prospectus-reveals-hidden-danger-quantum-hack-risk/": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/videos/interviews/nkKV8lFW/crypto-rally-stalls-btc-vegas-today-circle-files-for-ipo": {
+        "last_processed": "2025-05-27T16:21:43.237152+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Mining",
+            "DApp",
+            "Security",
+            "KYC",
+            "Options"
+        ],
+        "source": "Decrypt"
     }
 }
