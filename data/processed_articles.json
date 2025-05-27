@@ -2464,5 +2464,83 @@
             "Options"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/bitstamp-rolls-out-staking-services-to-uk-customers/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Ethereum",
+            "Staking",
+            "Regulation",
+            "KYC",
+            "AML",
+            "Custody"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/blockchain-com-launches-african-push-in-nigeria-ghana-is-africa-cryptos-next-frontier/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Compliance",
+            "Decentralized",
+            "Wallet",
+            "Venture Capital",
+            "Virtual Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/chatgpt-predicts-the-price-of-solana-xrp-and-dogecoin-by-end-of-2025/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "DeFi",
+            "Cryptocurrency",
+            "Staking",
+            "Smart Contract",
+            "Layer 2",
+            "Regulation",
+            "Decentralized",
+            "Institutional",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/luxembourg-labels-crypto-firms-high-risk-for-money-laundering-in-2025-risk-report/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Regulation",
+            "Compliance",
+            "Decentralized",
+            "AML",
+            "Custody",
+            "Digital Asset",
+            "Virtual Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-coin-price-prediction-post-dinner-silence-has-traders-on-edge-is-something-brewing/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Altcoin",
+            "Tokenomics"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/saylor-slams-proof-of-reserves-its-like-publishing-your-kids-bank-accounts/": {
+        "last_processed": "2025-05-27T17:15:26.293172+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
