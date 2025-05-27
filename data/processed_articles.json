@@ -1477,5 +1477,64 @@
             "Digital Asset"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/migos-instagram-hacked-apparent-blackmail-on-solana-co-founder?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T05:17:12.152166+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Blockchain",
+            "NFT",
+            "Hacker"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/michael-saylor-says-proof-of-reserves-bad-idea?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T05:17:12.152166+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Exchange",
+            "Mining",
+            "Security",
+            "Wallet",
+            "Audit",
+            "Institutional",
+            "Retail",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/meme-coins-represent-market-for-attention-sygnum-bank-exec/": {
+        "last_processed": "2025-05-27T05:17:12.152166+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Cryptocurrency",
+            "Security",
+            "Regulation",
+            "Governance",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/speculation-grows-over-trump-medias-3-billion-crypto-ambition/": {
+        "last_processed": "2025-05-27T05:17:12.152166+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322221/pakistan-world-liberty-financial-advisor-government-role-crypto": {
+        "last_processed": "2025-05-27T05:17:12.152166+00:00",
+        "keywords": [
+            "Mining"
+        ],
+        "source": "Decrypt"
     }
 }
