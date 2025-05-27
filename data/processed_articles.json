@@ -1425,5 +1425,34 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/france-blockchain-group-buy-590-bitcoin-bond-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T03:09:07.188270+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Treasury",
+            "Venture Capital",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/another-suspect-turn-into-cops-new-york-crypto-case-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T03:09:07.188270+00:00",
+        "keywords": [
+            "AI",
+            "Wallet",
+            "Custody"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/de-dollarization-deepens-as-sco-nations-target-dollar-free-trade/": {
+        "last_processed": "2025-05-27T03:09:07.188270+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
