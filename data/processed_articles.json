@@ -2542,5 +2542,46 @@
             "Security"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/blackrock-portfolio-ibit-etf-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T18:22:55.247946+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin",
+            "Institutional",
+            "Retail",
+            "Fund",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-profit-taking-lingers-but-rally-to-115k-will-liquidate-7b-shorts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T18:22:55.247946+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Treasury",
+            "Leverage",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/wall-street-firm-cantor-begins-bitcoin-lending-operations/": {
+        "last_processed": "2025-05-27T18:22:55.247946+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322274/cantor-2-billion-bitcoin-lending-first-transactions": {
+        "last_processed": "2025-05-27T18:22:55.247946+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
