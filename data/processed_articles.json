@@ -2583,5 +2583,67 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/trump-media-group-tmtg-2b-btc-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T19:13:14.000436+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Cryptocurrency",
+            "Fiat",
+            "Treasury",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/strive-raises-750m-alpha-generating-bitcoin-buy-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T19:13:14.000436+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Treasury",
+            "Fund",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/solaxy-presale-41m-final-20-days-whales-100x/": {
+        "last_processed": "2025-05-27T19:13:14.000436+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Staking",
+            "Security",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Scalability",
+            "RWA",
+            "TradFi",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-payments-save-steak-n-shake-50-in-fees-credit-cards-cant-keep-up/": {
+        "last_processed": "2025-05-27T19:13:14.000436+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322297/publicly-traded-sharplink-raises-425m-ethereum-treasury": {
+        "last_processed": "2025-05-27T19:13:14.000436+00:00",
+        "keywords": [
+            "Ethereum",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
