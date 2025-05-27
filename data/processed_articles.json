@@ -1357,5 +1357,42 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-btc-holds-109k-amid-etf-inflows-and-macro-shifts/": {
+        "last_processed": "2025-05-27T00:46:06.330876+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Staking",
+            "Liquidity",
+            "Treasury",
+            "Retail",
+            "Fund",
+            "ETF",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/peter-brandt-ignites-xrp-or-sol-clash-with-bold-100k-trading-scenario/": {
+        "last_processed": "2025-05-27T00:46:06.330876+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Altcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322195/first-humanoid-boxing-match-china": {
+        "last_processed": "2025-05-27T00:46:06.330876+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322192/project-send-bitcoin-without-internet-access": {
+        "last_processed": "2025-05-27T00:46:06.330876+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
