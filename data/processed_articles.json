@@ -1818,5 +1818,144 @@
             "Retail"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/uk-outpaces-global-crypto-ownership-growth-in-2025-says-gemini?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-shows-signs-of-easing-momentum-but-traders-see-150k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Institutional",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/luxembourg-crypto-risk-vasps-money-laundering-2025-nra?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Compliance",
+            "Stablecoin",
+            "Derivatives",
+            "Virtual Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/metaplanet-bitcoin-premium-600k-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Treasury",
+            "Retail",
+            "Fund",
+            "Leverage"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/is-fartcoin-the-new-king-of-meme-coins-while-trump-tanks-fart-just-keeps-rising-fartcoin-price-prediction/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Solana",
+            "AI",
+            "DeFi",
+            "Decentralized",
+            "Centralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/french-police-arrest-over-12-in-connection-to-crypto-kidnapping-in-paris-report/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/kraken-proof-of-reserves-march-2025/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Security",
+            "Centralized",
+            "Audit",
+            "Custody",
+            "Institutional",
+            "Retail",
+            "Derivatives",
+            "Futures",
+            "Margin Trading"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/margex-20-percent-deposit-bonus-offer/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity",
+            "Wallet",
+            "KYC",
+            "Derivatives",
+            "Options",
+            "Margin Trading",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/btc-holds-steady-near-110k-as-traders-brace-for-bitcoin-conference-headlines-qcp/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "ETF",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/former-cftc-chairman-crypto-dad-joins-sygnum-bank/": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Futures",
+            "Leverage"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322233/bank-of-korea-stablecoins-private-sector": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322231/meme-coins-global-wave-new-crypto-investors-gemini": {
+        "last_processed": "2025-05-27T11:14:41.143232+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
