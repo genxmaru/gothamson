@@ -2645,5 +2645,114 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-held-up-by-corporate-adoption-and-inflation-hedge-narratives?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Institutional",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/sol-strategies-1b-financing-flexibility-solana-growth/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Staking",
+            "Tokenization",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/solana-price-next-leg-up-analyst-thinks-420-is-just-the-start/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Liquidity",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/russian-national-arrested-over-730k-seoul-crypto-ambush-two-suspects-still-at-large/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Custody",
+            "Peer-to-Peer"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/is-a-massive-xrp-move-coming-derivatives-say-yes-charts-say-any-minute-now-xrp-price-prediction/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Liquidity",
+            "Wallet",
+            "Derivatives",
+            "Futures",
+            "Airdrop"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/will-pi-coin-break-down-further-bearish-flag-forms-but-smart-traders-are-watching-this-pi-price-prediction/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "AI",
+            "Exchange",
+            "Fund"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/crypto-price-prediction-today-27-may-pepe-pi-coin-xrp-mind/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Staking",
+            "Liquidity",
+            "Layer 2",
+            "Security",
+            "Decentralized",
+            "Institutional",
+            "Retail",
+            "Scalability",
+            "Digital Asset",
+            "Cross-chain"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/sharplink-gaming-secures-425-million-to-launch-ethereum-treasury-strategy/": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Treasury"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322300/strive-raises-750-million-bitcoin-treasury-purchases": {
+        "last_processed": "2025-05-27T20:18:56.756969+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
