@@ -1667,5 +1667,59 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/thailand-tourists-crypto-credit-cards-regulatory-reform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T08:23:02.884675+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "Tokenization",
+            "TradFi",
+            "Digital Asset",
+            "P2P"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/crypto-bank-sygnum-brings-on-ex-cftc-chief-to-steer-regulatory-efforts/": {
+        "last_processed": "2025-05-27T08:23:02.884675+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Regulation",
+            "Stablecoin",
+            "Treasury",
+            "Institutional",
+            "Venture Capital",
+            "Futures",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/thailand-regulator-issues-clear-rules-for-g-tokens-issuance/": {
+        "last_processed": "2025-05-27T08:23:02.884675+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Security",
+            "Custody",
+            "Retail",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/former-imf-bitcoin-dollar-role-shadow-economy/": {
+        "last_processed": "2025-05-27T08:23:02.884675+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
