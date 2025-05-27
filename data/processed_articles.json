@@ -2146,5 +2146,59 @@
             "Ethereum"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/how-to-research-altcoins-using-chatgpt-and-grok?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T13:30:01.243878+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Staking",
+            "Security",
+            "Decentralized",
+            "Tokenomics",
+            "Scalability",
+            "Throughput",
+            "Consensus"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/is-dogecoin-about-to-explode-225-chart-signals-a-major-move-incoming/": {
+        "last_processed": "2025-05-27T13:30:01.243878+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Altcoin",
+            "Wallet",
+            "Custody",
+            "Retail",
+            "ETF",
+            "Derivatives"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitget-expands-into-real-world-assets-with-bgusd-offering-daily-yields-and-high-liquidity/": {
+        "last_processed": "2025-05-27T13:30:01.243878+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/hashpower-hot-zones-north-america-eurasia-and-latin-america-lead-bitcoins-hashrate-race/": {
+        "last_processed": "2025-05-27T13:30:01.243878+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
