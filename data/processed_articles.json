@@ -2874,5 +2874,44 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ethereum-price-target-shifts-to-3k-after-sharplink-adopts-eth-treasury-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T23:15:50.459090+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Altcoin",
+            "DApp",
+            "Decentralized",
+            "Treasury",
+            "Futures",
+            "Leverage"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/third-suspect-arrested-in-nyc-crypto-torture-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T23:15:50.459090+00:00",
+        "keywords": [
+            "Security",
+            "Custody",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/2025-tipping-point-bitcoin-to-attract-massive-institutional-capital-bitwise-executive-predicts/": {
+        "last_processed": "2025-05-27T23:15:50.459090+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322343/robinhood-ceo-predicts-ai-companies-bitcoin-satoshi": {
+        "last_processed": "2025-05-27T23:15:50.459090+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
