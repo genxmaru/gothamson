@@ -2200,5 +2200,68 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/how-to-buy-a-home-with-a-crypto-backed-loan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T14:17:03.223086+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/solana-a-memecoin-one-trick-pony-standard-chartered?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T14:17:03.223086+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Exchange",
+            "Smart Contract",
+            "Security",
+            "Decentralized",
+            "Scalability",
+            "Throughput",
+            "Consensus"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/filecoin-foundation-and-ava-labs-launch-native-cross-chain-data-bridge/": {
+        "last_processed": "2025-05-27T14:17:03.223086+00:00",
+        "keywords": [
+            "Blockchain",
+            "Smart Contract",
+            "Stablecoin",
+            "Decentralized",
+            "KYC",
+            "Governance",
+            "Audit",
+            "Fund",
+            "Leverage",
+            "Scalability",
+            "Throughput",
+            "Consensus",
+            "RWA",
+            "Digital Asset",
+            "Peer-to-Peer",
+            "EVM",
+            "Bridge",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/major-banks-underwrite-circles-ipo-as-company-prepares-for-nyse-debut/": {
+        "last_processed": "2025-05-27T14:17:03.223086+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322251/solana-labubu-meme-coin-viral-toy-sales-halted": {
+        "last_processed": "2025-05-27T14:17:03.223086+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
     }
 }
