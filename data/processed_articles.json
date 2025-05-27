@@ -1394,5 +1394,36 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitlayer-secures-40-of-bitcoin-s-hashrate-to-bring-smart-contracts-to-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T01:19:48.381666+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Web3",
+            "DeFi",
+            "Mining",
+            "Smart Contract",
+            "Decentralized",
+            "Latency",
+            "Consensus",
+            "Bridge"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/binance-square-turns-on-live-trading-new-era-of-stream-to-trade-begins/": {
+        "last_processed": "2025-05-27T01:19:48.381666+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322197/civitai-crypto-credit-card-processor-ban-ai-explicit-content": {
+        "last_processed": "2025-05-27T01:19:48.381666+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
