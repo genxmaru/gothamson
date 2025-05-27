@@ -2801,5 +2801,78 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/btc-reserve-requires-congressional-legislation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Mining",
+            "Regulation",
+            "Treasury",
+            "Fund",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/president-trump-supports-bitcoin-bill-senator-lummis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Regulation",
+            "Stablecoin",
+            "Treasury",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/selling-bitcoin-like-playing-bad-house-rate-casino-adam-back?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Retail",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/christy-romero-big-swings-regulation-threaten-markets/": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Regulation",
+            "Futures"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/lyn-ulbricht-launches-mothers-against-cruel-sentencing-at-bitcoin-2025-event/": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322275/solana-lag-ethereum-network-solves-scaling-issues-standard-chartered": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Throughput"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322327/crypto-fashion-label-9dcc-shutting-down": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322311/harvard-faceage-ai-links-cancer-photos": {
+        "last_processed": "2025-05-27T22:16:02.156047+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
