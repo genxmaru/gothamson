@@ -2754,5 +2754,52 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/maple-finance-falconx-secure-bitcoin-backed-loans-from-cantor-fitzgerald-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T21:16:10.965259+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity",
+            "Stablecoin",
+            "Treasury",
+            "Institutional",
+            "Leverage",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/crypto-kidnapping-second-suspect-bitcoin-case/": {
+        "last_processed": "2025-05-27T21:16:10.965259+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Security",
+            "Custody",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/metamask-integrates-solana-for-seamless-multi-chain-token-management/": {
+        "last_processed": "2025-05-27T21:16:10.965259+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Wallet",
+            "Custody",
+            "EVM"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322310/vegas-vibes-all-time-high-bitcoin-2025-photos": {
+        "last_processed": "2025-05-27T21:16:10.965259+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
