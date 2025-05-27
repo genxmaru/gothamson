@@ -1536,5 +1536,67 @@
             "Mining"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ai-powered-robots-fight-china-boxing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Blockchain",
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/former-cftc-chair-christopher-giancarlo-crypto-bank-sygnum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "Retail",
+            "Derivatives",
+            "Futures",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-long-term-holders-capitalizing-drop-109000?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Institutional",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/south-korea-plans-to-integrate-deposit-tokens-on-blockchain/": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Stablecoin",
+            "Digital Asset",
+            "Virtual Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/solana-co-founders-private-data-leaked-via-migos-instagram/": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "KYC"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/latam-insights-encore-colombias-toughest-battle-introducing-a-cbdc/": {
+        "last_processed": "2025-05-27T06:24:37.306088+00:00",
+        "keywords": [
+            "Bitcoin",
+            "CBDC"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
