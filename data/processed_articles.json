@@ -2263,5 +2263,139 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/zkps-can-prove-identity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Blockchain",
+            "AI",
+            "Security",
+            "Decentralized",
+            "Centralized",
+            "Scalability",
+            "Interoperability"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/is-xrp-price-going-to-crash-again?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Exchange",
+            "Institutional",
+            "Retail",
+            "Fund",
+            "Derivatives",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sharplink-ethereum-treasury-joseph-lubin-board-chair?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Stablecoin",
+            "Treasury",
+            "Venture Capital"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/what-is-a-cryptocurrency-mixer-and-how-does-it-work?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Smart Contract",
+            "Security",
+            "Compliance",
+            "Decentralized",
+            "Centralized",
+            "Wallet",
+            "KYC",
+            "AML",
+            "Custody"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-2024-conference-sparked-30-btc-price-crash-bulls-escape-this-year?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Liquidity",
+            "Futures",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/russian-arrested-south-korea-attempted-crypto-robbery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Ethereum",
+            "Exchange",
+            "Security",
+            "Stablecoin",
+            "TradFi",
+            "Peer-to-Peer"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/mind-of-pepe-presale-nears-11m-95-hours-left/": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "AI",
+            "Exchange",
+            "Liquidity",
+            "Smart Contract",
+            "Wallet",
+            "Retail"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-media-2-5b-bitcoin-treasury-deal/": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Wallet",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "ETF",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://decrypt.co/322254/stablecoin-giant-circle-files-ipo-nyse-6-7-billion": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322261/thailand-crypto-linked-credit-cards": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Digital Asset"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322255/french-police-arrest-12-suspects-in-crypto-kidnapping-investigations": {
+        "last_processed": "2025-05-27T15:18:31.120148+00:00",
+        "keywords": [
+            "Cryptocurrency"
+        ],
+        "source": "Decrypt"
     }
 }
