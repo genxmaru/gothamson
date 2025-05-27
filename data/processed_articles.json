@@ -1454,5 +1454,28 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/meta-ai-boss-ai-lacks-intelligent-behavior-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T04:23:26.074124+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/india-crypto-industry-seeks-relief-from-30-pct-tax-burden/": {
+        "last_processed": "2025-05-27T04:23:26.074124+00:00",
+        "keywords": [
+            "Web3",
+            "Regulation"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/conor-mcgregor-sparks-decentralization-dogfight-between-bitcoiners-and-multi-chain-believers/": {
+        "last_processed": "2025-05-27T04:23:26.074124+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
