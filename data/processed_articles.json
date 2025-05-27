@@ -1957,5 +1957,194 @@
         "last_processed": "2025-05-27T11:14:41.143232+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/marathon-record-bitcoin-mining-revenue-752m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Altcoin",
+            "Mining",
+            "Halving",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/starkware-unveils-s-two-client-side-zk-prover?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Decentralized",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/taurus-parafin-partnership-crypto-infrastructure-institutions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Stablecoin",
+            "Wallet",
+            "Governance",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "Retail",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/circle-ipo-launch-nyse-crcl-listing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/crypto-vision-2025-philippines-shaping-future-of-web3/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "NFT",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Security",
+            "Regulation",
+            "Compliance",
+            "Decentralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-etf-inflows-hit-historic-levels-how-soon-can-btc-smash-through-150k/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Institutional",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/tether-and-zengo-wallet-join-forces-to-usher-in-a-new-era-of-self-custodial-stablecoin-security/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Security",
+            "Stablecoin",
+            "Decentralized",
+            "Private Key",
+            "Wallet",
+            "KYC",
+            "Custody",
+            "Institutional",
+            "Digital Asset",
+            "Cross-chain"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/deutsche-bank-and-accenture-backed-teams-taurus-and-parfin-work-to-fuel-institutional-adoption-in-eu-and-latam/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Liquidity",
+            "Security",
+            "Compliance",
+            "CBDC",
+            "Wallet",
+            "Governance",
+            "Custody",
+            "Institutional",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/usdc-issuer-circle-targets-up-to-624m-in-nyse-ipo-ticker-to-be-crcl/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Exchange",
+            "Stablecoin",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/why-is-crypto-down-today-may-27-2025/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Decentralized",
+            "Wallet",
+            "Treasury",
+            "Retail",
+            "Fund",
+            "ETF",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trader-nets-5-6m-in-3-days-by-countertrading-james-wynns-positions/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Exchange",
+            "Decentralized",
+            "Wallet",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/rumble-cloud-enters-strategic-collaboration-with-tron/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "DAO",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/aeon-launches-ai-payment-to-power-the-future-of-autonomous-crypto-driven-real-world-commerce/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency",
+            "Retail"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ethereum-leader-vitalik-buterin-reflects-on-ethereums-role-as-cash/": {
+        "last_processed": "2025-05-27T12:35:39.678064+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
