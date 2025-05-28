@@ -3582,5 +3582,103 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/nft-sales-rebound-may-2025-cryptoslam?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "NFT",
+            "RWA"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sui-price-chart-hints-2x-rally-nasdaq-etf-filing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Exchange",
+            "Staking",
+            "Decentralized",
+            "Exploit",
+            "Fund",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/elon-musk-xai-300-million-telegram-deal-grok-integration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/former-chainlink-two-sigma-execs-moirai-uncover-crypto-gems?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Stablecoin",
+            "Venture Capital",
+            "Fund",
+            "Tokenization"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/trader-rejects-altcoin-bear-market-fears-literally-at-the-bottom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "AI",
+            "Altcoin",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-cantor-fitzgerald-deal-marks-start-of-new-cycle-say-analysts-200k-next/": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Staking",
+            "Liquidity",
+            "Institutional",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-price-watch-momentum-cools-while-moving-averages-stay-bullish/": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/guayaquil-makes-history-with-the-first-bitcoin-mining-event-in-ecuador/": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/the-future-of-on-chain-gambling-is-accountless-and-trust-free-meet-luck-io/": {
+        "last_processed": "2025-05-28T13:30:43.606571+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Blockchain",
+            "Centralized",
+            "KYC"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
