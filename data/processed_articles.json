@@ -3497,5 +3497,90 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/xrp-price-48-jump-spot-etf-reality-draws-closer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Exchange",
+            "Institutional",
+            "Fund",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/gamestop-buys-bitcoin-4710-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/michael-saylors-strategy-slows-bitcoin-buys-as-mstr-premium-shrinks-says-k33/": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Derivatives"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/white-houses-david-sacks-hints-at-budget-neutral-path-for-u-s-bitcoin-purchases/": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Wallet",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/why-is-crypto-down-today-may-28-2025/": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Institutional",
+            "ETF",
+            "Futures",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/orange-pilled-by-censorship-trump-jr-links-free-speech-and-defi-in-vegas-speech/": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bulls-march-on-bitcoin-and-ether-etfs-add-more-than-420-million-combined/": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322372/etoro-adds-12-tokens-to-us-platform": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322390/gamestop-buys-512m-worth-of-btc-for-bitcoin-treasury": {
+        "last_processed": "2025-05-28T12:35:47.292046+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
