@@ -3222,5 +3222,19 @@
             "Bridge"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/qcp-insights-market-eyes-bitcoin-2025-conference-as-volatility-remains-elevated/": {
+        "last_processed": "2025-05-28T07:16:52.849197+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322379/asic-sues-former-blockchain-global-exec-20m-unpaid-customer-claims": {
+        "last_processed": "2025-05-28T07:16:52.849197+00:00",
+        "keywords": [
+            "Blockchain"
+        ],
+        "source": "Decrypt"
     }
 }
