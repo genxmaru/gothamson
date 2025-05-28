@@ -3393,5 +3393,109 @@
         "last_processed": "2025-05-28T10:19:15.838597+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ton-foundation-hires-visa-executive-nikola-plecas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Web3",
+            "Compliance",
+            "Stablecoin",
+            "Decentralized",
+            "On-ramp",
+            "Scalability"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/why-is-bitcoin-price-stuck?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Liquidity",
+            "Options",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/amina-bank-2024-crypto-revenue-aum-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Web3",
+            "Liquidity",
+            "Custody",
+            "Institutional",
+            "Derivatives",
+            "Futures",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/gamestop-adds-4710-bitcoins-to-treasury-amid-crypto-push/": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Web3",
+            "NFT",
+            "Exchange",
+            "Wallet",
+            "Treasury",
+            "Retail",
+            "Fund",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/sui-community-advances-cetus-recovery-plan-with-onchain-vote-after-223m-exploit/": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Exchange",
+            "Liquidity",
+            "Security",
+            "Decentralized",
+            "Wallet",
+            "Fiat",
+            "Hacker",
+            "Exploit",
+            "Audit"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/quranium-launches-the-convergence-layer/": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitstamp-launches-staking-for-ethereum-and-cardano-for-uk-customers/": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/videos/interviews/VfxSWDMZ/under-exposed-ep-27-macro-alt-szn-and-the-hype-trade": {
+        "last_processed": "2025-05-28T11:15:05.923092+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
