@@ -3680,5 +3680,65 @@
             "KYC"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/how-to-mine-bitcoin-at-home?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T14:18:09.652192+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Mining",
+            "Regulation",
+            "Halving",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "ETF",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-top-bulls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T14:18:09.652192+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Stablecoin",
+            "Fiat",
+            "Institutional",
+            "Retail"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/uk-s-fca-requests-commentary-on-stablecoin-regulation-and-crypto-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T14:18:09.652192+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency",
+            "Regulation",
+            "Stablecoin",
+            "Custody"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/xrp-price-prediction-onchain-activity-flashes-danger-big-drop-possible/": {
+        "last_processed": "2025-05-28T14:18:09.652192+00:00",
+        "keywords": [
+            "Solana",
+            "DeFi",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/gamestop-buys-4710-bitcoin-fueling-gme-shares-surge/": {
+        "last_processed": "2025-05-28T14:18:09.652192+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
