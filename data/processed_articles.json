@@ -2930,5 +2930,39 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/nasdaq-files-21-shares-sui-etf-sec-review?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T01:21:17.087500+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Decentralized",
+            "Governance",
+            "Treasury",
+            "Custody",
+            "Fund",
+            "ETF",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/binance-shares-regulatory-formula-to-ignite-crypto-mass-adoption/": {
+        "last_processed": "2025-05-28T01:21:17.087500+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322359/trumps-win-boosted-bitcoin-adoption-decades-adam-back": {
+        "last_processed": "2025-05-28T01:21:17.087500+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
