@@ -3335,5 +3335,63 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/blackrock-telegram-bond-sale-1-5b-ipo-discount?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ripple-sec-letter-crypto-not-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Security",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-whales-keep-buying-btc-price-dip-targets-include-94k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Liquidity",
+            "Leverage",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/exclusives/trader-james-wynn-lost-87-million-what-now/": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Exchange",
+            "Decentralized",
+            "Centralized",
+            "Wallet",
+            "Futures",
+            "Leverage",
+            "Liquidation"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/stolen-crypto-traced-ugandan-police-arrest-suspect-in-blockchain-educators-abduction/": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322387/vietnamese-police-arrest-gang-accused-of-394m-matrix-chain-scam": {
+        "last_processed": "2025-05-28T10:19:15.838597+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
