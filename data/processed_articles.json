@@ -3005,5 +3005,41 @@
             "Fund"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/block-inc-bitcoin-payments-square-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T04:21:45.594851+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security",
+            "Stablecoin",
+            "Wallet",
+            "Fiat",
+            "Custody",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/brics-bank-fuels-russias-de-dollarization-push-global-finance-faces-reset/": {
+        "last_processed": "2025-05-28T04:21:45.594851+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322370/ethereum-options-market-signals-cautious-optimism-open-interest-climbs": {
+        "last_processed": "2025-05-28T04:21:45.594851+00:00",
+        "keywords": [
+            "Ethereum",
+            "Options"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322367/ai-crypto-czar-david-sacks-says-us-could-buy-more-bitcoin": {
+        "last_processed": "2025-05-28T04:21:45.594851+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
