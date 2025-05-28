@@ -3932,5 +3932,55 @@
             "Centralized"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/explained/coinbase-data-breach-2025-what-was-stolen-and-what-you-need-to-know?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T17:15:16.153013+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Smart Contract",
+            "Security",
+            "Wallet",
+            "Hacker",
+            "Insurance",
+            "Fund",
+            "Bridge",
+            "Cross-chain"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/vance-declares-bidens-crypto-crackdown-is-over-champions-bitcoin-at-las-vegas-conference/": {
+        "last_processed": "2025-05-28T17:15:16.153013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/publicly-traded-bitcoin-miners-slide-as-sector-sees-broad-losses/": {
+        "last_processed": "2025-05-28T17:15:16.153013+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322462/toncoin-soars-amid-telegram-musk-xai-deal-1-5-billion-bond-sale-report": {
+        "last_processed": "2025-05-28T17:15:16.153013+00:00",
+        "keywords": [
+            "Altcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/fyJvsIEF/btc-conference-begins-fed-minutes-nvidia-today": {
+        "last_processed": "2025-05-28T17:15:16.153013+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Staking"
+        ],
+        "source": "Decrypt"
     }
 }
