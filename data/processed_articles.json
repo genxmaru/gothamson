@@ -3041,5 +3041,72 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/goldsmith-romero-cf-exodus-not-a-great-situation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Retail",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/trump-cftc-pick-quintenz-discloses-crypto-links-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Regulation",
+            "Stablecoin",
+            "Fund",
+            "Derivatives",
+            "Futures",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/steil-wants-lawmakers-restrain-adding-non-relevant-items-crypto-bills?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Regulation",
+            "Stablecoin",
+            "Institutional",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/metaplanet-issues-50m-zero-interest-bonds-fresh-bitcoin-buy/": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/france-detains-24-in-explosive-crypto-kidnapping-plots/": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322374/el-salvador-defies-imf-again-fresh-bitcoin-purchase": {
+        "last_processed": "2025-05-28T05:17:19.323352+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
