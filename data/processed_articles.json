@@ -4089,5 +4089,87 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/price-predictions-5-28-btc-eth-xrp-bnb-sol-doge-ada-sui-hype-link?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/uks-fca-seeks-public-feedback-on-new-stablecoin-and-crypto-custody-rules/": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Liquidity",
+            "Regulation",
+            "Stablecoin",
+            "Fiat",
+            "Custody"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/crypto-price-prediction-solana-xrp-sui-28-may/": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Staking",
+            "Liquidity",
+            "Smart Contract",
+            "Layer 2",
+            "Institutional",
+            "Scalability",
+            "Throughput",
+            "Digital Asset",
+            "Cross-chain"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/btc-bull-token-6-5m-presale-bitcoin-108k/": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Altcoin",
+            "Exchange",
+            "Wallet",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/defi-platform-cork-protocol-suffers-12m-exploit-markets-paused/": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "DeFi",
+            "Security",
+            "Exploit"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/nycs-eric-adams-unveils-plan-for-bitcoin-bonds-at-vegas-conference/": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322514/trump-labor-departent-retracts-guidance-crypto-retirement-plans": {
+        "last_processed": "2025-05-28T20:19:02.739674+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
