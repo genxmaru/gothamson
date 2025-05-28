@@ -3860,5 +3860,77 @@
             "AI"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/cork-protocol-hacked-contracts-paused?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Exchange",
+            "Liquidity",
+            "Smart Contract",
+            "Security",
+            "Decentralized",
+            "Exploit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/pepe-price-prediction-is-the-next-shiba-moment-here-volume-explodes-to-1-5-billion/": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Wallet",
+            "Futures"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/how-bitcoin-hyper-reinvents-btc/": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Blockchain",
+            "NFT",
+            "DeFi",
+            "DAO",
+            "Cryptocurrency",
+            "Mining",
+            "Staking",
+            "Smart Contract",
+            "Layer 2",
+            "Security",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Options",
+            "Scalability",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/us-labor-department-rescinds-biden-era-crypto-warning-for-retirement-plans/": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322421/gamestop-stock-dives-512-million-bitcoin-buy": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322398/vitalik-buterin-ethereum-sweden-norway-cashless": {
+        "last_processed": "2025-05-28T16:20:24.086905+00:00",
+        "keywords": [
+            "Ethereum",
+            "Centralized"
+        ],
+        "source": "Decrypt"
     }
 }
