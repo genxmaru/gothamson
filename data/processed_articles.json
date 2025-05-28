@@ -3236,5 +3236,56 @@
             "Blockchain"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/metaplanet-raises-50m-zero-interest-bonds-bitcoin-purchase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T08:23:03.851917+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Fiat",
+            "Treasury",
+            "Retail",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/blockchain-global-director-charged-by-asic-over-duty-breaches/": {
+        "last_processed": "2025-05-28T08:23:03.851917+00:00",
+        "keywords": [
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trumps-cftc-pick-brian-quintenz-reveals-millions-in-assets-crypto-ties/": {
+        "last_processed": "2025-05-28T08:23:03.851917+00:00",
+        "keywords": [
+            "Blockchain",
+            "Regulation",
+            "Stablecoin",
+            "Derivatives",
+            "Futures",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/htx-research-a-fresh-look-at-bitcoin-amidst-macro-changes-featuring-htxs-new-compliant-stablecoin-offerings/": {
+        "last_processed": "2025-05-28T08:23:03.851917+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Stablecoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitlayer-teams-up-with-major-bitcoin-mining-pools-to-achieve-first-bitvm-implementation/": {
+        "last_processed": "2025-05-28T08:23:03.851917+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining",
+            "Bridge"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
