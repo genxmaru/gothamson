@@ -4346,5 +4346,48 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ethereum-bulls-aim-for-2-7k-ahead-of-eth-s-2-4b-options-expiry?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T23:16:02.810857+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Altcoin",
+            "Exchange",
+            "Decentralized",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Futures",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/from-4-5b-to-20b-grayscale-bullish-on-ai-cryptos-future-cites-key-catalysts/": {
+        "last_processed": "2025-05-28T23:16:02.810857+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Halving"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322537/shots-fired-ai-browser-wars": {
+        "last_processed": "2025-05-28T23:16:02.810857+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322558/circle-freezes-58-million-usdc-solana-wallets-libra-scandal": {
+        "last_processed": "2025-05-28T23:16:02.810857+00:00",
+        "keywords": [
+            "Solana",
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
     }
 }
