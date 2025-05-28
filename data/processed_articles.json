@@ -3740,5 +3740,125 @@
             "Digital Asset"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/bitcoin-sags-below-108k-rate-cut-bets-evaporate-before-fed-minutes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Liquidity",
+            "Futures",
+            "Liquidation"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/katana-defi-chain-launches-private-mainnet-for-higher-yields?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Exchange",
+            "Liquidity",
+            "Decentralized",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-physical-infrastructure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Regulation",
+            "Decentralized",
+            "Insurance",
+            "Retail",
+            "Digital Asset",
+            "Bridge"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/elderly-crypto-investors-are-getting-scammed-teach-them-these-key-safety-tips?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Regulation",
+            "Fiat",
+            "Exploit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/snorter-token-presale-launches-next-big-meme-coin/": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "AI",
+            "Cryptocurrency",
+            "Altcoin",
+            "Exchange",
+            "Staking",
+            "Smart Contract",
+            "Security",
+            "Regulation",
+            "Wallet",
+            "Governance",
+            "Institutional",
+            "Retail",
+            "Latency",
+            "MEV",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/wlfi-usd1-restaking-kernel-dao/": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Blockchain",
+            "DeFi",
+            "DAO",
+            "Security",
+            "Stablecoin",
+            "Decentralized",
+            "Governance",
+            "Restaking"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/pi-coin-price-prediction-experts-warn-of-collapse-unless-these-3-changes-are-made/": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Altcoin",
+            "Decentralized",
+            "Wallet",
+            "KYC",
+            "Governance"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/freedom-debt-relief-a-trusted-solution-to-regain-financial-control/": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/telegram-teams-with-elon-musk-to-bring-grok-ai-to-over-a-billion-users/": {
+        "last_processed": "2025-05-28T15:17:57.953846+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
