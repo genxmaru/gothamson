@@ -4249,5 +4249,102 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/labor-department-rescinds-biden-guidance-crypto-401k-plans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Blockchain",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange",
+            "Compliance",
+            "Treasury",
+            "Options",
+            "Tokenization"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-analyst-says-btc-price-peak-in-220k-to-330k-range-still-possible?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/trumps-approval-ratings-44-percent-vance-crypto-lawfare/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/jd-vance-blasts-gary-gensler-bitcoin-2025-conference/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-coin-price-prediction-100-incoming-or-full-collapse-the-3b-mystery-gets-deeper/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Staking",
+            "Regulation"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/fastest-l1-ever-solanas-alpenglow-upgrade-has-traders-watching-300-next-solana-price-prediction/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Solana",
+            "Cryptocurrency",
+            "Centralized",
+            "Wallet",
+            "ETF",
+            "Scalability",
+            "Latency",
+            "Consensus"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/mind-of-pepe-presale-ends-62-hours-claim-date-locked/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "AI",
+            "Staking",
+            "Liquidity",
+            "Smart Contract",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bad-idea-be-damned-arkham-maps-strategys-billion-dollar-bitcoin-hoard/": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Wallet"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322525/president-trumps-sons-victory-lap-fathers-behalf-at-btc-2025": {
+        "last_processed": "2025-05-28T22:16:06.424137+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
