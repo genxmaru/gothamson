@@ -3108,5 +3108,119 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/david-sacks-us-potentially-acquire-more-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency",
+            "Centralized",
+            "Wallet",
+            "Treasury",
+            "Hacker",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/australian-regulator-legal-action-former-blockchain-global-director?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/altcoin-season-sparks-crypto-trader-shuts-down-bear-market-fears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "AI",
+            "Altcoin",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/imf-el-salvador-efforts-stop-bitcoin-buys-120m-payments-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Compliance",
+            "Stablecoin",
+            "Wallet",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/crypto-firms-tap-capital-markets-to-fuel-bitcoin-buying-spree/": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/block-to-launch-bitcoin-payments-on-square-by-2026/": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining",
+            "Security",
+            "Decentralized",
+            "Wallet",
+            "Fiat",
+            "Custody",
+            "P2P",
+            "Peer-to-Peer"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/el-salvador-to-hold-off-bitcoin-buys-under-loan-pact-imf/": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Wallet",
+            "Treasury",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/thailand-signals-openness-to-controlled-crypto-conversion/": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322376/cetus-reveals-recovery-plan-taps-sui-bridge-loan": {
+        "last_processed": "2025-05-28T06:25:07.787415+00:00",
+        "keywords": [
+            "Exploit",
+            "Bridge"
+        ],
+        "source": "Decrypt"
     }
 }
