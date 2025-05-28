@@ -2964,5 +2964,46 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-aggressive-leg-q3-uncertain-bitfinex-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T03:11:39.894684+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/real-world-assets-revitalize-dying-nft-lending-dappradar?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T03:11:39.894684+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "NFT",
+            "Liquidity",
+            "Stablecoin",
+            "Decentralized",
+            "Leverage"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/indias-crypto-sector-rallies-for-tax-change-as-trump-spurs-market-optimism/": {
+        "last_processed": "2025-05-28T03:11:39.894684+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/750m-private-investment-fuels-strives-bid-to-become-top-bitcoin-treasury-firm/": {
+        "last_processed": "2025-05-28T03:11:39.894684+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
