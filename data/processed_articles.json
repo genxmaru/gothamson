@@ -3982,5 +3982,73 @@
             "Staking"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/conduit-raises-36m-stablecoin-fiat-cross-border-network?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Blockchain",
+            "Regulation",
+            "Stablecoin",
+            "Fiat",
+            "Custody"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/blackrock-eyes-10-stake-in-circle-ipo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/telegram-bond-sale-lures-blackrock-citadel-into-1-5b-high-yield-bet-despite-ceo-probe/": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/galxe-launches-starboard-to-help-web3-projects-reward-active-users/": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "DeFi",
+            "Liquidity",
+            "Decentralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/report-blackrock-eyes-10-stake-in-circles-ipo/": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/metaplanet-announces-issuance-of-50-million-in-ordinary-bonds-for-more-bitcoin-acquisition/": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322505/bitcoin-strategically-important-asset-us-jd-vance": {
+        "last_processed": "2025-05-28T18:22:52.279678+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
