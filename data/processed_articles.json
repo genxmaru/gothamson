@@ -4050,5 +4050,44 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/jd-vance-urges-bitcoin-community-politics?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T19:14:04.732100+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Institutional",
+            "Retail",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/blackrock-to-buy-stake-in-circle-internet-ahead-of-ipo-report/": {
+        "last_processed": "2025-05-28T19:14:04.732100+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Stablecoin",
+            "Institutional",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitmain-unveils-most-efficient-mining-rig-amid-market-shift/": {
+        "last_processed": "2025-05-28T19:14:04.732100+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322498/bitcoin-treasury-list-grows-entry-of-crypto-brokerage-k33": {
+        "last_processed": "2025-05-28T19:14:04.732100+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
