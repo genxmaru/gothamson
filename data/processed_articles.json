@@ -3287,5 +3287,53 @@
             "Bridge"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/cetus-protocol-vote-recover-frozen-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-28T09:18:33.990523+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Exchange",
+            "Security",
+            "Decentralized",
+            "Governance",
+            "Treasury",
+            "Exploit",
+            "Audit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/robinhood-ceo-vlad-tenev-sees-ai-startups-mirroring-bitcoin-solo-launch/": {
+        "last_processed": "2025-05-28T09:18:33.990523+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Compliance",
+            "Decentralized",
+            "Leverage",
+            "Peer-to-Peer"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/nft-lending-market-crashes-97-as-users-and-loan-sizes-plummet/": {
+        "last_processed": "2025-05-28T09:18:33.990523+00:00",
+        "keywords": [
+            "NFT",
+            "Liquidity",
+            "DApp",
+            "Options",
+            "Airdrop"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/jack-dorseys-block-to-roll-out-bitcoin-lightning-payments-on-square/": {
+        "last_processed": "2025-05-28T09:18:33.990523+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
