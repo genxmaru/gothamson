@@ -2913,5 +2913,22 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/crypto-exchange-bitget-debuts-yield-bearing-bgusd-backed-by-rwas/": {
+        "last_processed": "2025-05-28T00:47:12.512017+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322356/third-arrest-made-kidnapping-bitcoin-investor-new-york": {
+        "last_processed": "2025-05-28T00:47:12.512017+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
