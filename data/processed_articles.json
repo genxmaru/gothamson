@@ -4620,5 +4620,53 @@
             "Decentralized"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/crypto-lobby-group-sec-should-back-off-regulating-most-daos?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T07:17:00.194307+00:00",
+        "keywords": [
+            "Blockchain",
+            "DeFi",
+            "DAO",
+            "Exchange",
+            "Security",
+            "Decentralized",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/russia-opens-doors-to-crypto-derivatives-for-select-investors/": {
+        "last_processed": "2025-05-29T07:17:00.194307+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin",
+            "Retail",
+            "Derivatives"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/theminermag-bitcoin-mining-update-april-may-2025/": {
+        "last_processed": "2025-05-29T07:17:00.194307+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Mining",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322590/sol-strategies-1b-shelf-prospectus-solana-investment-flexibility": {
+        "last_processed": "2025-05-29T07:17:00.194307+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322588/bitcoin-wobbles-as-us-trade-court-strikes-down-trumps-tariffs": {
+        "last_processed": "2025-05-29T07:17:00.194307+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
