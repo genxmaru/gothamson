@@ -5680,5 +5680,91 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/stablecoin-payment-volume-94b-driven-b2b-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sec-dismisses-lawsuit-against-binance-filings-show?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/pepe-price-prediction-can-pepe-reach-1-cent/": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/snorter-token-beats-trojan-bot-price-raises-177k/": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Staking",
+            "Smart Contract",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Retail",
+            "MEV"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/solaxy-42m-presale-ethereum-l2-doubts/": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Exchange",
+            "Staking",
+            "Liquidity",
+            "Security",
+            "Decentralized",
+            "Centralized",
+            "Wallet",
+            "Governance",
+            "Custody",
+            "Fund",
+            "Rollup",
+            "Throughput",
+            "Latency",
+            "Bridge",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/sec-should-treat-daos-as-dispersed-groups-of-people-say-defi-education-fund-uniswap/": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "DAO",
+            "Exchange",
+            "Decentralized",
+            "Governance",
+            "Fund"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322842/arthur-hayes-ethereum-double-price-this-year": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [
+            "Ethereum"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322848/sec-agrees-drop-lawsuit-binance-cz": {
+        "last_processed": "2025-05-29T22:16:19.531862+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
