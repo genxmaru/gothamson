@@ -4472,5 +4472,54 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/crypto-vulnerable-without-cftc-authority-rostin-beh?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T04:22:17.076240+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Stablecoin",
+            "Institutional",
+            "Retail",
+            "Derivatives",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/crypto-mining-stocks-plunge-federal-reserve-tradeoffs-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T04:22:17.076240+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Mining"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/pakistan-to-set-up-bitcoin-reserve-echoing-us-crypto-strategy/": {
+        "last_processed": "2025-05-29T04:22:17.076240+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "DeFi",
+            "Mining",
+            "Regulation",
+            "Stablecoin",
+            "Decentralized",
+            "Tokenization",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/binance-issues-real-world-threat-alert-with-urgent-advice-for-crypto-holders/": {
+        "last_processed": "2025-05-29T04:22:17.076240+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
