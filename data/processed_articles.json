@@ -4552,5 +4552,73 @@
         "last_processed": "2025-05-29T05:17:51.292125+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/eric-adams-bitcoin-bond-new-york-city-end-bitlicense?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Compliance",
+            "Stablecoin",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-rally-inbound-united-states-donald-trump-tariffs-blocked-court?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Retail",
+            "Consensus"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-pivot-zone-potential-consolidation-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining",
+            "Liquidity",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/elon-musk-leaves-doge-admit-tougher-than-expected?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/tesla-shares-rise-after-elon-musk-exits-doge-role/": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "AI",
+            "Exchange"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/metaplanet-issues-21m-in-no-interest-bonds-to-increase-bitcoin-holdings/": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Institutional",
+            "Fund"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/depin-project-mawari-japans-vtuber-agencies-partner-to-xr-platform-for-fan-engagement/": {
+        "last_processed": "2025-05-29T06:25:03.999700+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
