@@ -4521,5 +4521,36 @@
             "Exchange"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/european-crypto-firm-k33-raises-for-bitcoin-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T05:17:51.292125+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/us-court-blocks-trumps-tariffs-arthur-hayes-says-buy-everything/": {
+        "last_processed": "2025-05-29T05:17:51.292125+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF",
+            "Futures"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://decrypt.co/322585/metaplanet-issues-new-bonds-bitcoin-2025-goal": {
+        "last_processed": "2025-05-29T05:17:51.292125+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322576/elon-musk-bids-adieu-doge": {
+        "last_processed": "2025-05-29T05:17:51.292125+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
