@@ -5498,5 +5498,66 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/deepseek-claims-upgraded-model-reasons-better-has-reduced-hallucination-rate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/russian-crypto-couple-kidnapped-interpol-uae-red-notice/": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bybit-mica-license-austria-eu-expansion/": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Regulation",
+            "Compliance",
+            "Liquidation",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/central-bank-of-brazil-open-to-change-proposal-establishing-controversial-stablecoin-ban/": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Custody"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322825/opensea-relaunches-platform-rewards-sea-token": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "NFT"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322771/crypto-kyc-problem-coinbase-hack-solana-founder-doxxing": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "Solana",
+            "KYC"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322796/bryan-johnson-sleep-new-alpha-better-bitcoin-trader": {
+        "last_processed": "2025-05-29T19:12:27.692183+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
