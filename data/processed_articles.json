@@ -5559,5 +5559,46 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/hidden-road-otc-crypto-swaps-us-institutions/": {
+        "last_processed": "2025-05-29T20:19:09.929796+00:00",
+        "keywords": [
+            "Exchange",
+            "Stablecoin",
+            "Decentralized",
+            "Institutional",
+            "Derivatives",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/indias-central-bank-to-introduce-features-for-digital-rupee-pilot-and-test-cross-border-payment-report/": {
+        "last_processed": "2025-05-29T20:19:09.929796+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Staking",
+            "Security",
+            "Regulation",
+            "CBDC",
+            "Retail"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/cantor-fitzgerald-boss-bitcoins-fixed-supply-makes-it-superior-to-gold-in-scarcity/": {
+        "last_processed": "2025-05-29T20:19:09.929796+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322827/blackrock-bitcoin-etf-inflows-have-already-hit-a-record-high": {
+        "last_processed": "2025-05-29T20:19:09.929796+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Decrypt"
     }
 }
