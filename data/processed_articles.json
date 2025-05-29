@@ -5766,5 +5766,69 @@
         "last_processed": "2025-05-29T22:16:19.531862+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/uk-reform-party-crypto-donations-nigel-farage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/midas-tokenized-tbill-on-algorand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/solana-price-drops-as-memecoins-fade-and-sol-unlock-concerns-emerge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Solana",
+            "Altcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/securities-regulations-more-complex-than-static-definition-of-security-sec-commissioner?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/kazakhstan-president-unveils-cryptocity-pilot-zone-here-is-what-you-need-to-know/": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Regulation",
+            "CBDC",
+            "Custody",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/standard-chartered-sees-solana-hitting-500-by-2029-despite-short-term-dip/": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322870/cantor-debut-bitcoin-gold-fund-aimed-investors-scared-crypto": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Insurance"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322869/congress-new-crypto-market-structure-bill": {
+        "last_processed": "2025-05-29T23:15:37.372354+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
