@@ -4389,5 +4389,32 @@
             "Stablecoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/solana-chart-hints-at-180-rally-to-300-if-key-technical-trend-holds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T00:47:50.275116+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Altcoin",
+            "Exchange",
+            "Treasury",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/xrp-futures-hit-regulated-markets-with-a-bang-as-tradestation-joins/": {
+        "last_processed": "2025-05-29T00:47:50.275116+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Futures",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322556/free-will-illusion-quantum-experiments": {
+        "last_processed": "2025-05-29T00:47:50.275116+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
