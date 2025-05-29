@@ -4767,5 +4767,25 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/arkham-claims-microstrategy-bitcoin-wallets-identified?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T10:19:18.615346+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Security",
+            "Wallet",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/etoro-expands-us-crypto-offerings-with-addition-of-a-dozen-new-tokens/": {
+        "last_processed": "2025-05-29T10:19:18.615346+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
