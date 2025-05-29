@@ -4668,5 +4668,73 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/metaplanet-issues-21m-bonds-after-50m-bitcoin-raise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Fund",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/norways-k33-raises-6-2m-to-join-wave-of-public-bitcoin-buyers/": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Treasury",
+            "Fund",
+            "Leverage",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/top-us-banks-discuss-crypto-expansion-initial-approach-remains-tentative-insight/": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Regulation",
+            "Stablecoin",
+            "Custody",
+            "Institutional"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/exclusives/revealed-what-it-will-take-for-bitcoin-to-hit-150000/": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Wallet",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/mbit-explores-the-future-of-gaming-access-nft-game-passes-vs-traditional-subscriptions/": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Bitcoin",
+            "NFT"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/crypto-p2p-lender-liquidium-launches-cross-chain-lending-protocol-for-bitcoin-ethereum-and-solana/": {
+        "last_processed": "2025-05-29T08:23:07.658691+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Centralized",
+            "P2P",
+            "Cross-chain"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
