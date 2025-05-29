@@ -4736,5 +4736,36 @@
             "Cross-chain"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/why-is-ethereum-eth-price-up-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T09:18:35.494173+00:00",
+        "keywords": [
+            "Ethereum",
+            "Altcoin",
+            "Exchange",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "ETF",
+            "Futures",
+            "Options"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/nyc-pro-crypto-mayor-announces-bitcoin-bond-plan-intends-to-eliminate-bitlicense/": {
+        "last_processed": "2025-05-29T09:18:35.494173+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Mining"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bolivia-bans-state-oil-company-from-using-crypto-for-energy-settlements/": {
+        "last_processed": "2025-05-29T09:18:35.494173+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
