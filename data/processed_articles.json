@@ -5303,5 +5303,123 @@
             "Derivatives"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/telegram-raises-17-billion-convertible-bonds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/spacepay-1m-presale-signals-big-things-ahead/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Security",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/xrp-price-about-to-explode-ripples-sec-letter-could-change-everything/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency",
+            "Security",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/solana-price-prediction-as-circle-freezes-58-million-on-sol-blockchain-whats-going-on/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "Cryptocurrency",
+            "Stablecoin",
+            "Centralized",
+            "Wallet",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/cloud-mining-2025-hashfly-go-to-platform-for-beginners/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency",
+            "Mining",
+            "Security",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/shib-price-collapse-coming-2-trillion-tokens-flood-exchanges/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Wallet",
+            "Tokenomics"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/coinbase-partners-with-irdeto-to-fight-crypto-fuelled-piracy/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Fund",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/apt-miner-mobile-app-free-bitcoin-dogecoin-litecoin-mining/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Mining",
+            "Security",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-consolidates-near-peak-as-experts-eye-macro-triggers/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/russian-central-bank-greenlights-crypto-linked-products-for-qualified-investors/": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Derivatives"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322782/why-bitcoin-friendly-lawmaker-carries-us-debt-clock-his-pocket": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/2mEpr5Kp/btc-vegas-tariffs-eth-szn-fomo-hour-ep367": {
+        "last_processed": "2025-05-29T17:16:04.184976+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
