@@ -5600,5 +5600,85 @@
             "ETF"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/santander-bank-considers-issuing-stablecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Stablecoin",
+            "Retail"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/bitcoin-powers-to-112k-but-on-chain-metrics-warn-of-potential-pause-cryptoquant/": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Retail"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/crypto-price-prediction-today-29-may-xrp-pi-coin-dogecoin/": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Staking",
+            "Security"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/chatgpt-predicts-the-price-of-solana-pepe-and-shiba-inu-by-end-of-2025/": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "AI",
+            "DeFi",
+            "Cryptocurrency",
+            "Altcoin",
+            "Staking",
+            "Smart Contract",
+            "Decentralized",
+            "Institutional",
+            "ETF",
+            "Options",
+            "Scalability",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/defi-dev-corp-becomes-first-public-company-to-integrate-solana-liquid-staking-into-treasury-strategy/": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "DeFi",
+            "Staking",
+            "Treasury",
+            "Liquid Staking"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/litecoin-integrates-bitcoinos-for-zk-rollup-cross-chain-utility/": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Smart Contract",
+            "Rollup",
+            "Cross-chain"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322832/gamestop-stock-continues-sinking-512-million-bitcoin-buy": {
+        "last_processed": "2025-05-29T21:16:09.658920+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
