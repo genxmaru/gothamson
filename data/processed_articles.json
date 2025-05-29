@@ -4964,5 +4964,110 @@
             "Wallet"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/tim-berners-lee-says-dns-should-have-been-more-decentralized?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Web3",
+            "Decentralized",
+            "Centralized",
+            "Governance",
+            "Fork"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/trendspotting-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "DeFi",
+            "Exchange",
+            "Staking",
+            "Liquidity",
+            "Layer 2",
+            "Decentralized",
+            "Wallet",
+            "Tokenomics",
+            "Rug Pull",
+            "Audit",
+            "Retail",
+            "Airdrop"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/genius-act-solidify-us-dollar-dominance-digital-economy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Compliance",
+            "Stablecoin",
+            "Fiat",
+            "AML",
+            "Treasury",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ethereum-foundation-borrows-gho-defi-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Ethereum",
+            "DeFi",
+            "DAO",
+            "Staking",
+            "Liquidity",
+            "Security",
+            "Stablecoin",
+            "Decentralized",
+            "Centralized",
+            "Treasury",
+            "Fund",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/exclusives/trumps-big-beautiful-bill-how-bitcoin-miners-could-erase-100-taxes/": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Mining",
+            "Compliance",
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bspin-io-raises-the-bar-for-privacy-first-crypto-gambling/": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Decentralized",
+            "KYC",
+            "Custody"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-price-watch-mixed-signals-from-macd-and-rsi-suggest-a-critical-juncture/": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322660/bitcoinos-sees-renaissance-for-litecoin-with-its-first-ever-zk-rollup": {
+        "last_processed": "2025-05-29T13:28:28.707162+00:00",
+        "keywords": [
+            "Rollup",
+            "Scalability",
+            "Cross-chain"
+        ],
+        "source": "Decrypt"
     }
 }
