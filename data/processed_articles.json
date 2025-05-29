@@ -5421,5 +5421,82 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/us-lawmakers-bipartisan-regulatory-framework-digital-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-s-coinbase-premium-goes-on-20-day-streak-even-as-sellers-push-btc-price-lower?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/russia-permite-que-bancos-oferecam-produtos-de-criptomoedas-a-investidores-qualificados?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/nigel-farage-to-pitch-uk-as-crypto-powerhouse-at-bitcoin-2025/": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Regulation",
+            "Compliance",
+            "Decentralized",
+            "Centralized",
+            "Venture Capital",
+            "Tokenization"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bitget-ripple-rlusd-regulated-stablecoin-listing/": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Ethereum",
+            "Web3",
+            "Compliance",
+            "Stablecoin",
+            "Wallet",
+            "Fiat",
+            "Institutional",
+            "Retail",
+            "Options",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/sec-launches-defi-roundtable-to-redesign-crypto-regulation/": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "Exchange",
+            "Regulation",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ripples-hidden-road-unleashes-institutional-swaps-across-us/": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322793/myriad-moves-ethereum-price-polish-election-french-open": {
+        "last_processed": "2025-05-29T18:23:28.705227+00:00",
+        "keywords": [
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
