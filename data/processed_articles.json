@@ -5133,5 +5133,93 @@
             "Wallet"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/crypto-has-structural-optimism?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/kazakhstan-pilots-cryptocity-crypto-payments-adoption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/address-poisoning-attacks-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Cryptocurrency"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/mind-of-pepe-presale-ends-48-hours-claim-date/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "AI",
+            "Staking",
+            "Liquidity",
+            "Smart Contract",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/arkham-traces-7-6b-in-bitcoin-to-strategy-despite-saylors-privacy-stance/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Security",
+            "Wallet",
+            "Treasury",
+            "Custody",
+            "Institutional"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/xrp-price-bullish-vivopower-launches-121m-xrp-treasury-will-ripple-surge/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Treasury",
+            "Institutional"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/exclusives/not-every-company-will-make-the-cut-mica-impact-on-eu-crypto/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Blockchain",
+            "Regulation",
+            "Compliance",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitget-lists-ripple-usd-rlusd-to-expand-stablecoin-offerings-on-spot-market/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-etfs-hit-10-day-inflow-streak-with-433-million-surge/": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322676/bitcoin-steady-us-confirms-economy-shrank-in-q1": {
+        "last_processed": "2025-05-29T15:17:38.211675+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
