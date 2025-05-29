@@ -5069,5 +5069,69 @@
             "Cross-chain"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/explained/sbuidl-blackrocks-tokenized-treasury-fund-explained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "DeFi",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/hyperliquid-trader-3m-to-27m-crypto-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Exchange",
+            "Decentralized",
+            "Leverage"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ripple-hidden-road-debuts-otc-crypto-swaps-united-states?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/how-african-innovators-are-using-blockchain-to-solve-real-problems?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Blockchain"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/5-bitcoin-signs-btc-price-rally-room-for-further-expansion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/exclusives/what-shock-trump-tariffs-ruling-means-for-bitcoin/": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Fiat",
+            "Futures"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/the-new-trade-in-town-taco/": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/tangem-granted-us-patent-for-crypto-smart-ring-wallet/": {
+        "last_processed": "2025-05-29T14:16:48.840194+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Wallet"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
