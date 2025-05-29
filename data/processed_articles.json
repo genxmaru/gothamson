@@ -5221,5 +5221,87 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/bitcoin-defi-bull-run-2000-btc-115k/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Web3",
+            "DeFi",
+            "Cryptocurrency",
+            "Liquidity",
+            "Smart Contract",
+            "Security",
+            "Stablecoin",
+            "Decentralized",
+            "Centralized",
+            "Institutional",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-analysts-now-eye-130k-as-trump-family-doubles-down/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3",
+            "DeFi",
+            "Mining",
+            "Regulation",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Treasury",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-coin-price-prediction-500m-flood-suggests-political-catalyst-could-be-days-away/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Staking",
+            "Wallet",
+            "Treasury",
+            "MEV"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/exclusives/jd-vance-at-bitcoin-2025-light-on-substance-but-a-significant-moment/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/paradigm-urges-cftc-to-craft-defi-perps-regulatory-path/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "Decentralized",
+            "Centralized",
+            "Derivatives",
+            "Futures"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoins-path-to-120k-faces-mounting-sell-pressure-glassnode-report-warns/": {
+        "last_processed": "2025-05-29T16:21:00.010450+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Derivatives"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
