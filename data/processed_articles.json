@@ -4428,5 +4428,49 @@
             "Wallet"
         ],
         "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/new-jersey-county-tokenize-240-billion-property-deeds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T03:12:01.467182+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Venture Capital",
+            "Fund",
+            "Tokenization",
+            "TradFi"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/nvidia-q1-predicts-8b-hit-us-chip-curbs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T03:12:01.467182+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Cryptocurrency",
+            "Mining"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/federal-court-blocks-trump-tariffs-white-house-appeals/": {
+        "last_processed": "2025-05-29T03:12:01.467182+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ripple-donates-skull-of-satoshi-says-btc-and-xrp-arent-so-different/": {
+        "last_processed": "2025-05-29T03:12:01.467182+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322572/crypto-mayor-eric-adams-end-new-yorks-bitlicense": {
+        "last_processed": "2025-05-29T03:12:01.467182+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
