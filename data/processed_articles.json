@@ -4787,5 +4787,100 @@
             "Ethereum"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/rbi-expands-digital-rupee-pilots-real-time-payments-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Web3",
+            "Regulation",
+            "CBDC",
+            "Institutional",
+            "Retail",
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bubblemaps-time-travel-for-insider-activity-rug-pulls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "Web3",
+            "DeFi",
+            "Cryptocurrency",
+            "Liquidity",
+            "Wallet",
+            "Rug Pull"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sol-strategies-defi-dev-liquid-staking-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Solana",
+            "DeFi",
+            "Staking",
+            "Security",
+            "Compliance",
+            "Decentralized",
+            "Treasury",
+            "Audit",
+            "Institutional",
+            "Liquid Staking"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/russia-allows-banks-offer-crypto-products-accredited-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin",
+            "Decentralized",
+            "Centralized",
+            "Wallet",
+            "Derivatives",
+            "Tokenization"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/new-jersey-county-to-tokenize-240b-in-property-deeds-on-avalanche-blockchain/": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Blockchain",
+            "Venture Capital",
+            "Fund",
+            "Tokenization"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/spinly-retro-roots-on-chain-power-and-player-control-reimagined/": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/el-salvador-passes-imf-review-with-flying-colors-despite-its-bitcoin-purchases/": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Fund",
+            "Consensus"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322605/bank-of-russia-qualified-investors-crypto-derivatives": {
+        "last_processed": "2025-05-29T11:14:34.957365+00:00",
+        "keywords": [
+            "Derivatives"
+        ],
+        "source": "Decrypt"
     }
 }
