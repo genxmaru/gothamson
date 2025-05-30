@@ -6869,5 +6869,47 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-drop-to-100k-likely-but-futures-market-reset-means-dips-won-t-last-long?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T21:15:06.214858+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-btc-slips-below-105k-as-global-policies-shif/": {
+        "last_processed": "2025-05-30T21:15:06.214858+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Staking",
+            "Security",
+            "Regulation",
+            "CBDC",
+            "Wallet",
+            "KYC",
+            "Governance",
+            "Institutional",
+            "Retail",
+            "Airdrop"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/cantor-fitzgerald-unveils-gold-hedged-bitcoin-fund/": {
+        "last_processed": "2025-05-30T21:15:06.214858+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323144/public-keys-gamestop-bitcoin-flop-blackrock-etf-euphoria": {
+        "last_processed": "2025-05-30T21:15:06.214858+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Decrypt"
     }
 }
