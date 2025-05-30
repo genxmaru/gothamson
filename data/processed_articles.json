@@ -6992,5 +6992,27 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/caricom-bloc-advances-pilot-to-reduce-dollar-dependence/": {
+        "last_processed": "2025-05-30T23:15:44.844671+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323180/nigel-farage-slash-crypto-capital-gains-bitcoin-reserve": {
+        "last_processed": "2025-05-30T23:15:44.844671+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/323189/bored-ape-maker-sells-moonbirds-gaming-startup": {
+        "last_processed": "2025-05-30T23:15:44.844671+00:00",
+        "keywords": [
+            "Ethereum",
+            "NFT"
+        ],
+        "source": "Decrypt"
     }
 }
