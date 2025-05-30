@@ -6222,5 +6222,37 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/thailand-blocks-okx-bybit-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T10:17:53.712312+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/why-is-bitcoin-price-down-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T10:17:53.712312+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/panama-city-proposes-bitcoin-payments-for-priority-passage-through-panama-canal/": {
+        "last_processed": "2025-05-30T10:17:53.712312+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Exchange",
+            "Mining",
+            "Regulation"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/thai-regulators-tighten-crypto-oversight-unlicensed-exchanges-to-be-banned-by-june-2025/": {
+        "last_processed": "2025-05-30T10:17:53.712312+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
