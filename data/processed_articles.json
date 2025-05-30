@@ -6618,5 +6618,81 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/crypto-op-eds-how-opinions-can-shaping-web3-thought-and-policy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Web3"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/jd-com-stablecoin-hits-phase-2-hong-kong-sandbox-testing-and-targets-global-payments/": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Blockchain",
+            "Regulation",
+            "Compliance",
+            "Stablecoin",
+            "CBDC",
+            "Fiat",
+            "Custody",
+            "Retail",
+            "Digital Asset",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/crypto-regulation-chaos-trump-bitcoin-sec-binance/": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Regulation",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "Futures",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/wemix-vows-resilience-after-court-upholds-token-delisting-whats-next-for-the-gaming-crypto-giant/": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Blockchain",
+            "Web3",
+            "DeFi",
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity",
+            "Security",
+            "Compliance",
+            "Exploit",
+            "Digital Asset",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/trump-media-raises-2-32b-bitcoin-treasury-and-big-moves-ahead/": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ethereum-price-gains-momentum-as-lightchain-ai-unlocks-infinite-ai-possibilities/": {
+        "last_processed": "2025-05-30T17:14:52.567365+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
