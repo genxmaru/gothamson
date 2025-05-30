@@ -5854,5 +5854,86 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/new-york-cops-linked-crypto-torture-case-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ethereum-etf-investors-substantially-underwater-glassnode?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Ethereum",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/us-sanctions-philippines-firm-aid-crypto-scams?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/sec-and-binance-seek-to-dismiss-legal-clash-is-the-crypto-industrys-biggest-showdown-over/": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "NFT",
+            "Exchange",
+            "Regulation",
+            "Compliance"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bipartisan-clarity-act-of-2025-unveiled-will-it-finally-end-crypto-regulatory-chaos-between-the-sec-and-the-cftc/": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DeFi",
+            "Exchange",
+            "Regulation",
+            "Compliance",
+            "Stablecoin",
+            "Decentralized",
+            "Wallet",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "Futures",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/russian-couple-kidnapped-in-crypto-trap-escape-sets-off-global-hunt/": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/sec-staff-some-staking-activities-are-not-securities/": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Staking",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ripple-proposes-legal-framework-to-help-sec-regulate-crypto/": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Regulation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322898/ross-ulbricht-speaks-at-bitcoin-2025-you-didnt-forget-me": {
+        "last_processed": "2025-05-30T03:09:49.361032+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
