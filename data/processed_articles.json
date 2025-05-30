@@ -6106,5 +6106,35 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-to-pause-106000-before-more-price-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T07:16:25.087493+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/staking-on-proof-of-stake-blockchains-not-security-transaction-sec-staff/": {
+        "last_processed": "2025-05-30T07:16:25.087493+00:00",
+        "keywords": [
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Staking",
+            "Security",
+            "Regulation",
+            "Options",
+            "Consensus"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bybit-expands-into-europe-with-micar-license/": {
+        "last_processed": "2025-05-30T07:16:25.087493+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
