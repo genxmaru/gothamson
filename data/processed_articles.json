@@ -6174,5 +6174,53 @@
             "Digital Asset"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/bitcoin-bull-market-great-validator-comes-james-wynn-loses-100m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/opensea-expands-beyond-nfts-with-os2-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/why-is-the-crypto-market-down-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [
+            "Cryptocurrency"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/crypto-remains-illegal-in-pakistan-despite-recent-bitcoin-push/": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Mining",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/cryptocurrency-bill-draft-introduced-in-guatemalan-congress/": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Regulation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322990/the-new-york-times-strikes-ai-content-licensing-deal-with-amazon": {
+        "last_processed": "2025-05-30T09:17:54.408337+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
