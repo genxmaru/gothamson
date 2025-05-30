@@ -6765,5 +6765,45 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-rally-driven-by-macroeconomic-headwinds-not-just-spot-btc-etf-flows-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T19:13:21.365998+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/mexc-exchange-detects-200-surge-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T19:13:21.365998+00:00",
+        "keywords": [
+            "Exchange"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/friday-meltdown-bitcoins-fall-ignites-841m-liquidation-storm/": {
+        "last_processed": "2025-05-30T19:13:21.365998+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Derivatives",
+            "Liquidation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/while-bitcoins-hashrate-and-price-hit-new-peaks-on-and-off-chain-metrics-shrivel/": {
+        "last_processed": "2025-05-30T19:13:21.365998+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323041/canary-capital-files-us-cronos-etf": {
+        "last_processed": "2025-05-30T19:13:21.365998+00:00",
+        "keywords": [
+            "Altcoin",
+            "Fund",
+            "ETF"
+        ],
+        "source": "Decrypt"
     }
 }
