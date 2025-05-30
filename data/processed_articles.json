@@ -6136,5 +6136,43 @@
             "Exchange"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cryptonews.com/news/cantor-fitzgerald-asset-management-to-launch-gold-hedged-bitcoin-fund/": {
+        "last_processed": "2025-05-30T08:22:30.551453+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/ross-ulbricht-gets-heros-welcome-at-bitcoin-2025/": {
+        "last_processed": "2025-05-30T08:22:30.551453+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "DeFi",
+            "Exchange",
+            "Wallet",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/best-crypto-casino-2025-why-winna-com-is-quietly-becoming-the-go-to-platform-for-bitcoin-gamblers/": {
+        "last_processed": "2025-05-30T08:22:30.551453+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ethereums-strong-rally-market-signals-point-to-a-3000-price-breakout/": {
+        "last_processed": "2025-05-30T08:22:30.551453+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
