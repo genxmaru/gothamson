@@ -6421,5 +6421,57 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/banks-very-interested-stablecoin-use-stripe-exec?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T14:17:31.566642+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/garantex-successor-moves-1-66b-to-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T14:17:31.566642+00:00",
+        "keywords": [
+            "Blockchain"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/exclusives/reform-u-k-unveils-pro-bitcoin-policies-but-can-the-party-win/": {
+        "last_processed": "2025-05-30T14:17:31.566642+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-cantors-new-gold-insured-btc-product-could-attract-billions/": {
+        "last_processed": "2025-05-30T14:17:31.566642+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Staking",
+            "Security",
+            "Wallet",
+            "KYC",
+            "Governance",
+            "Treasury",
+            "Institutional",
+            "Retail",
+            "Fund",
+            "ETF",
+            "Airdrop"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/canarys-us-spot-cro-etf-takes-step-forward-with-s-1-filing/": {
+        "last_processed": "2025-05-30T14:17:31.566642+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Fund",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
