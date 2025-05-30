@@ -6805,5 +6805,69 @@
             "ETF"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-falls-below-104k-but-data-shows-btc-traders-positioned-for-a-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-2025-event-recap-freedom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/xend-finance-risevest-launch-tokenized-stocks-platform-africa?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/gemini-price-prediction-google-ai-forecasts-xrp-ada-trump/": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Security",
+            "Regulation",
+            "Decentralized",
+            "Institutional",
+            "Retail",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/xrp-price-rises-along-with-lightchain-ai-potential/": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323042/elon-musk-spacex-mars-plan-self-sustaining-colony": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/323142/crypto-liquidations-800-million-bitcoin-dogecoin-ethereum": {
+        "last_processed": "2025-05-30T20:18:43.683521+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
