@@ -6694,5 +6694,76 @@
             "Decentralized"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/price-predictions-5-30-btc-eth-xrp-bnb-sol-doge-ada-sui-hype-link?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sui-vote-on-162m-frozen-cetus-funds-sparks-decentralization-debate-finance-redefined-may-23-30?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "DeFi",
+            "Exploit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/crypto-price-prediction-xrp-shiba-inu-fartcoin/": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Decentralized",
+            "Institutional",
+            "Retail",
+            "Scalability",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/two-nypd-allegedly-officers-caught-in-crypto-kidnapping-storm-duties-curtailed/": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Security"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/snorter-token-eclipse-banana-gun-88-snipe-wins/": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "AI",
+            "DeFi",
+            "Staking",
+            "Liquidity",
+            "Smart Contract",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Institutional",
+            "Retail",
+            "MEV",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://decrypt.co/323046/trump-media-raises-2-4-billion-bitcoin-treasury": {
+        "last_processed": "2025-05-30T18:23:29.208936+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
