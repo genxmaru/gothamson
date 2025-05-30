@@ -6911,5 +6911,86 @@
             "ETF"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/nyc-comptroller-rejects-mayor-adams-proposal-bitcoin-backed-bonds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/ftx-5b-payout-what-you-need-know?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-demand-shock-could-amplify-price-months-sygnum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/pepe-price-prediction-trump-posts-pepe-meme-on-socials/": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/cardano-price-prediction-on-chain-data-shows-whales-accumulated-while-retail-sold-is-a-parabolic-move-coming/": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Decentralized",
+            "Wallet",
+            "Retail"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/trump-media-raises-2-44b-to-launch-corporate-bitcoin-treasury-is-this-the-future-of-corporate-crypto/": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Liquidity",
+            "Fiat",
+            "Treasury",
+            "Custody",
+            "Institutional",
+            "ETF",
+            "Tokenization"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/sec-staking-guidance-proof-of-stake-not-securities/": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Exchange",
+            "Staking",
+            "Consensus"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/landmark-crypto-legislation-introduced-in-congress-clarity-act-ushers-in-golden-age/": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Custody",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323168/brazilian-fintech-meliuz-share-offering-bitcoin": {
+        "last_processed": "2025-05-30T22:15:55.419497+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
