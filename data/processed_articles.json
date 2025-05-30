@@ -5830,5 +5830,29 @@
         "last_processed": "2025-05-29T23:15:37.372354+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/analyst-urges-us-to-sell-gold-for-bitcoin-then-mine-asteroids/": {
+        "last_processed": "2025-05-30T00:47:01.485573+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/xrp-gains-nasdaq-traction-as-vivopower-launches-saudi-backed-xrp-treasury-plan/": {
+        "last_processed": "2025-05-30T00:47:01.485573+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322844/ethereum-games-realms-alurya-wonder-wars-offline": {
+        "last_processed": "2025-05-30T00:47:01.485573+00:00",
+        "keywords": [
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
