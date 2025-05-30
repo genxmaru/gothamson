@@ -6560,5 +6560,63 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/xrp-price-prediction-ripples-hidden-road-just-changed-the-game-bulls-now-eye-10/": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Cryptocurrency",
+            "Altcoin",
+            "Institutional",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bank-of-italy-crypto-warning-systemic-shock/": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation",
+            "Fiat",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/mind-of-pepe-presale-closes-24-hours-11-4m-raise/": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "AI",
+            "Exchange",
+            "Staking",
+            "Smart Contract",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-price-watch-consolidation-deepens-below-key-resistance/": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ftx-gets-hollywood-treatment-with-julia-garner-as-caroline-ellison-in-netflix-series/": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/videos/interviews/ug0kZ8Tg/is-crypto-over-osf-talks-brand-coins": {
+        "last_processed": "2025-05-30T16:21:28.659698+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
