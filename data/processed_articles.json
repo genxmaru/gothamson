@@ -6473,5 +6473,92 @@
             "ETF"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/ai-youtube-comment-profiling-privacy-risk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/centralized-ai-threatens-a-democratic-future?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "AI",
+            "Security",
+            "Decentralized",
+            "Centralized"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/what-are-stablecoin-backed-corporate-cards-and-how-do-they-work?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/whats-elon-planning-with-toncoin-price-prediction-after-300m-grok-ai-deal/": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Solana",
+            "AI",
+            "DeFi",
+            "Altcoin"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/nft-lending-volume-crashes-97-dappradar/": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "NFT",
+            "DeFi",
+            "Liquidity",
+            "Institutional",
+            "ETF",
+            "Airdrop",
+            "Tokenization",
+            "RWA"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/breakdown-points-to-solana-price-pain-40-drop-inevitable/": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "AI",
+            "Cryptocurrency",
+            "Exchange",
+            "Decentralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/justin-sun-meets-trump-is-this-the-inflection-point-for-htx-and-trx-in-the-crypto-power-game/": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/after-10-years-ross-ulbricht-speaks-out-bitcoin-doesnt-work-without-freedom/": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323034/xrp-solana-alts-slip-crypto-market-contracts": {
+        "last_processed": "2025-05-30T15:17:37.803389+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana"
+        ],
+        "source": "Decrypt"
     }
 }
