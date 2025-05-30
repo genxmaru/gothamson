@@ -6002,5 +6002,109 @@
             "Fund"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/decentralized-ai-favored-majority-americans-dcg-harris-poll?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "AI",
+            "Decentralized"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-etfs-first-outflow-2-weeks-blackrock-bucks-trend?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fund"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/panama-city-mayor-floats-panama-canal-bitcoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sec-says-protocol-staking-pos-blockchains-not-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Staking",
+            "Security"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/football-team-paris-saint-germain-scores-bitcoin-treasury-strategy/": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fiat",
+            "Treasury",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/bitcoin-price-hits-106k-as-nyc-plans-552m-bitbond-launch-and-forecasts-250k/": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3",
+            "Regulation",
+            "Decentralized",
+            "Wallet",
+            "Fiat",
+            "Governance",
+            "Fund",
+            "Leverage",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/us-sanctions-funnull-tech-for-200m-crypto-scam/": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/thailand-sec-blocks-bybit-okx-coinex-for-operating-without-license/": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Retail",
+            "Digital Asset",
+            "P2P"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/football-powerhouse-paris-saint-germain-confirms-club-added-bitcoin-to-balance-sheet-in-2024/": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322979/coinbase-open-new-san-francisco-office-dropping-hq-model": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322976/paris-saint-germain-bitcoin-holdings-champions-league-final": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322974/central-african-republic-tokenize-land-solana-meme-coin": {
+        "last_processed": "2025-05-30T06:24:30.258933+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
     }
 }
