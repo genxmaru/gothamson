@@ -6367,5 +6367,59 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/justin-suns-trump-jr-photo-op-fuels-tron-rally-is-political-clout-the-secret-weapon-for-cryptos-next-surge/": {
+        "last_processed": "2025-05-30T13:27:55.845324+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Exchange",
+            "Staking",
+            "Stablecoin",
+            "Retail",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/reports/june-2025-altcoin-outlook-altseason-could-start-by-july/": {
+        "last_processed": "2025-05-30T13:27:55.845324+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "AI",
+            "NFT",
+            "DAO",
+            "Altcoin",
+            "Layer 2",
+            "Compliance",
+            "Decentralized",
+            "Institutional",
+            "Retail",
+            "Venture Capital",
+            "Airdrop",
+            "Tokenization",
+            "RWA"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/htx-dao-and-htx-ventures-at-bitcoin-2025-empowering-the-global-rise-of-the-bitcoin-ecosystem/": {
+        "last_processed": "2025-05-30T13:27:55.845324+00:00",
+        "keywords": [
+            "Bitcoin",
+            "DAO"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322940/meet-sharplink-microstrategy-ethereum": {
+        "last_processed": "2025-05-30T13:27:55.845324+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
