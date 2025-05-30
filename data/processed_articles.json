@@ -5935,5 +5935,46 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/base-nears-1000-tps-competitive-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T04:21:40.161507+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/ripple-usd-accelerates-0-fees-140-onramps-15k-rlusd-reward-storm/": {
+        "last_processed": "2025-05-30T04:21:40.161507+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Fiat",
+            "Institutional",
+            "Retail"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322938/hyperliquid-trader-liquidated-100-million-bitcoin-bet-unravels": {
+        "last_processed": "2025-05-30T04:21:40.161507+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322873/us-sanctions-filipino-tech-company-200m-crypto-scam-network": {
+        "last_processed": "2025-05-30T04:21:40.161507+00:00",
+        "keywords": [
+            "Treasury"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322934/sec-says-crypto-staking-not-subject-to-securities-laws": {
+        "last_processed": "2025-05-30T04:21:40.161507+00:00",
+        "keywords": [
+            "Staking"
+        ],
+        "source": "Decrypt"
     }
 }
