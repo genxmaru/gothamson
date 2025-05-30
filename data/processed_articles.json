@@ -6295,5 +6295,77 @@
             "Security"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/deepseek-ai-censorship-free-speech-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/digital-euro-not-mica-control-crypto-risks-bank-italy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sec-crypto-staking-guidance-win-crypto-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Staking",
+            "Regulation",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/sui-passes-governance-vote-to-recover-162m-cetus-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Exploit"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/press-releases/katana-reshape-defi-incubated-by-gsr-polygon-labs/": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "DeFi",
+            "Staking",
+            "Yield Farming",
+            "Liquidity",
+            "Stablecoin",
+            "Decentralized",
+            "Governance",
+            "Institutional",
+            "Margin Trading",
+            "Rollup",
+            "Cross-chain"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/sec-drops-lawsuit-with-prejudice-against-binance-and-cz-case-closed/": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Regulation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-etf-streak-ends-with-359-million-outflow-as-ether-etfs-keep-momentum/": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322999/bitcoin-ethereum-dip-as-trump-tariffs-back-on-the-table": {
+        "last_processed": "2025-05-30T12:34:41.903058+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
