@@ -7087,5 +7087,21 @@
             "Treasury"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/ethereum-treasury-sharplink-gaming-significant-eth-purchase-michael-saylor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T05:15:59.511823+00:00",
+        "keywords": [
+            "Ethereum"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/ripple-pushes-sec-to-launch-real-world-crypto-sandboxes/": {
+        "last_processed": "2025-05-31T05:15:59.511823+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Regulation"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
