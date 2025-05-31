@@ -7373,5 +7373,21 @@
             "ETF"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/sec-commissioner-breaks-down-staking-whos-safe-whats-covered/": {
+        "last_processed": "2025-05-31T18:21:37.677632+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Exchange",
+            "Staking",
+            "Decentralized"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323136/crypto-game-crashouts-shutdowns-2025": {
+        "last_processed": "2025-05-31T18:21:37.677632+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
