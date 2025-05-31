@@ -7445,5 +7445,13 @@
         "last_processed": "2025-05-31T21:14:51.859065+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/max-keiser-casts-doubt-new-bitcoin-treasury-companies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T22:15:11.206678+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
     }
 }
