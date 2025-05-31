@@ -112,3 +112,4 @@
 {"timestamp": "2025-05-31T16:19:15.084733+00:00", "sources": {"CryptoNews": {"Bitcoin": 16, "Liquidity": 2, "Retail": 4, "Fund": 3, "ETF": 4, "Leverage": 2}, "Bitcoin.com News": {"Bitcoin": 1, "Institutional": 4, "Futures": 1}, "Decrypt": {"Stablecoin": 1}}}
 {"timestamp": "2025-05-31T17:13:32.390548+00:00", "sources": {"Cointelegraph": {"Security": 4, "Hacker": 1}, "Bitcoin.com News": {"Bitcoin": 7, "ETF": 2}}}
 {"timestamp": "2025-05-31T18:21:37.677632+00:00", "sources": {"Bitcoin.com News": {"Bitcoin": 1, "Blockchain": 1, "Exchange": 1, "Staking": 5, "Decentralized": 1}}}
+{"timestamp": "2025-05-31T19:12:29.493911+00:00", "sources": {"Cointelegraph": {"Bitcoin": 3, "Liquidity": 1, "Institutional": 1}, "Bitcoin.com News": {"Bitcoin": 1, "Ethereum": 3, "Solana": 3, "Exchange": 2, "Staking": 5, "ETF": 2}, "Decrypt": {"Bitcoin": 3}}}

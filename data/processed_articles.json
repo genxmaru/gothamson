@@ -7389,5 +7389,33 @@
         "last_processed": "2025-05-31T18:21:37.677632+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-analysts-predict-180k-to-250k-price-top-in-2025-which-is-most-realistic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T19:12:29.493911+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Institutional"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/ethereum-and-solana-staking-etfs-move-closer-to-us-listing/": {
+        "last_processed": "2025-05-31T19:12:29.493911+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Exchange",
+            "Staking",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322840/gold-reasserts-safe-haven-status-bitcoin-path-brighter": {
+        "last_processed": "2025-05-31T19:12:29.493911+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
