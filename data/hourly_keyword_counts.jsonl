@@ -109,3 +109,4 @@
 {"timestamp": "2025-05-31T13:25:52.735982+00:00", "sources": {"Cointelegraph": {"Bitcoin": 3}, "CryptoNews": {"Exchange": 2, "Liquidity": 1, "Retail": 1, "Digital Asset": 2}, "Bitcoin.com News": {"Bitcoin": 6, "AI": 1}}}
 {"timestamp": "2025-05-31T14:14:22.932806+00:00", "sources": {"Cointelegraph": {"Insurance": 3}, "Bitcoin.com News": {"Bitcoin": 1, "Stablecoin": 5, "Fiat": 2}}}
 {"timestamp": "2025-05-31T15:15:42.515981+00:00", "sources": {"Cointelegraph": {"Bitcoin": 3, "Ethereum": 3, "Altcoin": 1}, "Decrypt": {"Bitcoin": 2}}}
+{"timestamp": "2025-05-31T16:19:15.084733+00:00", "sources": {"CryptoNews": {"Bitcoin": 16, "Liquidity": 2, "Retail": 4, "Fund": 3, "ETF": 4, "Leverage": 2}, "Bitcoin.com News": {"Bitcoin": 1, "Institutional": 4, "Futures": 1}, "Decrypt": {"Stablecoin": 1}}}

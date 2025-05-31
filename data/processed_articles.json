@@ -7322,5 +7322,33 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cryptonews.com/news/blackrocks-ibit-sees-430m-outflow-ending-31-day-inflow-streak/": {
+        "last_processed": "2025-05-31T16:19:15.084733+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Retail",
+            "Fund",
+            "ETF",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/xrp-lending-goes-institutional-new-platform-targets-us-public-companies/": {
+        "last_processed": "2025-05-31T16:19:15.084733+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Futures"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/322931/crypto-south-koreas-upcoming-election": {
+        "last_processed": "2025-05-31T16:19:15.084733+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
     }
 }
