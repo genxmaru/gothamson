@@ -7417,5 +7417,19 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/sec-says-rex-osprey-staked-etf-may-not-qualify?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T20:17:09.289051+00:00",
+        "keywords": [
+            "Exchange"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/bitcoins-sentiment-meter-crashes-from-extreme-greed-to-neutral/": {
+        "last_processed": "2025-05-31T20:17:09.289051+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
