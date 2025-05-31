@@ -7147,5 +7147,36 @@
             "Exchange"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/imf-concern-pakistan-bitcoin-mining-power-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T10:16:31.612171+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/nigel-farage-vows-pro-crypto-bill-bitcoin-reserve-if-elected-uk-pm/": {
+        "last_processed": "2025-05-31T10:16:31.612171+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Cryptocurrency",
+            "Compliance",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/binance-japan-secures-international-security-certifications/": {
+        "last_processed": "2025-05-31T10:16:31.612171+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Security",
+            "Governance",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
