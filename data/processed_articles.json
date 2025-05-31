@@ -7040,5 +7040,28 @@
             "Exchange"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/ether-solana-staking-etf-filings-rex-shares-speculation-crypto-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T01:19:21.696256+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Staking",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/nyc-comptroller-rejects-mayor-adamss-bitbond-proposal-as-legally-and-fiscally-flawed/": {
+        "last_processed": "2025-05-31T01:19:21.696256+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Compliance",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
     }
 }
