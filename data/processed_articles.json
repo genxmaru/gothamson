@@ -7063,5 +7063,21 @@
             "Digital Asset"
         ],
         "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/webus-plots-300m-xrp-reserve-to-obliterate-cross-border-payment-friction-fast/": {
+        "last_processed": "2025-05-31T03:08:51.255280+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ghost-wallets-from-2011-awaken-move-23m-in-bitcoin/": {
+        "last_processed": "2025-05-31T03:08:51.255280+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
