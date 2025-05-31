@@ -7306,5 +7306,21 @@
             "Fiat"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/ethereum-55-rally-setup-vs-bitcoin-sparks-altseason-hopes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T15:15:42.515981+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Altcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://decrypt.co/323159/strategy-michael-saylor-bitcoin-2025-appeal-masses": {
+        "last_processed": "2025-05-31T15:15:42.515981+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
