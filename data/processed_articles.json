@@ -7130,5 +7130,13 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/secs-crypto-task-force-gets-crucial-input-from-ey/": {
+        "last_processed": "2025-05-31T08:20:31.011830+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
