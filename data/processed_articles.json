@@ -7138,5 +7138,14 @@
             "Exchange"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/crypto-forensics-exposes-criminal-network-binance-aids-in-major-law-enforcement-operation/": {
+        "last_processed": "2025-05-31T09:16:33.054570+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
