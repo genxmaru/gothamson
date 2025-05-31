@@ -7431,5 +7431,19 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/5-us-states-keep-attacking-coinbase-despite-sec-shift/": {
+        "last_processed": "2025-05-31T21:14:51.859065+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Staking"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323009/performance-art-duo-operator-movement-collectible-nfts": {
+        "last_processed": "2025-05-31T21:14:51.859065+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
