@@ -7453,5 +7453,14 @@
             "Treasury"
         ],
         "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/imf-alarmed-as-pakistan-declares-bold-bitcoin-reserve/": {
+        "last_processed": "2025-05-31T23:15:53.491882+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fund",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
