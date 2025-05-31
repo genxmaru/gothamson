@@ -7290,5 +7290,21 @@
             "AI"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/crypto-crime-insurers-race-to-cover-kidnap-ransom-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T14:14:22.932806+00:00",
+        "keywords": [
+            "Insurance"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/250b-in-sight-stablecoin-market-nears-milestone-within-striking-distance/": {
+        "last_processed": "2025-05-31T14:14:22.932806+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Fiat"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
