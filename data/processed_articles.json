@@ -7103,5 +7103,12 @@
             "Regulation"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-etfs-soar-as-investors-flee-gold-holdings/": {
+        "last_processed": "2025-05-31T06:22:36.042750+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
