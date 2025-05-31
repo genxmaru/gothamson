@@ -7014,5 +7014,31 @@
             "NFT"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ethereum-futures-data-and-network-activity-growth-back-eth-s-price-strength?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T00:45:20.209617+00:00",
+        "keywords": [
+            "Ethereum",
+            "Futures"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/xrps-institutional-access-expands-with-hashkey-exchange-listing/": {
+        "last_processed": "2025-05-31T00:45:20.209617+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Institutional",
+            "Futures"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/sec-backs-down-binance-us-blasts-back-with-full-usd-access/": {
+        "last_processed": "2025-05-31T00:45:20.209617+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
