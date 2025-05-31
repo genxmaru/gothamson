@@ -7350,5 +7350,28 @@
             "Stablecoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitmex-uncovers-holes-lazarus-group-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T17:13:32.390548+00:00",
+        "keywords": [
+            "Security",
+            "Hacker"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/nine-casino-tops-list-of-non-uk-casinos-accepting-uk-players-in-2025/": {
+        "last_processed": "2025-05-31T17:13:32.390548+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-etf-outflows-deepen-with-616-million-exit-while-ether-etfs-ride-10-day-inflow-wave/": {
+        "last_processed": "2025-05-31T17:13:32.390548+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
