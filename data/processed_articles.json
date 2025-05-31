@@ -7110,5 +7110,25 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/government-urges-supreme-court-reject-coinbase-user-crypto-records-fight?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T07:15:17.280279+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/blackrock-bitcoin-etf-inflow-streak-ends-outflow-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T07:15:17.280279+00:00",
+        "keywords": [
+            "Bitcoin",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/us-banking-regulator-calls-for-expanded-crypto-financial-literacy/": {
+        "last_processed": "2025-05-31T07:15:17.280279+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
