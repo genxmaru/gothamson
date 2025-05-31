@@ -7265,5 +7265,30 @@
             "Blockchain"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/111k-bitcoin-all-time-high-states-crypto-laws-may-charts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-05-31T13:25:52.735982+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/ftx-recovery-trust-begins-5b-second-payout-to-creditors/": {
+        "last_processed": "2025-05-31T13:25:52.735982+00:00",
+        "keywords": [
+            "Exchange",
+            "Liquidity",
+            "Retail",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/michael-saylor-outlines-21-wealth-building-strategies-with-bitcoin-at-center-stage/": {
+        "last_processed": "2025-05-31T13:25:52.735982+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
