@@ -7746,5 +7746,37 @@
         "last_processed": "2025-06-01T15:16:03.849332+00:00",
         "keywords": [],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/bitcoin-traders-target-100k-and-under-monthly-close-seals-11-gain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T16:19:40.880881+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/libra-case-update-57-million-frozen-investigations-progress/": {
+        "last_processed": "2025-06-01T16:19:40.880881+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/inside-the-crypto-whale-games-how-liquidation-hunting-targets-leveraged-traders/": {
+        "last_processed": "2025-06-01T16:19:40.880881+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Decentralized",
+            "Leverage",
+            "Liquidation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323135/money-printing-lift-bitcoin-250k-this-year-arthur-hayes": {
+        "last_processed": "2025-06-01T16:19:40.880881+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
