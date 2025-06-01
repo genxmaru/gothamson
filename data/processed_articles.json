@@ -7832,5 +7832,22 @@
             "Hacker"
         ],
         "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/tim-draper-us-dollar-going-extinct-bitcoin-set-to-dominate-retail/": {
+        "last_processed": "2025-06-01T20:18:01.011796+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Fiat",
+            "Retail"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323050/cypherock-x1-review-crypto-hardware-wallet-card-based-security": {
+        "last_processed": "2025-06-01T20:18:01.011796+00:00",
+        "keywords": [
+            "Security",
+            "Wallet"
+        ],
+        "source": "Decrypt"
     }
 }
