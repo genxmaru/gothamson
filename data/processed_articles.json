@@ -7856,5 +7856,19 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/traders-shift-short-term-tactics-response-tariffs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T22:15:43.772425+00:00",
+        "keywords": [
+            "Web3"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/did-you-order-price-discovery/": {
+        "last_processed": "2025-06-01T22:15:43.772425+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
