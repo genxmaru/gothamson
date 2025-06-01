@@ -7635,5 +7635,21 @@
             "Regulation"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/czech-justice-minister-resigns-bitcoin-donation-scandal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T12:32:12.309994+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/amboss-launches-rails-earn-yield-on-bitcoin-and-enhance-lightning-network-utility/": {
+        "last_processed": "2025-06-01T12:32:12.309994+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidity",
+            "Custody"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
