@@ -7565,5 +7565,28 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cryptonews.com/news/sec-challenges-etf-status-of-proposed-staked-solana-and-ether-funds/": {
+        "last_processed": "2025-06-01T10:17:20.042886+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Altcoin",
+            "Exchange",
+            "Staking",
+            "Compliance",
+            "Institutional",
+            "Fund",
+            "ETF"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/ross-ulbricht-given-300-bitcoin-donation/": {
+        "last_processed": "2025-06-01T10:17:20.042886+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Wallet"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
