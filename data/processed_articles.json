@@ -7462,5 +7462,23 @@
             "Digital Asset"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/xrp-futures-go-24-7-coinbase-enables-nonstop-institutional-access/": {
+        "last_processed": "2025-06-01T00:59:11.254311+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Solana",
+            "Institutional",
+            "Derivatives",
+            "Futures"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/robert-kiyosaki-even-0-01-bitcoin-could-make-you-very-rich/": {
+        "last_processed": "2025-06-01T00:59:11.254311+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
