@@ -7802,5 +7802,20 @@
             "Institutional"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/jpmorgan-ceo-us-shouldnt-stockpile-bitcoin-we-need-bullets-and-guns-not-crypto/": {
+        "last_processed": "2025-06-01T18:21:42.503721+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323056/best-short-form-ai-video-generator-kling-google-veo": {
+        "last_processed": "2025-06-01T18:21:42.503721+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Decrypt"
     }
 }
