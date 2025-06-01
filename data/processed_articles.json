@@ -7849,5 +7849,12 @@
             "Wallet"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/france-charges-25-over-violent-crypto-attacks-linked-to-kidnapping-plots/": {
+        "last_processed": "2025-06-01T21:14:49.189508+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
