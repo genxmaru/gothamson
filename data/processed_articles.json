@@ -7817,5 +7817,20 @@
             "AI"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/strategy-saylor-signals-impending-bitcoin-purchase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T19:13:05.244457+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitmex-descobre-falhas-na-seguranca-operacional-do-lazarus-group?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T19:13:05.244457+00:00",
+        "keywords": [
+            "Security",
+            "Hacker"
+        ],
+        "source": "Cointelegraph"
     }
 }

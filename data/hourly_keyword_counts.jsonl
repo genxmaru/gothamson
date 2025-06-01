@@ -132,3 +132,4 @@
 {"timestamp": "2025-06-01T16:19:40.880881+00:00", "sources": {"Cointelegraph": {"Bitcoin": 3}, "Bitcoin.com News": {"Bitcoin": 2, "Exchange": 1, "Decentralized": 1, "Leverage": 1, "Liquidation": 4}, "Decrypt": {"Bitcoin": 2}}}
 {"timestamp": "2025-06-01T17:13:59.326576+00:00", "sources": {"Cointelegraph": {"Blockchain": 2, "Bitcoin": 3}, "Bitcoin.com News": {"Bitcoin": 1, "Exchange": 1, "Liquidity": 1, "Institutional": 1}}}
 {"timestamp": "2025-06-01T18:21:42.503721+00:00", "sources": {"Bitcoin.com News": {"Bitcoin": 7, "Security": 1}, "Decrypt": {"AI": 2}}}
+{"timestamp": "2025-06-01T19:13:05.244457+00:00", "sources": {"Cointelegraph": {"Bitcoin": 2, "Security": 4, "Hacker": 1}}}
