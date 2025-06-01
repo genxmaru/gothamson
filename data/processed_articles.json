@@ -7480,5 +7480,22 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/us-dollar-faces-test-as-economist-sees-yuan-rupee-ruble-rising/": {
+        "last_processed": "2025-06-01T03:38:54.313227+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/ripple-presents-xrp-rlusd-to-replace-swifts-outdated-payment-system/": {
+        "last_processed": "2025-06-01T03:38:54.313227+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Stablecoin",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
