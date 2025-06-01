@@ -7497,5 +7497,12 @@
             "Digital Asset"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/strategy-michael-saylor-bitcoin-conversation-joe-rogan-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T04:33:01.729903+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
     }
 }
