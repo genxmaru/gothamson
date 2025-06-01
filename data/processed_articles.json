@@ -7541,5 +7541,29 @@
             "Security"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/france-charges-25-over-crypto-kidnapping-spree-paris?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T09:16:28.622510+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/bitmex-uncovers-security-flaws-in-north-koreas-lazarus-group-operations/": {
+        "last_processed": "2025-06-01T09:16:28.622510+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Security",
+            "Hacker"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/panama-accelerates-bitcoin-adoption-payments-bank-accounts-and-a-strategic-reserve-ahead/": {
+        "last_processed": "2025-06-01T09:16:28.622510+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
