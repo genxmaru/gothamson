@@ -7651,5 +7651,38 @@
             "Custody"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cryptonews.com/news/bitcoin-price-prediction-104k-btc-price-correction-or-breakout-reloading/": {
+        "last_processed": "2025-06-01T14:14:32.624853+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3",
+            "Mining",
+            "Staking",
+            "Compliance",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Institutional",
+            "Retail",
+            "Options",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-price-watch-market-stalls-at-104k-what-comes-next/": {
+        "last_processed": "2025-06-01T14:14:32.624853+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/latam-insights-bolivia-bans-crypto-energy-transactions-panama-accelerates-bitcoin-adoption/": {
+        "last_processed": "2025-06-01T14:14:32.624853+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
