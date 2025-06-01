@@ -7778,5 +7778,29 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ton-back-online-after-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T17:13:59.326576+00:00",
+        "keywords": [
+            "Blockchain"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-consolidate-but-eth-hype-tao-and-qnt-may-resume-their-up-move?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T17:13:59.326576+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/5b-in-ftx-funds-are-hitting-wallets-will-crypto-markets-get-a-second-wind/": {
+        "last_processed": "2025-06-01T17:13:59.326576+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Liquidity",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
