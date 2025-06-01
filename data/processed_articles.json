@@ -7511,5 +7511,21 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/ross-ulbricht-auction-nets-1-8m-in-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T07:15:58.577921+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/ai-to-transform-web3-into-knowledge-coordination-layer-says-openledgers-ram-kumar/": {
+        "last_processed": "2025-06-01T07:15:58.577921+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
