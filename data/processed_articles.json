@@ -7504,5 +7504,12 @@
             "Bitcoin"
         ],
         "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/bitcoin-scandal-forces-czech-justice-minister-to-step-down/": {
+        "last_processed": "2025-06-01T05:17:04.723277+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
