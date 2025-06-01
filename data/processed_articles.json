@@ -7684,5 +7684,67 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/the-machine-economy-has-arrived-and-bots-have-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/solana-price-prediction-with-sol-at-154-00-and-pressure-building-is-a-breakout-past-key-resistance-levels-on-the-horizon/": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "NFT",
+            "DeFi",
+            "Staking",
+            "Liquidity",
+            "DApp",
+            "Wallet",
+            "Options",
+            "EVM",
+            "Cross-chain",
+            "Interoperability"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/xrp-price-prediction-price-hovering-around-2-16-is-xrp-building-the-strength-needed-to-break-3/": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [
+            "Bitcoin",
+            "AI",
+            "Web3",
+            "CBDC",
+            "Decentralized",
+            "Wallet",
+            "Fiat",
+            "Governance",
+            "Institutional",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/vance-champions-bitcoin-in-vegas-trump-media-secures-2-5b-to-buy-bitcoin-and-more-week-in-review/": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/videos/interviews/EMTC8u3v/bitcoin-to-250k-arthur-hayes-makes-bold-predictions": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Treasury"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/322982/biggest-games-releasing-june-2025": {
+        "last_processed": "2025-06-01T15:16:03.849332+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
