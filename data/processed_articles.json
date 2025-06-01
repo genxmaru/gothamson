@@ -7527,5 +7527,19 @@
             "Web3"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/crypto-hacks-may-down-cetus-sui-cork-protocol-peckshield?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-01T08:20:56.129671+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/multichoices-irdeto-and-coinbase-unite-against-illicit-cryptocurrency-use/": {
+        "last_processed": "2025-06-01T08:20:56.129671+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
