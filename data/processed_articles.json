@@ -7588,5 +7588,52 @@
             "Wallet"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cryptonews.com/press-releases/habe-launches-ethereum-based-platform-creative-project-funding/": {
+        "last_processed": "2025-06-01T11:13:19.864446+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Web3",
+            "Cryptocurrency",
+            "Staking",
+            "Liquidity",
+            "Smart Contract",
+            "Centralized",
+            "Wallet",
+            "KYC",
+            "Governance"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/imf-warns-against-pakistans-power-push-for-bitcoin-mining-ai-data-centers/": {
+        "last_processed": "2025-06-01T11:13:19.864446+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "DeFi",
+            "Mining",
+            "Regulation",
+            "Decentralized",
+            "Wallet",
+            "Governance",
+            "Fund",
+            "Tokenization",
+            "Digital Asset",
+            "Virtual Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/south-african-judge-slams-central-bank-for-using-apartheid-era-laws-to-regulate-crypto/": {
+        "last_processed": "2025-06-01T11:13:19.864446+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Exchange",
+            "Regulation"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
