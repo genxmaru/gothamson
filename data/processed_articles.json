@@ -7870,5 +7870,21 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/943-eh-s-and-climbing-bitcoins-mining-power-nears-historic-threshold/": {
+        "last_processed": "2025-06-01T23:15:38.585607+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Mining"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323037/this-week-crypto-games-gamestop-bitcoin-ethereum-offline": {
+        "last_processed": "2025-06-01T23:15:38.585607+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum"
+        ],
+        "source": "Decrypt"
     }
 }
