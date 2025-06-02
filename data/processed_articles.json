@@ -7886,5 +7886,31 @@
             "Ethereum"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/santander-targets-crypto-payment-flows-with-stablecoin-strategy/": {
+        "last_processed": "2025-06-02T00:51:18.277013+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Stablecoin",
+            "Retail"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-donation-scandal-rocks-czech-republic-did-the-state-unknowingly-launder-millions/": {
+        "last_processed": "2025-06-02T00:51:18.277013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323249/sec-flags-compliance-concerns-ethereum-solana-etfs": {
+        "last_processed": "2025-06-02T00:51:18.277013+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Staking",
+            "Compliance"
+        ],
+        "source": "Decrypt"
     }
 }
