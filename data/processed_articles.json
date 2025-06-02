@@ -8714,5 +8714,52 @@
             "ETF"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/sec-faces-criticism-over-crypto-staking-shift?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T19:13:20.006759+00:00",
+        "keywords": [
+            "Staking"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/certik-reports-302m-lost-to-web3-scams-hacks-and-exploits-in-may/": {
+        "last_processed": "2025-06-02T19:13:20.006759+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Web3",
+            "DeFi",
+            "DAO",
+            "Security",
+            "Private Key",
+            "Wallet",
+            "Exploit"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/xrp-and-dogecoin-holders-quietly-turn-to-apt-miners-for-passive-income/": {
+        "last_processed": "2025-06-02T19:13:20.006759+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Mining",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/nft-market-slips-in-may-despite-buyer-growth-and-gains-from-bitcoin-avalanche/": {
+        "last_processed": "2025-06-02T19:13:20.006759+00:00",
+        "keywords": [
+            "Bitcoin",
+            "NFT"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323314/circle-bullish-ipo-demand-boosts-offering-7-2-billion": {
+        "last_processed": "2025-06-02T19:13:20.006759+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Decrypt"
     }
 }
