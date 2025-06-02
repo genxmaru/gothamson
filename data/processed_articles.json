@@ -7912,5 +7912,41 @@
             "Compliance"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/meta-ai-powered-headsets-us-military?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T03:18:42.431102+00:00",
+        "keywords": [
+            "AI"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/wintermute-crimeenjoyor-flags-malicious-ethereum-contracts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T03:18:42.431102+00:00",
+        "keywords": [
+            "Ethereum",
+            "Wallet"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/bitcoin-reserve-chaos-pakistans-big-reveal-crushed-by-own-government/": {
+        "last_processed": "2025-06-02T03:18:42.431102+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/asia-accelerates-de-dollarization-in-asean-currency-overhaul-plan/": {
+        "last_processed": "2025-06-02T03:18:42.431102+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323257/elon-musk-new-xchat-bitcoin-style-encryption": {
+        "last_processed": "2025-06-02T03:18:42.431102+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }

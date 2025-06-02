@@ -138,3 +138,4 @@
 {"timestamp": "2025-06-01T22:15:43.772425+00:00", "sources": {"Cointelegraph": {"Web3": 2}, "Bitcoin.com News": {"Bitcoin": 3}}}
 {"timestamp": "2025-06-01T23:15:38.585607+00:00", "sources": {"Bitcoin.com News": {"Bitcoin": 6, "Mining": 2}, "Decrypt": {"Bitcoin": 2, "Ethereum": 1}}}
 {"timestamp": "2025-06-02T00:51:18.277013+00:00", "sources": {"Bitcoin.com News": {"Bitcoin": 6, "Stablecoin": 4, "Retail": 1}, "Decrypt": {"Ethereum": 1, "Solana": 1, "Staking": 2, "Compliance": 1}}}
+{"timestamp": "2025-06-02T03:18:42.431102+00:00", "sources": {"Cointelegraph": {"AI": 2, "Ethereum": 3, "Wallet": 3}, "Bitcoin.com News": {"Bitcoin": 7}, "Decrypt": {"Bitcoin": 2}}}
