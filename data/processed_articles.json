@@ -8638,5 +8638,81 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/tether-debuts-omnichain-gold-stablecoin-ton-network?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/circle-hikes-ipo-to-896m-as-blackrock-demand-soars-valuation-could-top-6b/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange",
+            "Stablecoin",
+            "Fiat",
+            "Treasury",
+            "Institutional",
+            "Fund",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/france-crypto-kidnap-25-indicted-mutilation-ransom/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Security",
+            "Wallet",
+            "Insurance",
+            "Leverage",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/xrp-investors-explore-passive-income-with-savvy-mining-cloud-platform/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "AI",
+            "Cryptocurrency",
+            "Mining",
+            "Security",
+            "Compliance",
+            "Cold Storage",
+            "ETF",
+            "Options"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/strategy-doubles-down-on-crypto-with-75m-purchase-of-705-bitcoin/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Treasury"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-languishes-below-105k-despite-record-breaking-conference-attendance/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Institutional",
+            "Retail",
+            "Digital Asset"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/etf-weekly-flows-bitcoin-loses-157-million-as-ether-rallies-with-286-million-weekly-inflow/": {
+        "last_processed": "2025-06-02T18:24:27.899035+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "ETF"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
