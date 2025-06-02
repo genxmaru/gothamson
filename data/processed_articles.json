@@ -8080,5 +8080,40 @@
             "DeFi"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/ig-group-uk-crypto-trading-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T07:18:05.137474+00:00",
+        "keywords": [
+            "Cryptocurrency",
+            "Retail"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/yuga-labs-sells-moonbirds-ip-orange-cap-games?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T07:18:05.137474+00:00",
+        "keywords": [
+            "NFT"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/singapore-sets-june-30-deadline-for-unlicensed-crypto-operators/": {
+        "last_processed": "2025-06-02T07:18:05.137474+00:00",
+        "keywords": [
+            "Blockchain",
+            "Compliance",
+            "Retail",
+            "Digital Asset",
+            "Peer-to-Peer"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/nypd-detectives-investigated-for-alleged-role-in-crypto-entrepreneurs-kidnapping/": {
+        "last_processed": "2025-06-02T07:18:05.137474+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Cryptocurrency",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
