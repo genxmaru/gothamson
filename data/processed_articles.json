@@ -8115,5 +8115,65 @@
             "Security"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/metaplanet-becomes-ninth-largest-bitcoin-holder?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-levels-to-watch-bear-flag-breakdown-targets-97k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/meta-shareholders-reject-proposal-to-buy-bitcoin/": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Cryptocurrency",
+            "Treasury",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/wintermute-crimeenjoyor-to-warn-ethereum-users-of-wallet-draining-attacks/": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Web3",
+            "Staking",
+            "Security",
+            "Wallet",
+            "Exploit",
+            "Scalability",
+            "EVM"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/south-korean-ngo-becomes-first-entity-to-sell-crypto-after-phased-ban-lift/": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Ethereum",
+            "Cryptocurrency",
+            "Exchange",
+            "KYC",
+            "Institutional",
+            "ETF",
+            "Virtual Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/russia-considers-crypto-for-settling-49-5m-tonnes-of-grain-exports/": {
+        "last_processed": "2025-06-02T08:24:29.078564+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
