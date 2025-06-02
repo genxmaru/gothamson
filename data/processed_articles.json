@@ -8448,5 +8448,59 @@
             "Solana"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/centralized-infrastructure-requires-de-pin-adoption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Centralized"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitcoin-price-drops-under-104k-russia-ukraine-woes-rile-us-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/secs-2025-guidance-what-tokens-are-and-arent-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Digital Asset"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/consensys-web3auth-50m-user-acquisition/": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Ethereum",
+            "Blockchain",
+            "Web3",
+            "DApp",
+            "Security",
+            "Wallet",
+            "Options",
+            "Leverage"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitget-partners-with-kronos-research-to-deliver-institutional-grade-liquidity-and-trading-efficiency/": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Cryptocurrency",
+            "Exchange",
+            "Liquidity",
+            "Institutional"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323286/michael-saylors-strategy-makes-smallest-bitcoin-buy-in-10-weeks": {
+        "last_processed": "2025-06-02T15:19:09.625103+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
