@@ -8016,5 +8016,69 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/silk-road-founder-300-bitcoin-unlikely-self-donation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Wallet"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/meta-shareholders-knock-back-bitcoin-buy-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/world-vision-first-nonprofit-trade-crypto-south-korea?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/ross-ulbricht-donation-300-bitcoin-linked-to-questionable-source-zachxbt/": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Exchange",
+            "Compliance",
+            "Decentralized",
+            "Centralized",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/elon-musk-teases-new-xchat-feature-with-bitcoin-style-encryption/": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security",
+            "Decentralized"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/crypto-may-erode-public-trust-in-credit-warns-central-banker/": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323265/bitmex-lazarus-group-phishing-unsophisticated": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "NFT"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/323263/binance-founder-cz-proposes-dex-front-running": {
+        "last_processed": "2025-06-02T06:26:51.858744+00:00",
+        "keywords": [
+            "DeFi"
+        ],
+        "source": "Decrypt"
     }
 }
