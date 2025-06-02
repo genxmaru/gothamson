@@ -3,11 +3,9 @@ on:
   schedule:
     - cron: '0 * * * *'    # 毎時0分にフェッチ＆ログ追記
     - cron: '0 0 * * *'    # 毎日0時（UTC）に日次サマリーを実行
-    # - cron: '0 0 * * 1'    # 毎週月曜0時（UTC）に週次サマリーを実行 (必要ならコメントアウトを外す)
-    # - cron: '0 0 1 * *'    # 毎月1日0時（UTC）に月次サマリーを実行 (必要ならコメントアウトを外す)
   workflow_dispatch: # 手動実行も可能
 permissions:
-  contents: write # リポジトリへの書き込み権限（ログファイル、DB、処理済み記事ログ用）
+  contents: write
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -15,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # コミット権限用
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-          fetch-depth: 0 # 全履歴をフェッチ
-          ref: ${{ github.ref }} # 現在のブランチを明示的にチェックアウト
+          fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -41,15 +39,29 @@ jobs:
             sudo cat "$DICRC_PATH"
           else
             echo "Failed to create dicrc at $DICRC_PATH"
+            # exit 1 # 必要に応じてエラーで終了させる
           fi
 
-          echo "--- Listing files in MeCab dictionary directory ($MECAB_DIC_PATH) ---" # ★追加: デバッグ情報
-          ls -la "$MECAB_DIC_PATH"                                                     # ★追加: デバッグ情報
-          echo "--------------------------------------------------------------------" # ★追加: デバッグ情報
+          echo "--- Listing files in MeCab dictionary directory (before explicit compile) ---"
+          ls -la "$MECAB_DIC_PATH"
+          echo "-----------------------------------------------------------------------------"
 
-          # ★ギズモより: このpip installは、後続のvenv作成ステップ内のインストールと重複しています。
-          # 通常はvenv内でライブラリを管理するため、ここではコメントアウトするか削除しても良いかもしれません。
-          # pip install mecab-python3
+          echo "--- Attempting to compile MeCab dictionary explicitly ---" # ★追加: 明示的な辞書コンパイル開始
+          sudo mecab-dict-index \
+            -d "$MECAB_DIC_PATH" \
+            -o "$MECAB_DIC_PATH" \
+            -f utf-8 \
+            -t utf-8 \
+            -m "$MECAB_DIC_PATH/model.def" # ★追加: model.def を指定 (ただし存在しない場合はエラーになる可能性あり。まずはこれで試行)
+          # もし上記 model.def 指定でエラーが出る場合は、この行をコメントアウトして再試行してください。
+          # model.def が無くても基本的な辞書はコンパイルできる場合があります。
+          echo "--- Dictionary compilation attempt finished ---" # ★追加: 辞書コンパイル終了
+
+          echo "--- Listing files in MeCab dictionary directory (after explicit compile) ---" # ★追加
+          ls -la "$MECAB_DIC_PATH" # ★追加: 再度ファイル一覧を表示して確認
+          echo "---------------------------------------------------------------------------" # ★追加
+
+          # pip install mecab-python3 # (コメントアウトまたは削除推奨)
 
       - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
@@ -139,6 +151,12 @@ jobs:
           echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT
           PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Notify Discord 24H Trends
+        # (以降のDiscord通知部分は変更なしのため省略)
+        # ... (前回のコードと同じ) ...
+# ... (以降の summarize_and_notify ジョブの残りのステップも変更なし) ...
+# (Discord通知とワードクラウド生成・コミット部分のコードは前回のものをそのままお使いください)
 
       - name: Notify Discord 24H Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
