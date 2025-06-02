@@ -8502,5 +8502,118 @@
             "Bitcoin"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/price-predictions-6-2-spx-dxy-btc-eth-xrp-bnb-sol-doge-ada-hype?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/vc-roundup-crypto-venture-capital-may-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Treasury",
+            "Venture Capital"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/explained/who-really-controls-bitcoins-price-in-2025-whales-devs-or-governments-explained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Decentralized",
+            "ETF"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/bnb-rockets-19-in-may-can-sec-win-etf-hype-propel-it-to-2k/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Solana",
+            "DeFi",
+            "Altcoin",
+            "Exchange",
+            "Stablecoin",
+            "Decentralized",
+            "Wallet",
+            "Institutional",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/press-releases/defaicon-spotlight-defi-ai-agents-at-istanbul-blockchain-week-2025/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Blockchain",
+            "AI",
+            "Web3",
+            "DeFi",
+            "Decentralized",
+            "Governance",
+            "RWA"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/czech-minister-steps-down-over-45m-in-bitcoin-donated-from-convicted-criminal/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "Decentralized",
+            "Centralized",
+            "Wallet"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/solana-price-prediction-analysts-flip-bullish-as-sol-coils-below-resistance-big-move-loading/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "Layer 2",
+            "Wallet",
+            "Consensus",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/bitcoin-miners-bank-big-in-may-highest-monthly-earnings-since-the-halving/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Halving"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/uk-financial-giant-ig-group-launches-crypto-trading-for-retail-investors/": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Retail"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323293/sharplink-gaming-stock-falls-ethereum-treasury-pivot": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Ethereum",
+            "Treasury"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/323291/metaplanet-bitcoin-treasury-8888-btc": {
+        "last_processed": "2025-06-02T16:22:22.758612+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury"
+        ],
+        "source": "Decrypt"
     }
 }
