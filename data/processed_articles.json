@@ -8239,5 +8239,39 @@
             "Wallet"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/binance-co-founder-cz-proposes-dark-pool-dexs-against-manipulation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T11:15:18.051559+00:00",
+        "keywords": [
+            "MEV"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/eth-price-rally-incoming-ethereum-funds-see-321m-inflows/": {
+        "last_processed": "2025-06-02T11:15:18.051559+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Cryptocurrency",
+            "Institutional",
+            "ETF",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/spinlys-lounge-where-gaming-music-and-community-collide/": {
+        "last_processed": "2025-06-02T11:15:18.051559+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/elon-musk-claims-bitcoin-style-encryption-for-new-xchat-features/": {
+        "last_processed": "2025-06-02T11:15:18.051559+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Security"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
