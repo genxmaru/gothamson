@@ -8615,5 +8615,28 @@
             "Treasury"
         ],
         "source": "Decrypt"
+    },
+    "https://news.bitcoin.com/from-wallet-to-wager-bookmakerxyz-simplifies-sports-betting-with-web3-technology/": {
+        "last_processed": "2025-06-02T17:15:55.993446+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Web3",
+            "Wallet"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323296/solana-meme-coin-bonk-kill-to-earn-shooter-game": {
+        "last_processed": "2025-06-02T17:15:55.993446+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/videos/interviews/nyUZVqk3/btc-markets-news-more": {
+        "last_processed": "2025-06-02T17:15:55.993446+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
     }
 }
