@@ -34,18 +34,18 @@ EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 
 # 形態素解析器の初期化 (MeCab)
 # GitHub ActionsのUbuntu環境でmecab-ipadic-utf8がインストールされるパスを指定
-# 実際には /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic であることを確認
-MECAB_DIC_PATH = "/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic" # 【修正済み: 辞書パスを修正】
+# ログと経験に基づき、正しい辞書フォルダは /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic である
+MECAB_DIC_PATH = "/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic"
+# mecabrcの設定ファイルパス (GitHub ActionsのUbuntu環境のデフォルト)
+MECABRC_PATH = "/etc/mecabrc" # 【追加: mecabrcのパス】
 
 try:
-    # MeCab辞書パスを明示的に指定して初期化
-    tagger = MeCab.Tagger(f"-Ochasen -d {MECAB_DIC_PATH}")
+    # MeCab辞書パスとmecabrcパスを明示的に指定して初期化
+    tagger = MeCab.Tagger(f"-Ochasen -d {MECAB_DIC_PATH} -r {MECABRC_PATH}") # 【修正済み: -r オプションでmecabrcパスを指定】
 except RuntimeError as e:
-    # デフォルト辞書パスでも試す（フォールバック）
-    print(f"Failed to initialize MeCab with specified path: {e}. Trying with default path.")
-    # デフォルト辞書パスも環境によって異なる場合があるため、ここではエラーを再スローする
-    # もしデフォルトで動く環境であれば、この例外処理を削除しても良い
-    raise
+    print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH} and mecabrc: {MECABRC_PATH}")
+    print("Please verify the MeCab dictionary and mecabrc paths, and installation.")
+    raise # 致命的なエラーとして再スローする
 
 
 def extract_keywords(text):
