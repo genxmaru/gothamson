@@ -28,10 +28,23 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install MeCab and related libraries # 【変更点: MeCabインストールステップを追加】
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+          # mecab-ipadic-neologd をインストールする場合（これは時間がかかる可能性あり）
+          # sudo apt-get install -y git make curl
+          # git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
+          # cd mecab-ipadic-neologd
+          # ./bin/install-mecab-ipadic-neologd -n -y
+          # cd ..
+          # MeCab Python binding のインストール
+          pip install mecab-python3
+
       - name: Install dependencies
         run: |
           python -m venv .venv
-          source .venv/bin/activate # ここは source .venv/bin/activate が一般的です
+          source .venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt # requirements.txtから依存関係をインストール
 
@@ -39,9 +52,8 @@ jobs:
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          python news_fetcher.py # カレントディレクトリがルートなので、ファイル名だけでOK
+          PYTHONPATH="${{ github.workspace }}" python news_fetcher.py # PYTHONPATHを設定してモジュールのパスを通す
       
-      # 【追加箇所ここから】hourly_keyword_counts.jsonlの中身をデバッグログに出力
       - name: Debug Hourly Keyword Log
         run: |
           echo "--- Debugging hourly_keyword_counts.jsonl content ---"
@@ -53,7 +65,6 @@ jobs:
             echo "data/hourly_keyword_counts.jsonl does not exist."
           fi
           echo "-----------------------------------------------------"
-      # 【追加箇所ここまで】
 
       - name: Commit Hourly Logs and Processed Articles
         run: |
@@ -89,8 +100,7 @@ jobs:
           # 日本語フォントをインストール
           sudo apt-get update
           sudo apt-get install -y fonts-ipafont-gothic
-          # 必要に応じてフォントキャッシュを更新 (通常は不要だが念のため)
-          sudo fc-cache -fv
+          sudo fc-cache -fv # 必要に応じてフォントキャッシュを更新 (通常は不要だが念のため)
 
       - name: Initialize Database (if not exists)
         run: |
@@ -98,7 +108,6 @@ jobs:
           source .venv/bin/activate
           PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
-      # 【追加箇所ここから】DBの内容をデバッグログに出力
       - name: Debug DB Content
         run: |
           echo "--- Debugging keyword_trends.db content ---"
@@ -107,21 +116,20 @@ jobs:
           sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, COUNT(keyword) FROM daily_trends GROUP BY date, trend_type, source_name ORDER BY date DESC LIMIT 10;"
           sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, keyword, count FROM daily_trends ORDER BY date DESC, trend_type, source_name, count DESC LIMIT 20;"
           echo "-------------------------------------------"
-      # 【追加箇所ここまで】
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT # 出力名を変更
-          PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT # summarize.pyの出力を直接書き込む
+          echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT
+          PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
       
       - name: Notify Discord 24H Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_24H }} # 24H用Webhook
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_24H }}
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_24h=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---24H/,/---REPORT_SPLIT---1MON/p' | sed '1d;$d')
@@ -131,7 +139,7 @@ jobs:
             content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
           fi
 
-          if [ -n "$content_24h" ]; then # 内容が空でない場合のみ送信
+          if [ -n "$content_24h" ]; then
             payload=$(jq -Rn --arg c "$content_24h" '{content: $c}')
             curl -H "Content-Type: application/json" \
                  -d "$payload" \
@@ -143,7 +151,7 @@ jobs:
       - name: Notify Discord 1MON Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---1MON')
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_1MON }} # 1MON用Webhook
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_1MON }}
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_1m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---1MON/,/---REPORT_SPLIT---3MON/p' | sed '1d;$d')
@@ -153,7 +161,7 @@ jobs:
             content_1m=$(echo "$content_1m" | cut -c 1-1990)"..."
           fi
 
-          if [ -n "$content_1m" ]; then # 内容が空でない場合のみ送信
+          if [ -n "$content_1m" ]; then
             payload=$(jq -Rn --arg c "$content_1m" '{content: $c}')
             curl -H "Content-Type: application/json" \
                  -d "$payload" \
@@ -165,7 +173,7 @@ jobs:
       - name: Notify Discord 3MON Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---3MON')
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }} # 3MON用Webhook
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }}
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
@@ -175,11 +183,11 @@ jobs:
             content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
           fi
 
-          if [ -n "$content_3m" ]; then # 内容が空でない場合のみ送信
+          if [ -n "$content_3m" ]; then
             payload=$(jq -Rn --arg c "$content_3m" '{content: $c}')
             curl -H "Content-Type: application/json" \
                  -d "$payload" \
-                 "$DISCORD_WEBHOOK_URL"
+                 "${{ secrets.DISCORD_WEBHOOK_URL_3MON }}"
           else
             echo "3MON trends report is empty, skipping Discord notification."
           fi
