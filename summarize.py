@@ -30,6 +30,7 @@ def load_hourly_keyword_counts(since_timestamp):
             try:
                 entry = json.loads(line)
                 entry_timestamp = datetime.fromisoformat(entry['timestamp'])
+                # since_timestampよりも新しいか、同じ時刻のエントリのみを対象とする
                 if entry_timestamp >= since_timestamp:
                     all_hourly_counts.append(entry)
             except json.JSONDecodeError:
@@ -39,17 +40,6 @@ def load_hourly_keyword_counts(since_timestamp):
 def aggregate_trends(hourly_counts_data, time_ranges):
     """
     時間範囲とソース別にキーワードトレンドを集計する
-    戻り値の構造:
-    {
-        "24h": {
-            "Total": {"Keyword1": Count, ...},
-            "Source1": {"Keyword1": Count, ...},
-            "Source2": {"Keyword1": Count, ...},
-            ...
-        },
-        "1m": { ... },
-        "3m": { ... }
-    }
     """
     aggregated_data = {period: {"Total": {}} for period in time_ranges}
 
@@ -70,7 +60,6 @@ def aggregate_trends(hourly_counts_data, time_ranges):
                         aggregated_data[period][source_name][keyword] = \
                             aggregated_data[period][source_name].get(keyword, 0) + count
     
-    # ここでは集計のみを行い、表示件数の制限は generate_summary_report で行う
     return aggregated_data
 
 def save_daily_trends_to_db(trends_data, current_time):
@@ -80,13 +69,6 @@ def save_daily_trends_to_db(trends_data, current_time):
         conn = sqlite3.connect(KEYWORD_TRENDS_DB)
         cursor = conn.cursor()
 
-        # テーブル作成（存在しない場合のみ）
-        # trend_type: '24h', '1m', '3m'
-        # source_name: ニュースサイト名 ('Total'を含む)
-        # keyword: キーワード
-        # count: 出現回数
-        # date: 集計日 (YYYY-MM-DD)
-        # UNIQUE制約を強化し、重複挿入ではなく『更新』を促す (ON CONFLICT REPLACE)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS daily_trends (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -100,24 +82,27 @@ def save_daily_trends_to_db(trends_data, current_time):
         ''')
         conn.commit()
 
-        # データを挿入
-        # ここで、挿入前に既存のデータを削除するロジックを追加し、
-        # 日付ごとの完全な置き換えを確実にする
+        # `current_time`のYYYY-MM-DD形式で、その日のすべてのトレンドデータを削除する
+        # これにより、毎日新しいデータで完全に置き換えられる
         today_date_str = current_time.strftime('%Y-%m-%d')
+        print(f"Deleting existing daily trends for {today_date_str}...")
         cursor.execute('''
             DELETE FROM daily_trends WHERE date = ?
         ''', (today_date_str,))
         conn.commit()
+        print(f"Finished deleting for {today_date_str}.")
 
+        # データを挿入
+        print("Inserting new daily trends...")
         for trend_type, periods_data in trends_data.items():
             for source_name, keywords_counts in periods_data.items():
                 for keyword, count in keywords_counts.items():
                     cursor.execute('''
                         INSERT INTO daily_trends (trend_type, source_name, keyword, count, date)
                         VALUES (?, ?, ?, ?, ?)
-                    ''', (trend_type, source_name, keyword, count, today_date_str)) # `current_time.strftime('%Y-%m-%d')`を`today_date_str`に変更
+                    ''', (trend_type, source_name, keyword, count, today_date_str))
         conn.commit()
-        print("Saved daily counts to DB.")
+        print("Saved new daily counts to DB.")
     except sqlite3.Error as e:
         print(f"Database error: {e}")
     finally:
@@ -129,7 +114,7 @@ def generate_individual_summary_report(period_key, period_data, display_limit):
     report_parts = []
     
     if not period_data.get("Total"):
-        return "" # データがない場合は空文字列を返す
+        return ""
 
     report_parts.append(f"### 過去 {period_key} のトレンド")
     
@@ -139,14 +124,14 @@ def generate_individual_summary_report(period_key, period_data, display_limit):
         period_data["Total"].items(), 
         key=lambda item: item[1], 
         reverse=True
-    )[:display_limit] # ここで表示件数を制限
+    )[:display_limit]
     
     if total_keywords:
         report_parts.append(",".join([f"{keyword}: {count}件" for keyword, count in total_keywords]))
     else:
         report_parts.append("トレンドなし")
     
-    report_parts.append("") # 区切り
+    report_parts.append("")
 
     # ソース別のトレンド (Total以外のソースをループ)
     sorted_sources = sorted([s for s in period_data.keys() if s != "Total"])
@@ -155,16 +140,15 @@ def generate_individual_summary_report(period_key, period_data, display_limit):
             period_data[source_name].items(),
             key=lambda item: item[1],
             reverse=True
-        )[:display_limit] # ここで表示件数を制限
+        )[:display_limit]
         
         report_parts.append(f"**{source_name}:**")
         if source_counts:
             report_parts.append(",".join([f"{keyword}: {count}件" for keyword, count in source_counts]))
         else:
             report_parts.append("トレンドなし")
-        report_parts.append("") # 区切り
+        report_parts.append("")
     
-    # 各期間のレポートの終わりに区切りを追加
     report_parts.append("---\n") 
 
     return "\n".join(report_parts)
@@ -174,7 +158,6 @@ if __name__ == "__main__":
     now_utc = get_utc_now()
     time_ranges = calculate_time_ranges(now_utc)
     
-    # ロードするデータの最も古い開始時刻
     earliest_start_time = min(time_ranges.values())
     
     hourly_counts = load_hourly_keyword_counts(earliest_start_time)
@@ -183,21 +166,18 @@ if __name__ == "__main__":
     
     save_daily_trends_to_db(trends, now_utc)
     
-    # 各期間のレポートを個別に生成
-    # 各期間で上位10件に固定
     report_24h = generate_individual_summary_report("24h", trends.get("24h", {}), 10)
     report_1m = generate_individual_summary_report("1m", trends.get("1m", {}), 10)
     report_3m = generate_individual_summary_report("3m", trends.get("3m", {}), 10)
 
-    # 各レポートを区切り文字で結合して出力 (news.ymlで分割するために利用)
     final_output = []
     final_output.append(f"Aggregating daily trends up to {now_utc.isoformat()}...")
     final_output.append("Saved daily counts to DB.\n")
-    final_output.append("---REPORT_SPLIT---24H\n") # 24Hレポートの開始マーカー
+    final_output.append("---REPORT_SPLIT---24H\n")
     final_output.append(report_24h)
-    final_output.append("---REPORT_SPLIT---1MON\n") # 1MONレポートの開始マーカー
+    final_output.append("---REPORT_SPLIT---1MON\n")
     final_output.append(report_1m)
-    final_output.append("---REPORT_SPLIT---3MON\n") # 3MONレポートの開始マーカー
+    final_output.append("---REPORT_SPLIT---3MON\n")
     final_output.append(report_3m)
 
     print("\n".join(final_output))
