@@ -7993,5 +7993,28 @@
             "Wallet"
         ],
         "source": "Decrypt"
+    },
+    "https://cointelegraph.com/news/elon-musk-xchat-bitcoin-style-encryption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T05:18:06.199622+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/metaplanet-acquires-1088-btc-portfolio-grows-to-8888/": {
+        "last_processed": "2025-06-02T05:18:06.199622+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Treasury",
+            "Fund"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/trading-bitcoin-with-elliott-wave-theory-patterns-and-psychology/": {
+        "last_processed": "2025-06-02T05:18:06.199622+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
