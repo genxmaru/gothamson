@@ -147,3 +147,4 @@
 {"timestamp": "2025-06-02T09:19:29.245680+00:00", "sources": {"Cointelegraph": {"Bitcoin": 4, "Blockchain": 1, "Exchange": 3}, "Bitcoin.com News": {"Bitcoin": 6, "Exchange": 1, "Treasury": 2}}}
 {"timestamp": "2025-06-02T10:19:23.130306+00:00", "sources": {"CryptoNews": {"Bitcoin": 1, "Ethereum": 1, "Cryptocurrency": 2, "Exchange": 2, "Compliance": 1, "Custody": 1, "Institutional": 1, "Retail": 11, "Digital Asset": 1}, "Bitcoin.com News": {"Bitcoin": 1, "Wallet": 1}}}
 {"timestamp": "2025-06-02T11:15:18.051559+00:00", "sources": {"Cointelegraph": {"MEV": 1}, "CryptoNews": {"Bitcoin": 5, "Ethereum": 10, "Cryptocurrency": 2, "Institutional": 3, "ETF": 1, "Digital Asset": 2}, "Bitcoin.com News": {"Bitcoin": 6, "Security": 1}}}
+{"timestamp": "2025-06-02T12:35:50.776013+00:00", "sources": {"Cointelegraph": {"Bitcoin": 3}, "Bitcoin.com News": {"Bitcoin": 12}}}

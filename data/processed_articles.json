@@ -8273,5 +8273,38 @@
             "Security"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/strategy-ends-may-with-75m-bitcoin-buy-at-103k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T12:35:50.776013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/strategys-bitcoin-stack-hits-580955-btc-after-new-acquisition/": {
+        "last_processed": "2025-06-02T12:35:50.776013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/bitcoin-price-watch-bulls-and-bears-battle-at-104k-support-zone/": {
+        "last_processed": "2025-06-02T12:35:50.776013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://news.bitcoin.com/latam-insights-encore-bolivias-new-anti-crypto-decision-will-backfire-in-time/": {
+        "last_processed": "2025-06-02T12:35:50.776013+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323268/singapore-financial-watchdog-ban-overseas-crypto-services": {
+        "last_processed": "2025-06-02T12:35:50.776013+00:00",
+        "keywords": [],
+        "source": "Decrypt"
     }
 }
