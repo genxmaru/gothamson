@@ -8372,5 +8372,81 @@
             "Mining"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/circle-raises-ipo-target-to-896m-amid-strong-investor-interest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Stablecoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cryptonews.com/news/cardano-price-prediction-chaos-or-catalyst-ada-reacts-to-founder-fallout/": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Ethereum",
+            "Solana",
+            "Blockchain",
+            "DeFi",
+            "DAO",
+            "Cryptocurrency",
+            "Layer 2",
+            "Decentralized",
+            "Wallet",
+            "Bridge"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/russia-explores-using-crypto-for-grain-export-payments-to-bypass-sanctions/": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Ethereum",
+            "Blockchain",
+            "Cryptocurrency",
+            "Exchange",
+            "Stablecoin",
+            "Decentralized",
+            "Fiat",
+            "Insurance",
+            "Derivatives",
+            "Digital Asset"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://cryptonews.com/news/crypto-trader-james-wynn-quits-perps-after-100m-rollercoaster-now-bets-100m-on-btc-can-he-rebound/": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Blockchain",
+            "AI",
+            "Decentralized",
+            "Wallet",
+            "Retail",
+            "Leverage",
+            "Liquidation"
+        ],
+        "source": "CryptoNews"
+    },
+    "https://news.bitcoin.com/from-100m-wipeout-to-98m-gamble-wynns-back-and-betting-big-on-btc/": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Liquidation"
+        ],
+        "source": "Bitcoin.com News"
+    },
+    "https://decrypt.co/323287/bitcoin-price-subdued-as-trump-always-chickens-out-backlash-looms": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Decrypt"
+    },
+    "https://decrypt.co/323276/top-solana-meme-coin-creator-on-pump-fun-has-earned-93000-in-three-weeks": {
+        "last_processed": "2025-06-02T14:17:45.284368+00:00",
+        "keywords": [
+            "Solana"
+        ],
+        "source": "Decrypt"
     }
 }
