@@ -86,6 +86,7 @@ def save_daily_trends_to_db(trends_data, current_time):
         # keyword: キーワード
         # count: 出現回数
         # date: 集計日 (YYYY-MM-DD)
+        # UNIQUE制約を強化し、重複挿入ではなく『更新』を促す (ON CONFLICT REPLACE)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS daily_trends (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -100,13 +101,21 @@ def save_daily_trends_to_db(trends_data, current_time):
         conn.commit()
 
         # データを挿入
+        # ここで、挿入前に既存のデータを削除するロジックを追加し、
+        # 日付ごとの完全な置き換えを確実にする
+        today_date_str = current_time.strftime('%Y-%m-%d')
+        cursor.execute('''
+            DELETE FROM daily_trends WHERE date = ?
+        ''', (today_date_str,))
+        conn.commit()
+
         for trend_type, periods_data in trends_data.items():
             for source_name, keywords_counts in periods_data.items():
                 for keyword, count in keywords_counts.items():
                     cursor.execute('''
                         INSERT INTO daily_trends (trend_type, source_name, keyword, count, date)
                         VALUES (?, ?, ?, ?, ?)
-                    ''', (trend_type, source_name, keyword, count, current_time.strftime('%Y-%m-%d')))
+                    ''', (trend_type, source_name, keyword, count, today_date_str)) # `current_time.strftime('%Y-%m-%d')`を`today_date_str`に変更
         conn.commit()
         print("Saved daily counts to DB.")
     except sqlite3.Error as e:
@@ -133,12 +142,11 @@ def generate_individual_summary_report(period_key, period_data, display_limit):
     )[:display_limit] # ここで表示件数を制限
     
     if total_keywords:
-        for keyword, count in total_keywords:
-            report_parts.append(f"- {keyword}: {count}件")
+        report_parts.append(",".join([f"{keyword}: {count}件" for keyword, count in total_keywords]))
     else:
-        report_parts.append("  トレンドなし")
+        report_parts.append("トレンドなし")
     
-    report_parts.append("\n") # 区切り
+    report_parts.append("") # 区切り
 
     # ソース別のトレンド (Total以外のソースをループ)
     sorted_sources = sorted([s for s in period_data.keys() if s != "Total"])
@@ -151,11 +159,10 @@ def generate_individual_summary_report(period_key, period_data, display_limit):
         
         report_parts.append(f"**{source_name}:**")
         if source_counts:
-            for keyword, count in source_counts:
-                report_parts.append(f"- {keyword}: {count}件")
+            report_parts.append(",".join([f"{keyword}: {count}件" for keyword, count in source_counts]))
         else:
-            report_parts.append("  トレンドなし")
-        report_parts.append("\n") # 区切り
+            report_parts.append("トレンドなし")
+        report_parts.append("") # 区切り
     
     # 各期間のレポートの終わりに区切りを追加
     report_parts.append("---\n") 
@@ -183,7 +190,6 @@ if __name__ == "__main__":
     report_3m = generate_individual_summary_report("3m", trends.get("3m", {}), 10)
 
     # 各レポートを区切り文字で結合して出力 (news.ymlで分割するために利用)
-    # ここにタイムスタンプとDB保存メッセージも追加
     final_output = []
     final_output.append(f"Aggregating daily trends up to {now_utc.isoformat()}...")
     final_output.append("Saved daily counts to DB.\n")
