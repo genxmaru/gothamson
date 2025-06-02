@@ -37,14 +37,15 @@ EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 # ログと経験に基づき、正しい辞書フォルダは /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic である
 MECAB_DIC_PATH = "/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic"
 # mecabrcの設定ファイルパス (GitHub ActionsのUbuntu環境のデフォルト)
-MECABRC_PATH = "/etc/mecabrc" # 【追加: mecabrcのパス】
+# MECA BRC_PATH = "/etc/mecabrc" # この行はコメントアウトまたは削除する
 
 try:
-    # MeCab辞書パスとmecabrcパスを明示的に指定して初期化
-    tagger = MeCab.Tagger(f"-Ochasen -d {MECAB_DIC_PATH} -r {MECABRC_PATH}") # 【修正済み: -r オプションでmecabrcパスを指定】
+    # MeCab辞書パスのみを明示的に指定して初期化
+    # mecabrcのパスはシステムデフォルトに任せる（/etc/mecabrcなどを参照するはず）
+    tagger = MeCab.Tagger(f"-Ochasen -d {MECAB_DIC_PATH}") # 【修正済み: -r オプションを削除】
 except RuntimeError as e:
-    print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH} and mecabrc: {MECABRC_PATH}")
-    print("Please verify the MeCab dictionary and mecabrc paths, and installation.")
+    print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH}")
+    print("Please verify the MeCab dictionary path and installation.")
     raise # 致命的なエラーとして再スローする
 
 
