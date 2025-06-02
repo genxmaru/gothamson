@@ -28,17 +28,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MeCab and related libraries # 【変更点: MeCabインストールステップを追加】
+      - name: Install MeCab and related libraries
         run: |
           sudo apt-get update
           sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
-          # mecab-ipadic-neologd をインストールする場合（これは時間がかかる可能性あり）
-          # sudo apt-get install -y git make curl
-          # git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
-          # cd mecab-ipadic-neologd
-          # ./bin/install-mecab-ipadic-neologd -n -y
-          # cd ..
-          # MeCab Python binding のインストール
           pip install mecab-python3
 
       - name: Install dependencies
@@ -48,11 +41,14 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt # requirements.txtから依存関係をインストール
 
-      - name: Fetch & Log Keywords
+      - name: Fetch & Log Keywords # 【変更点: PYTHONPATHの設定を強化】
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          PYTHONPATH="${{ github.workspace }}" python news_fetcher.py # PYTHONPATHを設定してモジュールのパスを通す
+          # PYTHONPATHにvenvのsite-packagesディレクトリを追加してMeCabのパスを通す
+          # Python 3.11の場合、site-packagesは通常 .venv/lib/python3.11/site-packages
+          export PYTHONPATH="$(pwd)/.venv/lib/python3.11/site-packages:$PYTHONPATH"
+          PYTHONPATH="${{ github.workspace }}" python news_fetcher.py
       
       - name: Debug Hourly Keyword Log
         run: |
