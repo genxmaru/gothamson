@@ -7,15 +7,15 @@ from datetime import datetime, timedelta, timezone
 
 # ログファイルとDBファイルのパス
 KEYWORD_TRENDS_DB = os.path.join(os.path.dirname(__file__), 'data', 'keyword_trends.db')
-WORDCLOUD_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'data', 'wordclouds') # dataディレクトリの下にwordcloudsを置くように修正しました
+WORDCLOUD_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'data', 'wordclouds')
 
 # 日本語フォントのパス (GitHub ActionsのUbuntu環境で利用可能なフォント)
-# IPAexゴシックは多くのLinux環境で利用可能
-# 環境によっては以下を試す
-# FONT_PATH = '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf' # 汎用的なフォント
-# FONT_PATH = '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc' # Noto Sans CJK
-FONT_PATH = '/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf'  
-
+# 前回、一時的な切り分け策として汎用フォントを提案したが、
+# 今回は問題の切り分けと解決を最優先するため、最も確実性の高いパスに固定する。
+# IPAex Gothicのパスは `/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf` であり、
+# もしこれで動かない場合は、GitHub Actions環境の根本的な問題か、
+# WordCloud/Pillowライブラリの特定バージョンとの相性問題が考えられる。
+FONT_PATH = '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf' # 汎用フォントでまず動作確認
 
 def get_latest_trends(db_path, trend_type, source_name):
     """
@@ -28,7 +28,6 @@ def get_latest_trends(db_path, trend_type, source_name):
         cursor = conn.cursor()
 
         # 最新のデータ（最も新しい日付のデータ）を取得
-        # dateカラムで降順にソートし、最初の行を取得することで最新の日付を取得
         cursor.execute('''
             SELECT keyword, count
             FROM daily_trends
@@ -57,41 +56,38 @@ def generate_wordcloud(keywords_data, title, output_filepath):
         return
 
     # WordCloudオブジェクトの設定
-    # 背景色、最大単語数、フォントパスなどを指定
     wc = WordCloud(
         font_path=FONT_PATH,
         background_color="white",
-        max_words=100, # 表示する最大単語数 (get_latest_trendsのLIMITと合わせるか、それより少なく)
-        width=1200,    # 画像の幅
-        height=600,    # 画像の高さ
-        collocations=False, # 複数単語の組み合わせを生成しない（単一キーワードのトレンドなので）
-        random_state=42 # 再現性のため
+        max_words=100,
+        width=1200,
+        height=600,
+        collocations=False,
+        random_state=42
     )
 
     # ワードクラウドを生成
     wc.generate_from_frequencies(keywords_data)
 
     # 生成されたワードクラウドを画像として保存
-    plt.figure(figsize=(12, 6)) # figsizeもWordCloudのwidth/heightと合わせる
+    plt.figure(figsize=(12, 6))
     plt.imshow(wc, interpolation='bilinear')
-    plt.axis("off") # 軸を表示しない
-    plt.title(title, fontsize=16) # タイトル
-    plt.tight_layout(pad=0) # 余白をなくす
+    plt.axis("off")
+    plt.title(title, fontsize=16)
+    plt.tight_layout(pad=0)
     
     # 出力ディレクトリが存在しない場合は作成
     os.makedirs(WORDCLOUD_OUTPUT_DIR, exist_ok=True)
-    plt.savefig(output_filepath, dpi=300, bbox_inches='tight') # 高解像度で保存
-    plt.close() # メモリ解放のためプロットを閉じる
+    plt.savefig(output_filepath, dpi=300, bbox_inches='tight')
+    plt.close()
     print(f"Generated word cloud: {output_filepath}")
 
 
 if __name__ == "__main__":
     now_utc = datetime.now(timezone.utc)
-    # UTCの今日の00:00:00を基準日とする
     today_utc = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
-    date_str = today_utc.strftime('%Y%m%d') # ファイル名に使う日付文字列
+    date_str = today_utc.strftime('%Y%m%d')
 
-    # 集計するトレンドタイプとソース
     trend_types = {
         "24h": "過去24時間のトレンド",
         "1m": "過去1ヶ月のトレンド",
@@ -109,26 +105,14 @@ if __name__ == "__main__":
 
     for trend_type_key, trend_type_title in trend_types.items():
         for source_name_key, source_name_title in source_names.items():
-            # DBからキーワードデータを取得
             keywords_data = get_latest_trends(KEYWORD_TRENDS_DB, trend_type_key, source_name_key)
             
-            # ファイル名を生成 (例: wordcloud_24h_Total_20240527.png)
-            # ファイル名に使えない文字を置換し、小文字に統一
-            safe_source_name = source_name_key.replace(" ", "_").replace(".", "").lower() 
+            safe_source_name = source_name_key.replace(" ", "_").replace(".", "").lower()
             output_filename = f"wordcloud_{trend_type_key}_{safe_source_name}_{date_str}.png"
             output_filepath = os.path.join(WORDCLOUD_OUTPUT_DIR, output_filename)
             
-            # ワードクラウドを生成
             title = f"{trend_type_title}: {source_name_title}"
             generate_wordcloud(keywords_data, title, output_filepath)
             
-            if keywords_data: # データが生成された場合のみパスを追加
+            if keywords_data:
                 generated_image_paths.append(output_filepath)
-    
-    # 生成された画像のパスをGitHub Actionsの出力として設定
-    # GitHub ActionsのStep OutputにJSON文字列を書き込む
-    # GITHUB_OUTPUTへの書き込み形式は "name=value"
-    # ここでは改行文字を含まないよう、1行でJSON文字列を渡す
-    # この部分は、news.yml の Get Word Cloud URLs and Notify Discord ステップで処理されるため、
-    # Pythonスクリプトからは削除しても機能しますが、デバッグのために残しています。
-    # print(f"wordcloud_paths={json.dumps(generated_image_paths)}")
