@@ -39,7 +39,6 @@ jobs:
             sudo cat "$DICRC_PATH"
           else
             echo "Failed to create dicrc at $DICRC_PATH"
-            # exit 1 # 必要に応じてエラーで終了させる
           fi
 
           echo "--- Listing files in MeCab dictionary directory (before explicit compile) ---"
@@ -47,29 +46,23 @@ jobs:
           echo "-----------------------------------------------------------------------------"
 
           echo "--- Attempting to compile MeCab dictionary explicitly ---"
-          # mecab-dict-index で辞書を明示的にコンパイル
-          # -d: 辞書ソースディレクトリ
-          # -o: 出力先ディレクトリ (通常はソースと同じ場所)
-          # -f: 入力エンコーディング (ipadic-utf8 は utf-8)
-          # -t: 出力辞書のエンコーディング (通常は utf-8)
-          # -m: モデルファイル (存在すれば使用。無ければこのオプション自体を削除またはコメントアウト)
-          #     以前のログで model.def が skipped となっていたため、ここでは一旦コメントアウトします。
-          #     もし model.def が必須でエラーになる場合は、そのファイルを探すか、
-          #     別の辞書 (例: mecab-ipadic-neologd など) の利用も検討が必要になるかもしれません。
-          sudo mecab-dict-index \
+          # mecab-config --libexecdir で mecab-dict-index のあるディレクトリパスを取得
+          MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir) # ★追加: mecab-dict-indexのパスを取得
+          echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR" # ★追加: パスのデバッグ出力
+
+          # mecab-dict-index をフルパスで実行する
+          sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
             -d "$MECAB_DIC_PATH" \
             -o "$MECAB_DIC_PATH" \
             -f utf-8 \
             -t utf-8
-          # -m "$MECAB_DIC_PATH/model.def" # model.def が見つからないため、この行はコメントアウト
-
           echo "--- Dictionary compilation attempt finished ---"
 
           echo "--- Listing files in MeCab dictionary directory (after explicit compile) ---"
-          ls -la "$MECAB_DIC_PATH" # 再度ファイル一覧を表示して unk.dic や sys.dic が生成されたか確認
+          ls -la "$MECAB_DIC_PATH"
           echo "---------------------------------------------------------------------------"
 
-          # pip install mecab-python3 # このステップでのインストールは不要 (venv内で行うため)
+          # pip install mecab-python3 # (コメントアウトまたは削除推奨)
 
       - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
@@ -251,7 +244,6 @@ jobs:
           for IMAGE_PATH in $IMAGE_PATHS; do
             IMAGE_BASENAME=$(basename "$IMAGE_PATH")
             IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
-            # タイトル整形は元のコードのままとします
             TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
 
             DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
