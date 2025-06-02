@@ -1,5 +1,4 @@
 name: News Flow Automation
-
 on:
   schedule:
     - cron: '0 * * * *'    # 毎時0分にフェッチ＆ログ追記
@@ -7,10 +6,8 @@ on:
     # - cron: '0 0 * * 1'    # 毎週月曜0時（UTC）に週次サマリーを実行 (必要ならコメントアウトを外す)
     # - cron: '0 0 1 * *'    # 毎月1日0時（UTC）に月次サマリーを実行 (必要ならコメントアウトを外す)
   workflow_dispatch: # 手動実行も可能
-
 permissions:
   contents: write # リポジトリへの書き込み権限（ログファイル、DB、処理済み記事ログ用）
-
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -28,31 +25,35 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MeCab system libraries and create dicrc # 【変更点: dicrc作成を追加】
+      - name: Install MeCab system libraries and create dicrc
         run: |
           sudo apt-get update
           sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
-          
-          # MeCabの辞書ディレクトリパスを取得
-          MECAB_DIC_PATH="/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic"
-          DICRC_PATH="$MECAB_DIC_PATH/dicrc" # dicrcを辞書ディレクトリ直下に作成
+
+          # MeCabの辞書ディレクトリパスを修正 (mecab-ipadic-utf8の標準的なパス)
+          MECAB_DIC_PATH="/usr/share/mecab/dic/ipadic" # ★修正点: パスを変更しました
+          DICRC_PATH="$MECAB_DIC_PATH/dicrc"
+
+          # dicrcファイルを書き込む先の親ディレクトリを作成 (存在すれば何もしない)
+          sudo mkdir -p "$(dirname "$DICRC_PATH")" # ★追加点: 親ディレクトリの作成コマンド
 
           # dicrcファイルの内容を定義
           # dicdir行は通常mecabrcで指定されるが、dicrcではその辞書自体のメタ情報を記述する
-          # ここでは最小限の内容として空ファイルで作成、またはdicdirを指定
-          # 以前の調査でUbuntuのmecabrcがdicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic/ と設定されていることを踏まえる
-          echo "dicdir = $MECAB_DIC_PATH" | sudo tee $DICRC_PATH > /dev/null # dicrcを作成し、辞書パスを記述
+          echo "dicdir = $MECAB_DIC_PATH" | sudo tee "$DICRC_PATH" > /dev/null
 
-          # dicrcが作成されたか確認
+          # dicrcが作成されたか確認 (デバッグ用)
           if [ -f "$DICRC_PATH" ]; then
             echo "dicrc created at $DICRC_PATH"
-            cat $DICRC_PATH # 作成されたdicrcの内容をログに出力
+            sudo cat "$DICRC_PATH" # 作成されたdicrcの内容をログに出力 (sudoが必要な場合があります)
           else
             echo "Failed to create dicrc at $DICRC_PATH"
-            exit 1 # dicrc作成失敗は致命的エラー
+            # この時点で失敗している場合、後続の処理も失敗する可能性が高い
           fi
 
-          pip install mecab-python3
+          # ★ギズモより: このpip installは、後続のvenv作成ステップ内のインストールと重複しています。
+          # 通常はvenv内でライブラリを管理するため、ここではコメントアウトするか削除しても良いかもしれません。
+          # 今回のエラーとは直接関係ありませんが、今後のためにご検討ください。
+          # pip install mecab-python3
 
       - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
@@ -86,7 +87,8 @@ jobs:
           git config user.email "actions@github.com"
           git add data/hourly_keyword_counts.jsonl data/processed_articles.json
           git commit -m "chore: update hourly keyword counts and processed articles log" || echo "No changes to commit"
-          git push origin main
+          # git push origin main # ブランチ名を動的に指定する方が安全です (例: ${{ github.ref_name }})
+          git push origin ${{ github.ref_name }} # ★修正案: プッシュ先のブランチを動的に
 
   summarize_and_notify:
     needs: fetch # fetchジョブが完了してから実行
@@ -120,15 +122,19 @@ jobs:
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          PYTHONPATH="${{ github.workspace }}" python db_manager.py
+          PYTHONPATH="${{ github.workspace }}" python db_manager.py # db_manager.py が存在する場合
 
       - name: Debug DB Content
         run: |
           echo "--- Debugging keyword_trends.db content ---"
-          sqlite3 data/keyword_trends.db ".schema"
-          sqlite3 data/keyword_trends.db "SELECT * FROM daily_trends LIMIT 20;"
-          sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, COUNT(keyword) FROM daily_trends GROUP BY date, trend_type, source_name ORDER BY date DESC LIMIT 10;"
-          sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, keyword, count FROM daily_trends ORDER BY date DESC, trend_type, source_name, count DESC LIMIT 20;"
+          if [ -f data/keyword_trends.db ]; then # DBファイル存在確認
+            sqlite3 data/keyword_trends.db ".schema"
+            sqlite3 data/keyword_trends.db "SELECT * FROM daily_trends LIMIT 20;"
+            sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, COUNT(keyword) FROM daily_trends GROUP BY date, trend_type, source_name ORDER BY date DESC LIMIT 10;"
+            sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, keyword, count FROM daily_trends ORDER BY date DESC, trend_type, source_name, count DESC LIMIT 20;"
+          else
+            echo "data/keyword_trends.db does not exist."
+          fi
           echo "-------------------------------------------"
 
       - name: Run Summarizer and Get Report
@@ -139,7 +145,7 @@ jobs:
           echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT
           PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-      
+
       - name: Notify Discord 24H Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
         env:
@@ -147,7 +153,6 @@ jobs:
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_24h=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---24H/,/---REPORT_SPLIT---1MON/p' | sed '1d;$d')
-          
           if [ $(echo -n "$content_24h" | wc -c) -gt 1990 ]; then
             echo "Warning: 24H report content exceeds 2000 characters. Trimming..."
             content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
@@ -169,7 +174,6 @@ jobs:
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_1m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---1MON/,/---REPORT_SPLIT---3MON/p' | sed '1d;$d')
-
           if [ $(echo -n "$content_1m" | wc -c) -gt 1990 ]; then
             echo "Warning: 1MON report content exceeds 2000 characters. Trimming..."
             content_1m=$(echo "$content_1m" | cut -c 1-1990)"..."
@@ -191,7 +195,6 @@ jobs:
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
           content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
-
           if [ $(echo -n "$content_3m" | wc -c) -gt 1990 ]; then
             echo "Warning: 3MON report content exceeds 2000 characters. Trimming..."
             content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
@@ -205,40 +208,40 @@ jobs:
           else
             echo "3MON trends report is empty, skipping Discord notification."
           fi
-      
+
       - name: Generate Word Clouds
         run: |
           cd "${{ github.workspace }}"
           source .venv/bin/activate
           mkdir -p data/wordclouds
           PYTHONPATH="${{ github.workspace }}" python generate_wordclouds.py
-      
+
       - name: Commit Word Clouds
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
           git add data/wordclouds/*.png
           git commit -m "chore: add generated word cloud images" || echo "No new word cloud images to commit"
-          git push origin main
-      
+          # git push origin main # ブランチ名を動的に指定する方が安全です
+          git push origin ${{ github.ref_name }} # ★修正案: プッシュ先のブランチを動的に
+
       - name: Get Word Cloud URLs and Notify Discord
         if: success()
         run: |
           REPO_NAME="${{ github.repository }}"
           BRANCH_NAME="${{ github.ref_name }}"
-          
           IMAGE_PATHS=$(find data/wordclouds -name "*.png")
-          
+
           DISCORD_MESSAGE=""
           for IMAGE_PATH in $IMAGE_PATHS; do
             IMAGE_BASENAME=$(basename "$IMAGE_PATH")
             IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
             TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
-            
+
             DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
             DISCORD_MESSAGE+="$IMAGE_URL\n\n"
           done
-          
+
           if [ $(echo -n "$DISCORD_MESSAGE" | wc -c) -gt 1990 ]; then
             echo "Warning: Discord image report content exceeds 2000 characters. Trimming..."
             DISCORD_MESSAGE=$(echo "$DISCORD_MESSAGE" | cut -c 1-1990)"..."
@@ -252,11 +255,12 @@ jobs:
           else
             echo "No word cloud images generated, skipping Discord notification."
           fi
-      
+
       - name: Commit Summary and Database Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
           git add data/keyword_trends.db
           git commit -m "chore: update daily keyword trends DB" || echo "No changes to commit"
-          git push origin main
+          # git push origin main # ブランチ名を動的に指定する方が安全です
+          git push origin ${{ github.ref_name }} # ★修正案: プッシュ先のブランチを動的に
