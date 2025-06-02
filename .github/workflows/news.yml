@@ -28,12 +28,33 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MeCab system libraries
+      - name: Install MeCab system libraries and create dicrc # 【変更点: dicrc作成を追加】
         run: |
           sudo apt-get update
           sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+          
+          # MeCabの辞書ディレクトリパスを取得
+          MECAB_DIC_PATH="/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic"
+          DICRC_PATH="$MECAB_DIC_PATH/dicrc" # dicrcを辞書ディレクトリ直下に作成
 
-      - name: Create venv & Install dependencies (including mecab-python3 in venv) # 【変更点: MeCab Pythonバインディングをvenv内にインストール】
+          # dicrcファイルの内容を定義
+          # dicdir行は通常mecabrcで指定されるが、dicrcではその辞書自体のメタ情報を記述する
+          # ここでは最小限の内容として空ファイルで作成、またはdicdirを指定
+          # 以前の調査でUbuntuのmecabrcがdicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic/ と設定されていることを踏まえる
+          echo "dicdir = $MECAB_DIC_PATH" | sudo tee $DICRC_PATH > /dev/null # dicrcを作成し、辞書パスを記述
+
+          # dicrcが作成されたか確認
+          if [ -f "$DICRC_PATH" ]; then
+            echo "dicrc created at $DICRC_PATH"
+            cat $DICRC_PATH # 作成されたdicrcの内容をログに出力
+          else
+            echo "Failed to create dicrc at $DICRC_PATH"
+            exit 1 # dicrc作成失敗は致命的エラー
+          fi
+
+          pip install mecab-python3
+
+      - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
           python -m venv .venv
           source .venv/bin/activate
@@ -45,9 +66,7 @@ jobs:
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # 仮想環境のsite-packagesが既にアクティベートされているため、PYTHONPATHの複雑な設定は不要
-          # PYTHONPATH="${{ github.workspace }}" python news_fetcher.py # これは不要になるため削除
-          python news_fetcher.py # 仮想環境がアクティベートされているので直接実行
+          python news_fetcher.py
 
       - name: Debug Hourly Keyword Log
         run: |
