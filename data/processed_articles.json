@@ -8175,5 +8175,41 @@
             "Bitcoin"
         ],
         "source": "Bitcoin.com News"
+    },
+    "https://cointelegraph.com/news/crypto-funds-286-million-inflows-heavy-selling-coinshares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T09:19:29.245680+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/singapore-crypto-firms-deadline-overseas-digital-token-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T09:19:29.245680+00:00",
+        "keywords": [],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/bitopro-exchange-11-5m-suspicious-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T09:19:29.245680+00:00",
+        "keywords": [
+            "Blockchain",
+            "Exchange"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://cointelegraph.com/news/100k-retest-vs-highest-monthly-close-ever-5-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound": {
+        "last_processed": "2025-06-02T09:19:29.245680+00:00",
+        "keywords": [
+            "Bitcoin"
+        ],
+        "source": "Cointelegraph"
+    },
+    "https://news.bitcoin.com/metaplanet-acquires-additional-1088-bitcoin-boosting-total-holdings-to-8888-btc/": {
+        "last_processed": "2025-06-02T09:19:29.245680+00:00",
+        "keywords": [
+            "Bitcoin",
+            "Exchange",
+            "Treasury"
+        ],
+        "source": "Bitcoin.com News"
     }
 }
