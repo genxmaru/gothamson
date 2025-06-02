@@ -1,143 +1,171 @@
 import feedparser
+from bs4 import BeautifulSoup
+import requests
 import json
-import re
-from datetime import datetime, timezone
 import os
+from datetime import datetime, timezone, timedelta
+import re
+import MeCab
+from collections import Counter
 
-# 設定ファイルのパス
-CONFIG_FILE = os.path.join(os.path.dirname(__file__), 'config', 'keywords.json')
-# 処理済み記事ログファイルのパス
+# 設定
+RSS_FEEDS = {
+    "Cointelegraph": "https://cointelegraph.com/rss",
+    "CryptoNews": "https://cryptonews.com/feed/",
+    "Bitcoin.com News": "https://news.bitcoin.com/feed/",
+    "The Block": "https://www.theblockcrypto.com/rss",
+    "Decrypt": "https://decrypt.co/feed"
+}
+
+# ファイルパス
 PROCESSED_ARTICLES_LOG = os.path.join(os.path.dirname(__file__), 'data', 'processed_articles.json')
-# 毎時キーワードカウントログファイルのパス
 HOURLY_KEYWORD_COUNTS_LOG = os.path.join(os.path.dirname(__file__), 'data', 'hourly_keyword_counts.jsonl')
+CONFIG_KEYWORDS_PATH = os.path.join(os.path.dirname(__file__), 'config', 'keywords.json')
 
-def load_config():
-    """設定ファイルからキーワードとRSSフィードをロードする"""
-    if not os.path.exists(CONFIG_FILE):
-        print(f"Error: Config file not found at {CONFIG_FILE}")
-        return {"keywords": [], "rss_feeds": []}
-    with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+# 除外キーワードをロード
+def load_exclude_keywords(filepath):
+    if os.path.exists(filepath):
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            return [k.lower() for k in data.get("exclude_keywords", [])]
+    return []
+
+EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
+
+# 形態素解析器の初期化 (MeCab)
+# ipadic-neologd を使用する場合: MeCab.Tagger("-Ochasen -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd")
+# デフォルトのIPA辞書を使用する場合: MeCab.Tagger("-Ochasen")
+try:
+    # GitHub Actions環境でneologdがインストールされていればこれを使う
+    tagger = MeCab.Tagger("-Ochasen -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd")
+except:
+    # なければIPA辞書にフォールバック
+    tagger = MeCab.Tagger("-Ochasen")
+
+def extract_keywords(text):
+    node = tagger.parseToNode(text)
+    keywords = []
+    while node:
+        # 名詞のみを抽出 (一般、固有名詞、動詞の原型など)
+        if node.feature.startswith('名詞') or node.feature.startswith('動詞,自立') or node.feature.startswith('形容詞,自立'):
+            # 除外キーワードリストに含まれていないか確認
+            if node.surface.lower() not in EXCLUDE_KEYWORDS and len(node.surface) > 1: # 1文字のキーワードは除外
+                keywords.append(node.surface)
+        node = node.next
+    return keywords
 
 def load_processed_articles():
-    """処理済み記事のURLをロードする"""
-    if not os.path.exists(PROCESSED_ARTICLES_LOG):
-        return {}
-    with open(PROCESSED_ARTICLES_LOG, 'r', encoding='utf-8') as f:
-        try:
-            return json.load(f)
-        except json.JSONDecodeError:
-            return {} # ファイルが空または不正な場合は空の辞書を返す
+    """過去に処理した記事のURLをロードする"""
+    if os.path.exists(PROCESSED_ARTICLES_LOG):
+        with open(PROCESSED_ARTICLES_LOG, 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []
 
-def save_processed_articles(processed_articles):
-    """処理済み記事のURLを保存する"""
+def save_processed_articles(urls):
+    """処理した記事のURLを保存する"""
     with open(PROCESSED_ARTICLES_LOG, 'w', encoding='utf-8') as f:
-        json.dump(processed_articles, f, ensure_ascii=False, indent=4)
+        json.dump(urls, f, indent=4)
 
-def _log_hourly_keyword_counts(timestamp, keyword_counts):
-    """毎時のキーワードカウントをJSONL形式で追記する"""
-    entry = {
-        "timestamp": timestamp.isoformat(),
-        "counts": keyword_counts
-    }
-    with open(HOURLY_KEYWORD_COUNTS_LOG, 'a', encoding='utf-8') as f:
-        f.write(json.dumps(entry, ensure_ascii=False) + '\n')
+def clean_hourly_keyword_counts_log(max_age_hours=24):
+    """
+    hourly_keyword_counts.jsonl から古いエントリを削除し、ファイルをクリーンアップする
+    """
+    print(f"Cleaning {HOURLY_KEYWORD_COUNTS_LOG} for entries older than {max_age_hours} hours.")
+    temp_log_path = HOURLeY_KEYWORD_COUNTS_LOG + ".tmp"
+    
+    cutoff_time = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+    
+    retained_entries = []
+    if os.path.exists(HOURLY_KEYWORD_COUNTS_LOG):
+        with open(HOURLY_KEYWORD_COUNTS_LOG, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    entry = json.loads(line)
+                    entry_timestamp = datetime.fromisoformat(entry['timestamp'])
+                    if entry_timestamp >= cutoff_time:
+                        retained_entries.append(line)
+                except json.JSONDecodeError:
+                    continue # 不正な行はスキップ
 
-def _log_processed_article(timestamp, article_data):
-    """処理済み記事のログを追記する"""
-    # ここは、processed_articles.json に直接書き込むのではなく、メモリ上の辞書を更新して後でまとめて保存する
-    # すでに load_processed_articles と save_processed_articles があるので、この関数は不要
-    pass
+    with open(temp_log_path, 'w', encoding='utf-8') as f_tmp:
+        for entry_line in retained_entries:
+            f_tmp.write(entry_line)
+    
+    os.replace(temp_log_path, HOURLY_KEYWORD_COUNTS_LOG)
+    print(f"Cleaned {HOURLY_KEYWORD_COUNTS_LOG}. Retained {len(retained_entries)} entries.")
+
 
 def fetch_and_log_keywords():
-    """RSSフィードから記事を取得し、キーワードを検知・ログに記録する"""
-    config = load_config()
-    keywords = config.get("keywords", [])
-    rss_feeds = config.get("rss_feeds", [])
+    """RSSフィードからニュース記事をフェッチし、キーワードを抽出し、ログに追記する"""
+    print(f"Fetching news at {datetime.now(timezone.utc)}...")
+    processed_urls = load_processed_articles()
+    new_processed_urls = list(processed_urls) # 新しいURLを追加するためのリスト
+    
+    current_hourly_counts = {"timestamp": datetime.now(timezone.utc).isoformat(), "sources": {}}
+    new_keywords_detected = False
 
-    # 大文字・小文字を区別しない正規表現パターンをコンパイル
-    keyword_patterns = {
-        keyword: re.compile(r'\b' + re.escape(keyword) + r'\b', re.IGNORECASE)
-        for keyword in keywords
-    }
+    for source_name, rss_url in RSS_FEEDS.items():
+        print(f"Processing feed: {source_name} ({rss_url})")
+        try:
+            feed = feedparser.parse(rss_url)
+            source_keyword_counts = Counter()
+            
+            for entry in feed.entries:
+                link = entry.link
+                if link not in processed_urls:
+                    # 記事の内容を取得
+                    try:
+                        response = requests.get(link, timeout=10)
+                        response.raise_for_status() # HTTPエラーを確認
+                        soup = BeautifulSoup(response.text, 'html.parser')
+                        
+                        # 記事の本文を抽出 (RSSフィードの構造による)
+                        # 一般的な記事の本文要素のセレクタを試す
+                        text_content = ""
+                        for selector in ['article', '.entry-content', '.post-content', '.article-content', '.news-text']:
+                            body_div = soup.find(selector)
+                            if body_div:
+                                text_content = body_div.get_text()
+                                break
+                        
+                        if not text_content:
+                            # もし本文が見つからなければ、descriptionやsummaryから取得
+                            text_content = entry.get('description', entry.get('summary', ''))
 
-    processed_articles = load_processed_articles()
+                        # キーワード抽出
+                        keywords = extract_keywords(text_content)
+                        if keywords:
+                            source_keyword_counts.update(keywords)
+                            new_keywords_detected = True
+                        
+                        new_processed_urls.append(link) # 処理済みリストに追加
+                    except requests.exceptions.RequestException as e:
+                        print(f"Error fetching article {link}: {e}")
+                    except Exception as e:
+                        print(f"Error processing article {link}: { {e}}")
+            
+            if source_keyword_counts:
+                current_hourly_counts["sources"][source_name] = dict(source_keyword_counts)
 
-    current_time = datetime.now(timezone.utc)
-    hourly_counts_by_source = {} # サイト別にキーワードカウントを保持
+        except Exception as e:
+            print(f"Warning: Could not parse feed {rss_url} - {e}")
 
-    print(f"Fetching news at {current_time.isoformat()}...")
-
-    for feed_info in rss_feeds:
-        feed_name = feed_info.get("name", "Unknown Source")
-        feed_url = feed_info.get("url")
-
-        if not feed_url:
-            print(f"Skipping feed with no URL: {feed_info}")
-            continue
-
-        print(f"Processing feed: {feed_name} ({feed_url})")
-        feed = feedparser.parse(feed_url)
-
-        if feed.bozo:
-            print(f"Warning: Could not parse feed {feed_url} - {feed.bozo_exception}")
-            continue
-
-        for entry in feed.entries:
-            # 記事のユニークなIDとしてURLを使用 (またはGUIDがあればGUID)
-            article_id = entry.link
-
-            # すでに処理済みの記事であればスキップ
-            if article_id in processed_articles:
-                continue
-
-            title = getattr(entry, 'title', '')
-            summary = getattr(entry, 'summary', getattr(entry, 'description', ''))
-            content = getattr(entry, 'content', [])
-
-            full_text = title + " " + summary
-            for c in content:
-                if hasattr(c, 'value'):
-                    full_text += " " + c.value
-
-            # 記事ごとにキーワードをカウント
-            article_keyword_counts = {}
-            for keyword, pattern in keyword_patterns.items():
-                count = len(pattern.findall(full_text))
-                if count > 0:
-                    article_keyword_counts[keyword] = count
-
-            if article_keyword_counts:
-                # hourly_counts_by_source にサイト別、キーワード別のカウントを追加
-                if feed_name not in hourly_counts_by_source:
-                    hourly_counts_by_source[feed_name] = {}
-                for keyword, count in article_keyword_counts.items():
-                    hourly_counts_by_source[feed_name][keyword] = \
-                        hourly_counts_by_source[feed_name].get(keyword, 0) + count
-
-            # 処理済み記事として記録
-            processed_articles[article_id] = {
-                "last_processed": current_time.isoformat(),
-                "keywords": list(article_keyword_counts.keys()), # 検知されたキーワードのみ
-                "source": feed_name # ★ここを追加★ ニュースソース名
-            }
-
-    # サイトごとの集計結果を hourly_keyword_counts.jsonl に記録
-    if hourly_counts_by_source:
-        # hourly_keyword_counts.jsonl に保存する形式を、サイト名ごとの集計に調整
-        log_entry_counts = {
-            "timestamp": current_time.isoformat(),
-            "sources": hourly_counts_by_source # サイト別に集計結果を格納
-        }
+    if new_keywords_detected:
         with open(HOURLY_KEYWORD_COUNTS_LOG, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(log_entry_counts, ensure_ascii=False) + '\n')
-        print(f"Logged hourly keyword counts for {len(hourly_counts_by_source)} sources.")
+            json.dump(current_hourly_counts, f, ensure_ascii=False)
+            f.write('\n')
+        print("New keywords detected and logged.")
     else:
         print("No new keywords detected in this run.")
 
-    # 処理済み記事リストを保存
-    save_processed_articles(processed_articles)
+    # 処理済み記事のURLを更新して保存
+    save_processed_articles(new_processed_urls)
     print("Updated processed_articles.json.")
 
 if __name__ == "__main__":
+    # 実行前に古いエントリを削除する
+    clean_hourly_keyword_counts_log(max_age_hours=25) # 念のため24時間より少し長く
     fetch_and_log_keywords()
