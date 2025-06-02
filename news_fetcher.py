@@ -33,14 +33,20 @@ def load_exclude_keywords(filepath):
 EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 
 # 形態素解析器の初期化 (MeCab)
-# ipadic-neologd を使用する場合: MeCab.Tagger("-Ochasen -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd")
-# デフォルトのIPA辞書を使用する場合: MeCab.Tagger("-Ochasen")
+# GitHub ActionsのUbuntu環境でmecab-ipadic-utf8がインストールされるパスを指定
+# 実際には /usr/lib/x86_64-linux-gnu/mecab/dic/ipadic であることを確認
+MECAB_DIC_PATH = "/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic" # 【修正済み: 辞書パスを修正】
+
 try:
-    # GitHub Actions環境でneologdがインストールされていればこれを使う
-    tagger = MeCab.Tagger("-Ochasen -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd")
-except:
-    # なければIPA辞書にフォールバック
-    tagger = MeCab.Tagger("-Ochasen")
+    # MeCab辞書パスを明示的に指定して初期化
+    tagger = MeCab.Tagger(f"-Ochasen -d {MECAB_DIC_PATH}")
+except RuntimeError as e:
+    # デフォルト辞書パスでも試す（フォールバック）
+    print(f"Failed to initialize MeCab with specified path: {e}. Trying with default path.")
+    # デフォルト辞書パスも環境によって異なる場合があるため、ここではエラーを再スローする
+    # もしデフォルトで動く環境であれば、この例外処理を削除しても良い
+    raise
+
 
 def extract_keywords(text):
     node = tagger.parseToNode(text)
@@ -74,7 +80,7 @@ def clean_hourly_keyword_counts_log(max_age_hours=24):
     hourly_keyword_counts.jsonl から古いエントリを削除し、ファイルをクリーンアップする
     """
     print(f"Cleaning {HOURLY_KEYWORD_COUNTS_LOG} for entries older than {max_age_hours} hours.")
-    temp_log_path = HOURLeY_KEYWORD_COUNTS_LOG + ".tmp"
+    temp_log_path = HOURLY_KEYWORD_COUNTS_LOG + ".tmp"
     
     cutoff_time = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
     
@@ -102,7 +108,7 @@ def fetch_and_log_keywords():
     """RSSフィードからニュース記事をフェッチし、キーワードを抽出し、ログに追記する"""
     print(f"Fetching news at {datetime.now(timezone.utc)}...")
     processed_urls = load_processed_articles()
-    new_processed_urls = list(processed_urls) # 新しいURLを追加するためのリスト
+    new_processed_urls = list(processed_urls)
     
     current_hourly_counts = {"timestamp": datetime.now(timezone.utc).isoformat(), "sources": {}}
     new_keywords_detected = False
@@ -116,14 +122,11 @@ def fetch_and_log_keywords():
             for entry in feed.entries:
                 link = entry.link
                 if link not in processed_urls:
-                    # 記事の内容を取得
                     try:
                         response = requests.get(link, timeout=10)
-                        response.raise_for_status() # HTTPエラーを確認
+                        response.raise_for_status()
                         soup = BeautifulSoup(response.text, 'html.parser')
                         
-                        # 記事の本文を抽出 (RSSフィードの構造による)
-                        # 一般的な記事の本文要素のセレクタを試す
                         text_content = ""
                         for selector in ['article', '.entry-content', '.post-content', '.article-content', '.news-text']:
                             body_div = soup.find(selector)
@@ -132,16 +135,14 @@ def fetch_and_log_keywords():
                                 break
                         
                         if not text_content:
-                            # もし本文が見つからなければ、descriptionやsummaryから取得
                             text_content = entry.get('description', entry.get('summary', ''))
 
-                        # キーワード抽出
                         keywords = extract_keywords(text_content)
                         if keywords:
                             source_keyword_counts.update(keywords)
                             new_keywords_detected = True
                         
-                        new_processed_urls.append(link) # 処理済みリストに追加
+                        new_processed_urls.append(link)
                     except requests.exceptions.RequestException as e:
                         print(f"Error fetching article {link}: {e}")
                     except Exception as e:
@@ -161,11 +162,9 @@ def fetch_and_log_keywords():
     else:
         print("No new keywords detected in this run.")
 
-    # 処理済み記事のURLを更新して保存
     save_processed_articles(new_processed_urls)
     print("Updated processed_articles.json.")
 
 if __name__ == "__main__":
-    # 実行前に古いエントリを削除する
-    clean_hourly_keyword_counts_log(max_age_hours=25) # 念のため24時間より少し長く
+    clean_hourly_keyword_counts_log(max_age_hours=25)
     fetch_and_log_keywords()
