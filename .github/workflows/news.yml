@@ -28,28 +28,27 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MeCab and related libraries
+      - name: Install MeCab system libraries
         run: |
           sudo apt-get update
           sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
-          pip install mecab-python3
 
-      - name: Install dependencies
+      - name: Create venv & Install dependencies (including mecab-python3 in venv) # 【変更点: MeCab Pythonバインディングをvenv内にインストール】
         run: |
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
+          pip install mecab-python3 # ← ここで仮想環境内にインストール！
           pip install -r requirements.txt # requirements.txtから依存関係をインストール
 
-      - name: Fetch & Log Keywords # 【変更点: PYTHONPATHの設定を強化】
+      - name: Fetch & Log Keywords
         run: |
           cd "${{ github.workspace }}" # リポジトリのルートディレクトリに移動
           source .venv/bin/activate
-          # PYTHONPATHにvenvのsite-packagesディレクトリを追加してMeCabのパスを通す
-          # Python 3.11の場合、site-packagesは通常 .venv/lib/python3.11/site-packages
-          export PYTHONPATH="$(pwd)/.venv/lib/python3.11/site-packages:$PYTHONPATH"
-          PYTHONPATH="${{ github.workspace }}" python news_fetcher.py
-      
+          # 仮想環境のsite-packagesが既にアクティベートされているため、PYTHONPATHの複雑な設定は不要
+          # PYTHONPATH="${{ github.workspace }}" python news_fetcher.py # これは不要になるため削除
+          python news_fetcher.py # 仮想環境がアクティベートされているので直接実行
+
       - name: Debug Hourly Keyword Log
         run: |
           echo "--- Debugging hourly_keyword_counts.jsonl content ---"
