@@ -41,6 +41,20 @@ jobs:
           source .venv/bin/activate
           python news_fetcher.py # カレントディレクトリがルートなので、ファイル名だけでOK
       
+      # 【追加箇所ここから】hourly_keyword_counts.jsonlの中身をデバッグログに出力
+      - name: Debug Hourly Keyword Log
+        run: |
+          echo "--- Debugging hourly_keyword_counts.jsonl content ---"
+          if [ -f data/hourly_keyword_counts.jsonl ]; then
+            head -n 5 data/hourly_keyword_counts.jsonl
+            echo "..."
+            tail -n 5 data/hourly_keyword_counts.jsonl
+          else
+            echo "data/hourly_keyword_counts.jsonl does not exist."
+          fi
+          echo "-----------------------------------------------------"
+      # 【追加箇所ここまで】
+
       - name: Commit Hourly Logs and Processed Articles
         run: |
           git config user.name "github-actions[bot]"
@@ -84,6 +98,17 @@ jobs:
           source .venv/bin/activate
           PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
+      # 【追加箇所ここから】DBの内容をデバッグログに出力
+      - name: Debug DB Content
+        run: |
+          echo "--- Debugging keyword_trends.db content ---"
+          sqlite3 data/keyword_trends.db ".schema"
+          sqlite3 data/keyword_trends.db "SELECT * FROM daily_trends LIMIT 20;"
+          sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, COUNT(keyword) FROM daily_trends GROUP BY date, trend_type, source_name ORDER BY date DESC LIMIT 10;"
+          sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, keyword, count FROM daily_trends ORDER BY date DESC, trend_type, source_name, count DESC LIMIT 20;"
+          echo "-------------------------------------------"
+      # 【追加箇所ここまで】
+
       - name: Run Summarizer and Get Report
         id: run_summarizer
         run: |
@@ -99,10 +124,8 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_24H }} # 24H用Webhook
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
-          # 24Hトレンド部分を抽出
           content_24h=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---24H/,/---REPORT_SPLIT---1MON/p' | sed '1d;$d')
           
-          # Discordメッセージの文字数制限 (2000文字) を考慮し、必要に応じてトリミング
           if [ $(echo -n "$content_24h" | wc -c) -gt 1990 ]; then
             echo "Warning: 24H report content exceeds 2000 characters. Trimming..."
             content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
@@ -123,7 +146,6 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_1MON }} # 1MON用Webhook
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
-          # 1MONトレンド部分を抽出
           content_1m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---1MON/,/---REPORT_SPLIT---3MON/p' | sed '1d;$d')
 
           if [ $(echo -n "$content_1m" | wc -c) -gt 1990 ]; then
@@ -146,8 +168,6 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }} # 3MON用Webhook
         run: |
           full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
-          # 3MONトレンド部分を抽出
-          # 最終セクションなので、最後のSPLITマーカーからEOFまで
           content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
 
           if [ $(echo -n "$content_3m" | wc -c) -gt 1990 ]; then
@@ -168,7 +188,6 @@ jobs:
         run: |
           cd "${{ github.workspace }}"
           source .venv/bin/activate
-          # ワードクラウドの出力ディレクトリを作成
           mkdir -p data/wordclouds
           PYTHONPATH="${{ github.workspace }}" python generate_wordclouds.py
       
@@ -183,40 +202,31 @@ jobs:
       - name: Get Word Cloud URLs and Notify Discord
         if: success()
         run: |
-          # GitHubにプッシュされた画像のURLを構築
-          # リポジトリ名とブランチ名を取得
           REPO_NAME="${{ github.repository }}"
           BRANCH_NAME="${{ github.ref_name }}"
           
-          # wordcloudsディレクトリ内のすべてのPNG画像を検索
           IMAGE_PATHS=$(find data/wordclouds -name "*.png")
           
-          # 各画像のDiscord通知メッセージを構築
           DISCORD_MESSAGE=""
           for IMAGE_PATH in $IMAGE_PATHS; do
             IMAGE_BASENAME=$(basename "$IMAGE_PATH")
-            # GitHub rawコンテンツのURLを構築
             IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
-            # ファイル名を整形してタイトルにする（例: wordcloud_24h_total_20240527.png -> 24時間トレンド 全体 20240527）
             TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
             
             DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
             DISCORD_MESSAGE+="$IMAGE_URL\n\n"
           done
           
-          # Discordメッセージの文字数制限 (2000文字) を考慮し、必要に応じてトリミング
           if [ $(echo -n "$DISCORD_MESSAGE" | wc -c) -gt 1990 ]; then
             echo "Warning: Discord image report content exceeds 2000 characters. Trimming..."
             DISCORD_MESSAGE=$(echo "$DISCORD_MESSAGE" | cut -c 1-1990)"..."
           fi
 
           if [ -n "$DISCORD_MESSAGE" ]; then
-            # Discord Webhook URLは、この通知専用のものを定義するか、既存のものを再利用
-            # ここでは新しいシークレット DISCORD_WEBHOOK_URL_WORDCLOUDS を推奨
             payload=$(jq -Rn --arg c "$DISCORD_MESSAGE" '{content: $c}')
             curl -H "Content-Type: application/json" \
                  -d "$payload" \
-                 "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}" # 新しいWebhook URL
+                 "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}"
           else
             echo "No word cloud images generated, skipping Discord notification."
           fi
