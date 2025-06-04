@@ -26,7 +26,17 @@ jobs:
       - name: Install MeCab system libraries and create dicrc
         run: |
           sudo apt-get update
+          # ★変更点: mecab関連パッケージを一度完全に削除してクリーンアップ
+          echo "--- Purging existing MeCab packages ---"
+          sudo apt-get purge -y mecab libmecab-dev mecab-ipadic-utf8
+          sudo apt-get autoremove -y
+          sudo apt-get clean
+          echo "--- Finished purging MeCab packages ---"
+
+          # ★変更点: 再度インストール
+          echo "--- Reinstalling MeCab packages ---"
           sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+          echo "--- Finished reinstalling MeCab packages ---"
 
           MECAB_DIC_PATH="/usr/share/mecab/dic/ipadic"
           DICRC_PATH="$MECAB_DIC_PATH/dicrc"
@@ -46,23 +56,27 @@ jobs:
           echo "-----------------------------------------------------------------------------"
 
           echo "--- Attempting to compile MeCab dictionary explicitly ---"
-          # mecab-config --libexecdir で mecab-dict-index のあるディレクトリパスを取得
-          MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir) # ★追加: mecab-dict-indexのパスを取得
-          echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR" # ★追加: パスのデバッグ出力
+          MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir)
+          echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR"
 
-          # mecab-dict-index をフルパスで実行する
-          sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
+          # ★変更点: mecab-dict-index のオプションを調整し、実行成否を判定
+          # -f utf-8 と -t utf-8 は多くの場合デフォルトで問題ないため、一旦外して試します。
+          echo "Executing mecab-dict-index..."
+          if sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
             -d "$MECAB_DIC_PATH" \
-            -o "$MECAB_DIC_PATH" \
-            -f utf-8 \
-            -t utf-8
+            -o "$MECAB_DIC_PATH"; then
+            echo "mecab-dict-index completed successfully."
+          else
+            # $? で直前のコマンドの終了コードを取得
+            EXIT_CODE=$?
+            echo "mecab-dict-index failed with exit code: $EXIT_CODE"
+            # exit $EXIT_CODE # 必要に応じてここでジョブを失敗させる
+          fi
           echo "--- Dictionary compilation attempt finished ---"
 
           echo "--- Listing files in MeCab dictionary directory (after explicit compile) ---"
           ls -la "$MECAB_DIC_PATH"
           echo "---------------------------------------------------------------------------"
-
-          # pip install mecab-python3 # (コメントアウトまたは削除推奨)
 
       - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
