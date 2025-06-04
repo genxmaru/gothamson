@@ -50,4 +50,245 @@ jobs:
           echo "Using source dictionary from: $MECAB_DIC_PATH_SRC with encoding $MECAB_ENCODING_SRC"
 
           MECAB_DIC_PATH_COMPILED_UTF8="/usr/local/share/mecab-dic-compiled-utf8"
-          sudo mkdir -p "$MECAB_DIC_PATH_COMPILED
+          sudo mkdir -p "$MECAB_DIC_PATH_COMPILED_UTF8"
+          sudo chown -R runner:runner "$(dirname "$MECAB_DIC_PATH_COMPILED_UTF8")"
+
+          DICRC_PATH_COMPILED="$MECAB_DIC_PATH_COMPILED_UTF8/dicrc"
+
+          echo "--- Listing files in source dictionary directory ($MECAB_DIC_PATH_SRC) ---"
+          ls -la "$MECAB_DIC_PATH_SRC"
+          echo "-----------------------------------------------------------------------------"
+
+          echo "--- Attempting to compile dictionary to UTF-8 at $MECAB_DIC_PATH_COMPILED_UTF8 ---"
+          MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir)
+          echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR"
+
+          if sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
+            -d "$MECAB_DIC_PATH_SRC" \
+            -o "$MECAB_DIC_PATH_COMPILED_UTF8" \
+            -f "$MECAB_ENCODING_SRC" \
+            -t utf-8; then
+            echo "mecab-dict-index completed successfully to $MECAB_DIC_PATH_COMPILED_UTF8."
+            echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo tee "$DICRC_PATH_COMPILED" > /dev/null
+            if [ -f "$DICRC_PATH_COMPILED" ]; then
+              echo "dicrc created at $DICRC_PATH_COMPILED"
+              sudo cat "$DICRC_PATH_COMPILED"
+            else
+              echo "Failed to create dicrc at $DICRC_PATH_COMPILED"
+            fi
+          else
+            EXIT_CODE=$?
+            echo "mecab-dict-index failed with exit code: $EXIT_CODE. Check if source dictionary and encoding are correct."
+            # exit $EXIT_CODE # 失敗時はここでジョブを止める場合はコメント解除
+          fi
+          echo "--- Dictionary compilation attempt finished ---"
+
+          echo "--- Listing files in compiled UTF-8 dictionary directory ($MECAB_DIC_PATH_COMPILED_UTF8) ---"
+          ls -la "$MECAB_DIC_PATH_COMPILED_UTF8"
+          echo "---------------------------------------------------------------------------"
+
+      - name: Create venv & Install dependencies (including mecab-python3 in venv)
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install mecab-python3
+          pip install -r requirements.txt
+
+      - name: Fetch & Log Keywords
+        run: |
+          cd "${{ github.workspace }}"
+          source .venv/bin/activate
+          python news_fetcher.py
+
+      - name: Debug Hourly Keyword Log
+        run: |
+          echo "--- Debugging hourly_keyword_counts.jsonl content ---"
+          if [ -f data/hourly_keyword_counts.jsonl ]; then
+            head -n 5 data/hourly_keyword_counts.jsonl
+            echo "..."
+            tail -n 5 data/hourly_keyword_counts.jsonl
+          else
+            echo "data/hourly_keyword_counts.jsonl does not exist."
+          fi
+          echo "-----------------------------------------------------"
+
+      - name: Commit Hourly Logs and Processed Articles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/hourly_keyword_counts.jsonl data/processed_articles.json
+          git commit -m "chore: update hourly keyword counts and processed articles log" || echo "No changes to commit"
+          git push origin ${{ github.ref_name }}
+
+  summarize_and_notify:
+    needs: fetch
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.schedule == '0 0 * * *') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Create venv & Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          sudo apt-get update
+          sudo apt-get install -y fonts-ipafont-gothic
+          sudo fc-cache -fv
+
+      - name: Initialize Database (if not exists)
+        run: |
+          cd "${{ github.workspace }}"
+          source .venv/bin/activate
+          # PYTHONPATH="${{ github.workspace }}" python db_manager.py # db_manager.py がプロジェクトに存在する場合
+
+      - name: Debug DB Content
+        run: |
+          echo "--- Debugging keyword_trends.db content ---"
+          if [ -f data/keyword_trends.db ]; then
+            sqlite3 data/keyword_trends.db ".schema"
+            sqlite3 data/keyword_trends.db "SELECT * FROM daily_trends LIMIT 20;"
+            sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, COUNT(keyword) FROM daily_trends GROUP BY date, trend_type, source_name ORDER BY date DESC LIMIT 10;"
+            sqlite3 data/keyword_trends.db "SELECT date, trend_type, source_name, keyword, count FROM daily_trends ORDER BY date DESC, trend_type, source_name, count DESC LIMIT 20;"
+          else
+            echo "data/keyword_trends.db does not exist."
+          fi
+          echo "-------------------------------------------"
+
+      - name: Run Summarizer and Get Report
+        id: run_summarizer
+        run: |
+          cd "${{ github.workspace }}"
+          source .venv/bin/activate
+          echo "full_summary_output<<EOF" >> $GITHUB_OUTPUT
+          PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Notify Discord 24H Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_24H }}
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          content_24h=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---24H/,/---REPORT_SPLIT---1MON/p' | sed '1d;$d')
+          if [ $(echo -n "$content_24h" | wc -c) -gt 1990 ]; then
+            echo "Warning: 24H report content exceeds 2000 characters. Trimming..."
+            content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_24h" ]; then
+            payload=$(jq -Rn --arg c "$content_24h" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "24H trends report is empty, skipping Discord notification."
+          fi
+
+      - name: Notify Discord 1MON Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---1MON')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_1MON }}
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          content_1m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---1MON/,/---REPORT_SPLIT---3MON/p' | sed '1d;$d')
+          if [ $(echo -n "$content_1m" | wc -c) -gt 1990 ]; then
+            echo "Warning: 1MON report content exceeds 2000 characters. Trimming..."
+            content_1m=$(echo "$content_1m" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_1m" ]; then
+            payload=$(jq -Rn --arg c "$content_1m" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "$DISCORD_WEBHOOK_URL"
+          else
+            echo "1MON trends report is empty, skipping Discord notification."
+          fi
+
+      - name: Notify Discord 3MON Trends
+        if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---3MON')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_3MON }}
+        run: |
+          full_output="${{ steps.run_summarizer.outputs.full_summary_output }}"
+          content_3m=$(echo "$full_output" | sed -n '/---REPORT_SPLIT---3MON/,$p' | sed '1d')
+          if [ $(echo -n "$content_3m" | wc -c) -gt 1990 ]; then
+            echo "Warning: 3MON report content exceeds 2000 characters. Trimming..."
+            content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$content_3m" ]; then
+            payload=$(jq -Rn --arg c "$content_3m" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "${{ secrets.DISCORD_WEBHOOK_URL_3MON }}"
+          else
+            echo "3MON trends report is empty, skipping Discord notification."
+          fi
+
+      - name: Generate Word Clouds
+        run: |
+          cd "${{ github.workspace }}"
+          source .venv/bin/activate
+          mkdir -p data/wordclouds
+          PYTHONPATH="${{ github.workspace }}" python generate_wordclouds.py
+
+      - name: Commit Word Clouds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/wordclouds/*.png
+          git commit -m "chore: add generated word cloud images" || echo "No new word cloud images to commit"
+          git push origin ${{ github.ref_name }}
+
+      - name: Get Word Cloud URLs and Notify Discord
+        if: success()
+        run: |
+          REPO_NAME="${{ github.repository }}"
+          BRANCH_NAME="${{ github.ref_name }}"
+          IMAGE_PATHS=$(find data/wordclouds -name "*.png")
+
+          DISCORD_MESSAGE=""
+          for IMAGE_PATH in $IMAGE_PATHS; do
+            IMAGE_BASENAME=$(basename "$IMAGE_PATH")
+            IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
+            TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
+
+            DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
+            DISCORD_MESSAGE+="$IMAGE_URL\n\n"
+          done
+
+          if [ $(echo -n "$DISCORD_MESSAGE" | wc -c) -gt 1990 ]; then
+            echo "Warning: Discord image report content exceeds 2000 characters. Trimming..."
+            DISCORD_MESSAGE=$(echo "$DISCORD_MESSAGE" | cut -c 1-1990)"..."
+          fi
+
+          if [ -n "$DISCORD_MESSAGE" ]; then
+            payload=$(jq -Rn --arg c "$DISCORD_MESSAGE" '{content: $c}')
+            curl -H "Content-Type: application/json" \
+                 -d "$payload" \
+                 "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}"
+          else
+            echo "No word cloud images generated, skipping Discord notification."
+          fi
+
+      - name: Commit Summary and Database Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/keyword_trends.db
+          git commit -m "chore: update daily keyword trends DB" || echo "No changes to commit"
+          git push origin ${{ github.ref_name }}
