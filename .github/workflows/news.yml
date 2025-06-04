@@ -34,9 +34,9 @@ jobs:
 
           echo "--- Installing MeCab and dictionary (trying naist-jdic or jumandic-utf8) ---"
           sudo apt-get install -y mecab libmecab-dev mecab-utils
-          if sudo apt-get install -y mecab-naist-jdic; then
-            echo "mecab-naist-jdic installed."
-            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/naist-jdic"
+          if sudo apt-get install -y mecab-naist-jdic; then # mecab-naist-jdic パッケージ自体は mecab-naist-jdic-eucjp に依存
+            echo "mecab-naist-jdic (and -eucjp) installed."
+            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/naist-jdic-eucjp" # ★★★ 修正点: 正しいソース辞書パスに変更 ★★★
             MECAB_ENCODING_SRC="euc-jp"
           elif sudo apt-get install -y mecab-jumandic-utf8; then
             echo "mecab-jumandic-utf8 installed."
@@ -51,18 +51,25 @@ jobs:
 
           MECAB_DIC_PATH_COMPILED_UTF8="/usr/local/share/mecab-dic-compiled-utf8"
           sudo mkdir -p "$MECAB_DIC_PATH_COMPILED_UTF8"
-          sudo chown -R runner:runner "$(dirname "$MECAB_DIC_PATH_COMPILED_UTF8")"
+          sudo chown -R runner:runner "$MECAB_DIC_PATH_COMPILED_UTF8" # ディレクトリ自体の所有権を変更
 
           DICRC_PATH_COMPILED="$MECAB_DIC_PATH_COMPILED_UTF8/dicrc"
 
           echo "--- Listing files in source dictionary directory ($MECAB_DIC_PATH_SRC) ---"
-          ls -la "$MECAB_DIC_PATH_SRC"
+          if [ -d "$MECAB_DIC_PATH_SRC" ]; then # ディレクトリ存在確認
+            ls -la "$MECAB_DIC_PATH_SRC"
+          else
+            echo "Source dictionary directory $MECAB_DIC_PATH_SRC NOT FOUND! Please check the path."
+            # exit 1 # ソースが見つからなければここで終了させるのも手
+          fi
           echo "-----------------------------------------------------------------------------"
 
           echo "--- Attempting to compile dictionary to UTF-8 at $MECAB_DIC_PATH_COMPILED_UTF8 ---"
           MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir)
           echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR"
 
+          # mecab-dict-index でソース辞書からUTF-8辞書を新しい場所に生成
+          # -c オプションは存在しないため削除
           if sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
             -d "$MECAB_DIC_PATH_SRC" \
             -o "$MECAB_DIC_PATH_COMPILED_UTF8" \
@@ -79,7 +86,7 @@ jobs:
           else
             EXIT_CODE=$?
             echo "mecab-dict-index failed with exit code: $EXIT_CODE. Check if source dictionary and encoding are correct."
-            # exit $EXIT_CODE # 失敗時はここでジョブを止める場合はコメント解除
+            # exit $EXIT_CODE
           fi
           echo "--- Dictionary compilation attempt finished ---"
 
@@ -152,7 +159,7 @@ jobs:
         run: |
           cd "${{ github.workspace }}"
           source .venv/bin/activate
-          # PYTHONPATH="${{ github.workspace }}" python db_manager.py # db_manager.py がプロジェクトに存在する場合
+          # PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
       - name: Debug DB Content
         run: |
