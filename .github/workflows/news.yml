@@ -23,60 +23,87 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MeCab system libraries and create dicrc
+      - name: Install MeCab system libraries and alternative dictionary
         run: |
           sudo apt-get update
-          # ★変更点: mecab関連パッケージを一度完全に削除してクリーンアップ
-          echo "--- Purging existing MeCab packages ---"
-          sudo apt-get purge -y mecab libmecab-dev mecab-ipadic-utf8
+          # 既存のmecab, ipadic関連を一度パージ (依存関係で他の辞書も消える可能性あり)
+          echo "--- Purging existing MeCab ipadic/jumandic packages ---"
+          sudo apt-get purge -y mecab libmecab-dev mecab-ipadic mecab-ipadic-utf8 mecab-utils mecab-jumandic mecab-jumandic-utf8
           sudo apt-get autoremove -y
           sudo apt-get clean
           echo "--- Finished purging MeCab packages ---"
 
-          # ★変更点: 再度インストール
-          echo "--- Reinstalling MeCab packages ---"
-          sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
-          echo "--- Finished reinstalling MeCab packages ---"
-
-          MECAB_DIC_PATH="/usr/share/mecab/dic/ipadic"
-          DICRC_PATH="$MECAB_DIC_PATH/dicrc"
-
-          sudo mkdir -p "$(dirname "$DICRC_PATH")"
-          echo "dicdir = $MECAB_DIC_PATH" | sudo tee "$DICRC_PATH" > /dev/null
-
-          if [ -f "$DICRC_PATH" ]; then
-            echo "dicrc created at $DICRC_PATH"
-            sudo cat "$DICRC_PATH"
+          # mecab本体と、naist-jdic のインストールを試みる (なければ jumandic-utf8 を使う)
+          # Ubuntuのリポジトリに mecab-naist-jdic があるか、その名前が正しいか確認が必要
+          # なければ、mecab-jumandic-utf8 のみインストールする
+          echo "--- Installing MeCab and dictionary (trying naist-jdic or jumandic-utf8) ---"
+          # まず mecab 本体と開発ファイルをインストール
+          sudo apt-get install -y mecab libmecab-dev mecab-utils
+          # 次に辞書をインストール (naist-jdic があれば優先、なければ jumandic-utf8)
+          if sudo apt-get install -y mecab-naist-jdic; then
+            echo "mecab-naist-jdic installed."
+            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/naist-jdic" # 一般的なパスだが環境による
+            MECAB_ENCODING_SRC="euc-jp" # naist-jdic の一般的なエンコーディング
+          elif sudo apt-get install -y mecab-jumandic-utf8; then
+            echo "mecab-jumandic-utf8 installed."
+            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/juman" # jumandic-utf8 の一般的なパス
+            MECAB_ENCODING_SRC="utf-8"
           else
-            echo "Failed to create dicrc at $DICRC_PATH"
+            echo "Error: Could not install a suitable MeCab dictionary (naist-jdic or jumandic-utf8)."
+            exit 1
           fi
+          echo "--- Finished installing MeCab and dictionary ---"
+          echo "Using source dictionary from: $MECAB_DIC_PATH_SRC with encoding $MECAB_ENCODING_SRC"
 
-          echo "--- Listing files in MeCab dictionary directory (before explicit compile) ---"
-          ls -la "$MECAB_DIC_PATH"
+          # 出力先のUTF-8辞書パス (Pythonから参照するパス)
+          MECAB_DIC_PATH_COMPILED_UTF8="/usr/local/share/mecab-dic-compiled-utf8"
+          sudo mkdir -p "$MECAB_DIC_PATH_COMPILED_UTF8"
+          sudo chown -R runner:runner "$(dirname "$MECAB_DIC_PATH_COMPILED_UTF8")" # mecab-dict-indexが書き込めるように
+
+          DICRC_PATH_COMPILED="$MECAB_DIC_PATH_COMPILED_UTF8/dicrc" # Pythonが参照するdicrc
+
+          echo "--- Listing files in source dictionary directory ($MECAB_DIC_PATH_SRC) ---"
+          ls -la "$MECAB_DIC_PATH_SRC"
           echo "-----------------------------------------------------------------------------"
 
-          echo "--- Attempting to compile MeCab dictionary explicitly ---"
+          echo "--- Attempting to compile dictionary to UTF-8 at $MECAB_DIC_PATH_COMPILED_UTF8 ---"
           MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir)
           echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR"
 
-          # ★変更点: mecab-dict-index のオプションを調整し、実行成否を判定
-          # -f utf-8 と -t utf-8 は多くの場合デフォルトで問題ないため、一旦外して試します。
-          echo "Executing mecab-dict-index..."
+          # mecab-dict-index でソース辞書からUTF-8辞書を新しい場所に生成
           if sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
-            -d "$MECAB_DIC_PATH" \
-            -o "$MECAB_DIC_PATH"; then
-            echo "mecab-dict-index completed successfully."
+            -d "$MECAB_DIC_PATH_SRC" \
+            -o "$MECAB_DIC_PATH_COMPILED_UTF8" \
+            -f "$MECAB_ENCODING_SRC" \
+            -t utf-8 \
+            -c; then # -c はcharset convert (ただし、mecab-dict-indexにこのオプションはないかも。通常は -f と -t で判断)
+                     # 主要なのは -f (入力) と -t (出力)
+            echo "mecab-dict-index completed successfully to $MECAB_DIC_PATH_COMPILED_UTF8."
+            # dicrc を新しいUTF-8辞書パスに作成
+            echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo tee "$DICRC_PATH_COMPILED" > /dev/null
+            if [ -f "$DICRC_PATH_COMPILED" ]; then
+              echo "dicrc created at $DICRC_PATH_COMPILED"
+              sudo cat "$DICRC_PATH_COMPILED"
+            else
+              echo "Failed to create dicrc at $DICRC_PATH_COMPILED"
+            fi
           else
-            # $? で直前のコマンドの終了コードを取得
             EXIT_CODE=$?
-            echo "mecab-dict-index failed with exit code: $EXIT_CODE"
-            # exit $EXIT_CODE # 必要に応じてここでジョブを失敗させる
+            echo "mecab-dict-index failed with exit code: $EXIT_CODE. Check if source dictionary and encoding are correct."
+            # exit $EXIT_CODE # 失敗したらここで止める
           fi
           echo "--- Dictionary compilation attempt finished ---"
 
-          echo "--- Listing files in MeCab dictionary directory (after explicit compile) ---"
-          ls -la "$MECAB_DIC_PATH"
+          echo "--- Listing files in compiled UTF-8 dictionary directory ($MECAB_DIC_PATH_COMPILED_UTF8) ---"
+          ls -la "$MECAB_DIC_PATH_COMPILED_UTF8"
           echo "---------------------------------------------------------------------------"
+
+      - name: Create venv & Install dependencies (including mecab-python3 in venv)
+        # (以降のステップは変更なし)
+        # ... (前回のコードと同じ) ...
+# (fetchジョブの残りのステップ、summarize_and_notifyジョブ全体は前回のものをそのままお使いください)
+# (ただし、news_fetcher.pyのMECAB_DIC_PATHはステップ2で変更が必要です)
+# (以下、コピペミス防止のため、summarize_and_notifyジョブも記載しておきます)
 
       - name: Create venv & Install dependencies (including mecab-python3 in venv)
         run: |
