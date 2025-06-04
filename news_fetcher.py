@@ -33,23 +33,20 @@ def load_exclude_keywords(filepath):
 EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 
 # 形態素解析器の初期化 (MeCab)
-# GitHub ActionsのUbuntu環境でmecab-ipadic-utf8がインストールされる標準的なパスを指定
-MECAB_DIC_PATH = "/usr/share/mecab/dic/ipadic"  # ★★★ 修正点: 正しい辞書パスに変更しました ★★★
+# GitHub ActionsのUbuntu環境で新しくコンパイルしたUTF-8辞書のパスを指定
+MECAB_DIC_PATH = "/usr/local/share/mecab-dic-compiled-utf8"  # ★★★ ここを変更しました ★★★
 
-# mecabrcの設定ファイルパス (GitHub ActionsのUbuntu環境のデフォルト)
-# `mecabrc`は`/etc/mecabrc`に存在すると考えられる (今回は -r /dev/null で無視するため影響は少ない)
-MECABRC_SYSTEM_PATH = "/etc/mecabrc"
+# mecabrcの設定ファイルパス (今回は -r /dev/null で無視するため直接的な影響は少ない)
+MECABRC_SYSTEM_PATH = "/etc/mecabrc" # 参考情報として残します
 
 try:
     # MeCab辞書パスを明示的に指定して初期化
     # -r /dev/null オプションでシステム全体のmecabrcを無視します。
-    #   GitHub Actionsの `news.yml` で辞書ディレクトリ直下に `dicrc` を作成しているため、
-    #   MeCabは指定された辞書パス (-d オプション) を見て `dicrc` を読み込みます。
+    # news.yml で新しくコンパイルした辞書ディレクトリ内の dicrc を参照します。
     tagger = MeCab.Tagger(f"-r /dev/null -d {MECAB_DIC_PATH}")
 except RuntimeError as e:
     print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH}")
-    print("Please verify the MeCab dictionary path and installation based on the provided research.")
-    # エラーメッセージに詳細な情報が含まれているので、それも出力するとデバッグに役立ちます。
+    print("Please verify the MeCab dictionary path specified in MECAB_DIC_PATH and the content of the dicrc file in that directory.")
     print(f"MeCab Error Details: {e}")
     raise # 致命的なエラーとして再スローする
 
@@ -106,7 +103,6 @@ def clean_hourly_keyword_counts_log(max_age_hours=24):
                     print(f"Warning: Skipping entry with missing 'timestamp' in {HOURLY_KEYWORD_COUNTS_LOG}: {line.strip()}")
                     continue # timestampがないエントリはスキップ
 
-
     # dataディレクトリが存在しない場合は作成
     os.makedirs(os.path.dirname(HOURLY_KEYWORD_COUNTS_LOG), exist_ok=True)
 
@@ -114,10 +110,9 @@ def clean_hourly_keyword_counts_log(max_age_hours=24):
         for entry_line in retained_entries:
             f_tmp.write(entry_line)
     
-    # HOURLY_KEYWORD_COUNTS_LOG が存在しない場合でもreplaceはエラーになる可能性がある
     if os.path.exists(HOURLY_KEYWORD_COUNTS_LOG) or retained_entries:
         os.replace(temp_log_path, HOURLY_KEYWORD_COUNTS_LOG)
-    elif os.path.exists(temp_log_path): # 元ファイルがなく、保持エントリもないがtmpファイルが作られた場合
+    elif os.path.exists(temp_log_path): 
         os.remove(temp_log_path)
 
     print(f"Cleaned {HOURLY_KEYWORD_COUNTS_LOG}. Retained {len(retained_entries)} entries.")
@@ -126,7 +121,7 @@ def fetch_and_log_keywords():
     """RSSフィードからニュース記事をフェッチし、キーワードを抽出し、ログに追記する"""
     print(f"Fetching news at {datetime.now(timezone.utc)}...")
     processed_urls = load_processed_articles()
-    new_processed_urls = list(processed_urls) # 新しい処理済みURLリストをコピーして作成
+    new_processed_urls = list(processed_urls) 
     
     current_hourly_counts = {"timestamp": datetime.now(timezone.utc).isoformat(), "sources": {}}
     new_keywords_detected = False
@@ -139,7 +134,7 @@ def fetch_and_log_keywords():
             
             for entry in feed.entries:
                 link = entry.link
-                if link not in processed_urls: # setにすると検索が高速だが、今回はリストのままでも問題ない量と想定
+                if link not in processed_urls: 
                     try:
                         print(f"Fetching article: {link}")
                         response = requests.get(link, timeout=10)
@@ -147,29 +142,26 @@ def fetch_and_log_keywords():
                         soup = BeautifulSoup(response.text, 'html.parser')
                         
                         text_content = ""
-                        # 主要な記事本文が含まれそうなセレクタのリスト
-                        # より多くのサイトに対応するため、一般的なクラス名や要素名を追加/調整可能
                         selectors = [
                             'article', '.entry-content', '.post-content', '.article-body', 
                             '.story-content', '.main-content', '.news-text', '.article_body',
                             '.content__body', '.zn-body__paragraph', 'div[itemprop="articleBody"]'
                         ]
                         for selector in selectors:
-                            body_div = soup.select_one(selector) # select_oneで見つかった最初の要素を取得
+                            body_div = soup.select_one(selector) 
                             if body_div:
                                 text_content = body_div.get_text(separator=' ', strip=True)
                                 break
                         
-                        if not text_content: # 上記セレクタで見つからなければdescription/summaryを試す
+                        if not text_content: 
                             text_content = entry.get('description', entry.get('summary', ''))
                             text_content = BeautifulSoup(text_content, 'html.parser').get_text(separator=' ', strip=True)
-
 
                         if text_content:
                             print(f"Extracting keywords from: {link}")
                             keywords = extract_keywords(text_content)
                             if keywords:
-                                print(f"Detected keywords: {keywords[:5]}...") # 最初の5件程度表示
+                                print(f"Detected keywords: {keywords[:5]}...") 
                                 source_keyword_counts.update(keywords)
                                 new_keywords_detected = True
                         else:
@@ -179,7 +171,7 @@ def fetch_and_log_keywords():
                     except requests.exceptions.RequestException as e:
                         print(f"Error fetching article {link}: {e}")
                     except Exception as e:
-                        print(f"Error processing article {link}: {e}") # より詳細なエラー出力
+                        print(f"Error processing article {link}: {e}") 
             
             if source_keyword_counts:
                 current_hourly_counts["sources"][source_name] = dict(source_keyword_counts)
@@ -188,7 +180,6 @@ def fetch_and_log_keywords():
             print(f"Warning: Could not parse feed {rss_url} - {e}")
 
     if new_keywords_detected:
-        # dataディレクトリが存在しない場合は作成
         os.makedirs(os.path.dirname(HOURLY_KEYWORD_COUNTS_LOG), exist_ok=True)
         with open(HOURLY_KEYWORD_COUNTS_LOG, 'a', encoding='utf-8') as f:
             json.dump(current_hourly_counts, f, ensure_ascii=False)
@@ -201,20 +192,15 @@ def fetch_and_log_keywords():
     print("Updated processed_articles.json.")
 
 if __name__ == "__main__":
-    # dataディレクトリの存在確認と作成 (念のため)
     data_dir = os.path.join(os.path.dirname(__file__), 'data')
     os.makedirs(data_dir, exist_ok=True)
-    config_dir = os.path.join(os.path.dirname(__file__), 'config') # configディレクトリも
+    config_dir = os.path.join(os.path.dirname(__file__), 'config') 
     os.makedirs(config_dir, exist_ok=True)
 
-
-    # 初回実行時などに keywords.json がないと EXCLUDE_KEYWORDS が正しくロードされないため、
-    # ダミーの config/keywords.json を作成する処理を追加 (存在しない場合のみ)
     if not os.path.exists(CONFIG_KEYWORDS_PATH):
         print(f"{CONFIG_KEYWORDS_PATH} not found. Creating a dummy file.")
         with open(CONFIG_KEYWORDS_PATH, 'w', encoding='utf-8') as f_cfg:
             json.dump({"exclude_keywords": ["example_exclude_word"]}, f_cfg, indent=4)
 
-
-    clean_hourly_keyword_counts_log(max_age_hours=25) # デフォルト25時間保持
+    clean_hourly_keyword_counts_log(max_age_hours=25) 
     fetch_and_log_keywords()
