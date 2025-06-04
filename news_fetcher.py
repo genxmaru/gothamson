@@ -34,10 +34,10 @@ EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 
 # 形態素解析器の初期化 (MeCab)
 # GitHub ActionsのUbuntu環境で新しくコンパイルしたUTF-8辞書のパスを指定
-MECAB_DIC_PATH = "/usr/local/share/mecab-dic-compiled-utf8"  # ★★★ ここを変更しました ★★★
+MECAB_DIC_PATH = "/usr/local/share/mecab-dic-compiled-utf8"  # ★★★ ここが重要な変更点です ★★★
 
-# mecabrcの設定ファイルパス (今回は -r /dev/null で無視するため直接的な影響は少ない)
-MECABRC_SYSTEM_PATH = "/etc/mecabrc" # 参考情報として残します
+# mecabrcの設定ファイルパス (参考情報として残しますが、-r /dev/null で無視されます)
+MECABRC_SYSTEM_PATH = "/etc/mecabrc"
 
 try:
     # MeCab辞書パスを明示的に指定して初期化
@@ -46,7 +46,8 @@ try:
     tagger = MeCab.Tagger(f"-r /dev/null -d {MECAB_DIC_PATH}")
 except RuntimeError as e:
     print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH}")
-    print("Please verify the MeCab dictionary path specified in MECAB_DIC_PATH and the content of the dicrc file in that directory.")
+    print(f"Please ensure the directory '{MECAB_DIC_PATH}' exists and contains a valid MeCab dictionary (including 'dicrc', 'sys.dic', 'unk.dic', 'matrix.bin' etc.).")
+    print(f"Check the GitHub Actions logs for the 'Install MeCab system libraries and alternative dictionary' step to see if dictionary compilation was successful and files were created in the correct location.")
     print(f"MeCab Error Details: {e}")
     raise # 致命的なエラーとして再スローする
 
@@ -103,7 +104,6 @@ def clean_hourly_keyword_counts_log(max_age_hours=24):
                     print(f"Warning: Skipping entry with missing 'timestamp' in {HOURLY_KEYWORD_COUNTS_LOG}: {line.strip()}")
                     continue # timestampがないエントリはスキップ
 
-    # dataディレクトリが存在しない場合は作成
     os.makedirs(os.path.dirname(HOURLY_KEYWORD_COUNTS_LOG), exist_ok=True)
 
     with open(temp_log_path, 'w', encoding='utf-8') as f_tmp:
