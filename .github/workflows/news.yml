@@ -60,7 +60,7 @@ jobs:
             ls -la "$MECAB_DIC_PATH_SRC"
           else
             echo "Source dictionary directory $MECAB_DIC_PATH_SRC NOT FOUND! Please check the path."
-            exit 1
+            exit 1 # ソースが見つからなければエラーで終了
           fi
           echo "-----------------------------------------------------------------------------"
 
@@ -74,33 +74,35 @@ jobs:
             -f "$MECAB_ENCODING_SRC" \
             -t utf-8; then
             echo "mecab-dict-index completed successfully to $MECAB_DIC_PATH_COMPILED_UTF8."
-
-            # ★★★ ここから dicrc の内容を充実させる修正 ★★★
             echo "--- Updating dicrc in compiled directory ---"
             if [ -f "$MECAB_DIC_PATH_SRC/dicrc" ]; then
               echo "Source dicrc found at $MECAB_DIC_PATH_SRC/dicrc. Copying and updating..."
-              # 1. ソースのdicrcをコンパイル先にコピー
               sudo cp "$MECAB_DIC_PATH_SRC/dicrc" "$DICRC_PATH_COMPILED"
-              # 2. コピーしたdicrc内のdicdir行を新しいコンパイル済み辞書パスに書き換える
-              #    (元々dicdir行があればそれを置換、なければファイルの先頭に追加するイメージ)
-              #    まず、既存のdicdir行を削除 (あれば)
-              sudo sed -i '/^dicdir\s*=/d' "$DICRC_PATH_COMPILED"
-              #    新しいdicdir行をファイルの先頭に追加 (他のパラメータより前に来るように)
-              echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo awk -v new_line="dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" '{print} END {if(NR==0) print new_line}' "$DICRC_PATH_COMPILED" > temp_dicrc && sudo mv temp_dicrc "$DICRC_PATH_COMPILED"
-              #    もし元のdicrcに charset = EUC-JP のような行があれば、charset = UTF-8 に書き換える (または削除してMeCabに自動判別させる)
-              sudo sed -i 's/^charset\s*=\s*.*$/charset = utf-8/' "$DICRC_PATH_COMPILED"
-
+              # 新しいdicdir行で既存の行を置換 (なければ追加) し、charsetをutf-8に更新
+              # sedのコマンドを分けて、可読性を上げる
+              # 1. dicdir を設定 (なければ追加、あれば置換)
+              if grep -q '^dicdir\s*=' "$DICRC_PATH_COMPILED"; then
+                sudo sed -i "s|^dicdir\s*=.*$|dicdir = $MECAB_DIC_PATH_COMPILED_UTF8|" "$DICRC_PATH_COMPILED"
+              else
+                echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo cat - "$DICRC_PATH_COMPILED" > temp_dicrc && sudo mv temp_dicrc "$DICRC_PATH_COMPILED"
+              fi
+              # 2. charset を utf-8 に設定 (なければ追加、あれば置換)
+              if grep -q '^charset\s*=' "$DICRC_PATH_COMPILED"; then
+                sudo sed -i 's/^charset\s*=.*$/charset = utf-8/' "$DICRC_PATH_COMPILED"
+              else
+                echo "charset = utf-8" | sudo tee -a "$DICRC_PATH_COMPILED" > /dev/null
+              fi
               echo "Dicrc updated. Content of new dicrc ($DICRC_PATH_COMPILED):"
               sudo cat "$DICRC_PATH_COMPILED"
             else
               echo "Warning: Source dicrc ($MECAB_DIC_PATH_SRC/dicrc) not found. Creating minimal dicrc."
               echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo tee "$DICRC_PATH_COMPILED" > /dev/null
+              echo "charset = utf-8" | sudo tee -a "$DICRC_PATH_COMPILED" > /dev/null
             fi
-            # ★★★ ここまで ★★★
           else
             EXIT_CODE=$?
             echo "mecab-dict-index failed with exit code: $EXIT_CODE. Check if source dictionary and encoding are correct."
-            exit $EXIT_CODE # コンパイル失敗時はここでジョブを止める
+            exit $EXIT_CODE
           fi
           echo "--- Dictionary compilation attempt finished ---"
 
@@ -169,6 +171,19 @@ jobs:
           sudo apt-get install -y fonts-ipafont-gothic
           sudo fc-cache -fv
 
+          # ★★★ ここからフォント関連のデバッグ情報出力 ★★★
+          echo "--- Installed fonts list (IPA Gothic check) ---"
+          fc-list | grep -i ipa || echo "IPA font not found by fc-list"
+          echo "--- Checking specified font path for generate_wordclouds.py ---"
+          echo "Expected font path in generate_wordclouds.py: /usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf"
+          ls -la /usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf || echo "Font at /usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf NOT FOUND"
+          echo "--- Alternative font path check ---"
+          ls -la /usr/share/fonts/truetype/fonts-japanese-gothic.ttf || echo "Font at /usr/share/fonts/truetype/fonts-japanese-gothic.ttf NOT FOUND"
+          echo "--- Listing all files in IPA Gothic directory ---"
+          ls -la /usr/share/fonts/opentype/ipafont-gothic/ || echo "/usr/share/fonts/opentype/ipafont-gothic/ directory NOT FOUND"
+          echo "--- End of font debug info ---"
+          # ★★★ ここまでフォント関連のデバッグ情報出力 ★★★
+
       - name: Initialize Database (if not exists)
         run: |
           cd "${{ github.workspace }}"
@@ -176,6 +191,7 @@ jobs:
           # PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
       - name: Debug DB Content
+        # (このステップの中身は変更なし)
         run: |
           echo "--- Debugging keyword_trends.db content ---"
           if [ -f data/keyword_trends.db ]; then
@@ -190,6 +206,7 @@ jobs:
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
+        # (このステップの中身は変更なし)
         run: |
           cd "${{ github.workspace }}"
           source .venv/bin/activate
@@ -197,6 +214,7 @@ jobs:
           PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+      # (以降のDiscord通知、ワードクラウド生成、コミットステップは変更なし)
       - name: Notify Discord 24H Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
         env:
