@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # コミット権限用
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-          fetch-depth: 0 # 全履歴をフェッチ
-          ref: ${{ github.ref }} # 現在のブランチを明示的にチェックアウト
+          fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -60,7 +60,7 @@ jobs:
             ls -la "$MECAB_DIC_PATH_SRC"
           else
             echo "Source dictionary directory $MECAB_DIC_PATH_SRC NOT FOUND! Please check the path."
-            exit 1 # ソースが見つからなければエラーで終了
+            exit 1
           fi
           echo "-----------------------------------------------------------------------------"
 
@@ -78,15 +78,11 @@ jobs:
             if [ -f "$MECAB_DIC_PATH_SRC/dicrc" ]; then
               echo "Source dicrc found at $MECAB_DIC_PATH_SRC/dicrc. Copying and updating..."
               sudo cp "$MECAB_DIC_PATH_SRC/dicrc" "$DICRC_PATH_COMPILED"
-              # 新しいdicdir行で既存の行を置換 (なければ追加) し、charsetをutf-8に更新
-              # sedのコマンドを分けて、可読性を上げる
-              # 1. dicdir を設定 (なければ追加、あれば置換)
               if grep -q '^dicdir\s*=' "$DICRC_PATH_COMPILED"; then
                 sudo sed -i "s|^dicdir\s*=.*$|dicdir = $MECAB_DIC_PATH_COMPILED_UTF8|" "$DICRC_PATH_COMPILED"
               else
                 echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo cat - "$DICRC_PATH_COMPILED" > temp_dicrc && sudo mv temp_dicrc "$DICRC_PATH_COMPILED"
               fi
-              # 2. charset を utf-8 に設定 (なければ追加、あれば置換)
               if grep -q '^charset\s*=' "$DICRC_PATH_COMPILED"; then
                 sudo sed -i 's/^charset\s*=.*$/charset = utf-8/' "$DICRC_PATH_COMPILED"
               else
@@ -170,8 +166,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fonts-ipafont-gothic
           sudo fc-cache -fv
-
-          # ★★★ ここからフォント関連のデバッグ情報出力 ★★★
           echo "--- Installed fonts list (IPA Gothic check) ---"
           fc-list | grep -i ipa || echo "IPA font not found by fc-list"
           echo "--- Checking specified font path for generate_wordclouds.py ---"
@@ -182,7 +176,6 @@ jobs:
           echo "--- Listing all files in IPA Gothic directory ---"
           ls -la /usr/share/fonts/opentype/ipafont-gothic/ || echo "/usr/share/fonts/opentype/ipafont-gothic/ directory NOT FOUND"
           echo "--- End of font debug info ---"
-          # ★★★ ここまでフォント関連のデバッグ情報出力 ★★★
 
       - name: Initialize Database (if not exists)
         run: |
@@ -191,7 +184,6 @@ jobs:
           # PYTHONPATH="${{ github.workspace }}" python db_manager.py
 
       - name: Debug DB Content
-        # (このステップの中身は変更なし)
         run: |
           echo "--- Debugging keyword_trends.db content ---"
           if [ -f data/keyword_trends.db ]; then
@@ -206,7 +198,6 @@ jobs:
 
       - name: Run Summarizer and Get Report
         id: run_summarizer
-        # (このステップの中身は変更なし)
         run: |
           cd "${{ github.workspace }}"
           source .venv/bin/activate
@@ -214,7 +205,6 @@ jobs:
           PYTHONPATH="${{ github.workspace }}" python summarize.py >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      # (以降のDiscord通知、ワードクラウド生成、コミットステップは変更なし)
       - name: Notify Discord 24H Trends
         if: success() && contains(steps.run_summarizer.outputs.full_summary_output, '---REPORT_SPLIT---24H')
         env:
@@ -226,7 +216,6 @@ jobs:
             echo "Warning: 24H report content exceeds 2000 characters. Trimming..."
             content_24h=$(echo "$content_24h" | cut -c 1-1990)"..."
           fi
-
           if [ -n "$content_24h" ]; then
             payload=$(jq -Rn --arg c "$content_24h" '{content: $c}')
             curl -H "Content-Type: application/json" \
@@ -247,7 +236,6 @@ jobs:
             echo "Warning: 1MON report content exceeds 2000 characters. Trimming..."
             content_1m=$(echo "$content_1m" | cut -c 1-1990)"..."
           fi
-
           if [ -n "$content_1m" ]; then
             payload=$(jq -Rn --arg c "$content_1m" '{content: $c}')
             curl -H "Content-Type: application/json" \
@@ -268,7 +256,6 @@ jobs:
             echo "Warning: 3MON report content exceeds 2000 characters. Trimming..."
             content_3m=$(echo "$content_3m" | cut -c 1-1990)"..."
           fi
-
           if [ -n "$content_3m" ]; then
             payload=$(jq -Rn --arg c "$content_3m" '{content: $c}')
             curl -H "Content-Type: application/json" \
@@ -293,36 +280,63 @@ jobs:
           git commit -m "chore: add generated word cloud images" || echo "No new word cloud images to commit"
           git push origin ${{ github.ref_name }}
 
-      - name: Get Word Cloud URLs and Notify Discord
+      - name: Get Word Cloud URLs and Notify Discord # ★★★ ここから修正 ★★★
         if: success()
         run: |
-          REPO_NAME="${{ github.repository }}"
-          BRANCH_NAME="${{ github.ref_name }}"
-          IMAGE_PATHS=$(find data/wordclouds -name "*.png")
+          # GitHub PagesのURLをベースにする (例: https://ユーザー名.github.io/リポジトリ名/)
+          # もきしゅさんの場合、 USER_NAME は genxmaru, REPO_NAME_ONLY は gothamson
+          # これらは secrets や環境変数から取得するか、ハードコードも可能
+          # GITHUB_REPOSITORY は owner/repo の形式なので分割する
+          USER_NAME="${{ github.repository_owner }}"
+          REPO_NAME_ONLY=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          
+          # GitHub Pagesが有効化されているリポジトリのルートからのパスを指定
+          # (例: /data/wordclouds/画像ファイル名.png)
+          # news.yml で main ブランチの /(root) をソースにしているので、パスはそのまま
+          BASE_URL="https://$USER_NAME.github.io/$REPO_NAME_ONLY"
 
+          echo "Base URL for GitHub Pages: $BASE_URL"
+          
+          IMAGE_PATHS=$(find data/wordclouds -name "*.png")
+          if [ -z "$IMAGE_PATHS" ]; then
+            echo "No PNG files found in data/wordclouds. Skipping Discord notification for word clouds."
+            exit 0
+          fi
+          
           DISCORD_MESSAGE=""
           for IMAGE_PATH in $IMAGE_PATHS; do
             IMAGE_BASENAME=$(basename "$IMAGE_PATH")
-            IMAGE_URL="https://raw.githubusercontent.com/$REPO_NAME/$BRANCH_NAME/$IMAGE_PATH"
+            # GitHub PagesのURLを構築
+            IMAGE_URL="$BASE_URL/$IMAGE_PATH" # IMAGE_PATH は data/wordclouds/xxx.png 形式
+            
+            # タイトル整形 (ここは元のままでOK)
             TITLE_FORMATTED=$(echo "$IMAGE_BASENAME" | sed 's/wordcloud_//' | sed 's/\.png//' | sed 's/_/\ /g' | sed 's/24h/24時間トレンド/g' | sed 's/1m/1ヶ月トレンド/g' | sed 's/3m/3ヶ月トレンド/g' | sed 's/bitcoin.com news/Bitcoin.com News/g' | sed 's/cointelegraph/Cointelegraph/g' | sed 's/cryptonews/CryptoNews/g' | sed 's/decrypt/Decrypt/g' | sed 's/total/全体/g' | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1年\2月\3日/g')
-
+            
             DISCORD_MESSAGE+="## ワードクラウドレポート: $TITLE_FORMATTED\n"
             DISCORD_MESSAGE+="$IMAGE_URL\n\n"
           done
-
+          
           if [ $(echo -n "$DISCORD_MESSAGE" | wc -c) -gt 1990 ]; then
             echo "Warning: Discord image report content exceeds 2000 characters. Trimming..."
             DISCORD_MESSAGE=$(echo "$DISCORD_MESSAGE" | cut -c 1-1990)"..."
           fi
 
           if [ -n "$DISCORD_MESSAGE" ]; then
+            # Webhook URLが空でないか確認
+            if [ -z "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}" ]; then
+              echo "Error: DISCORD_WEBHOOK_URL_WORDCLOUDS is not set. Skipping notification."
+              exit 1 # または exit 0 で警告のみにする
+            fi
             payload=$(jq -Rn --arg c "$DISCORD_MESSAGE" '{content: $c}')
+            echo "Sending Word Cloud report to Discord..."
             curl -H "Content-Type: application/json" \
                  -d "$payload" \
                  "${{ secrets.DISCORD_WEBHOOK_URL_WORDCLOUDS }}"
+            echo "Word Cloud report sent."
           else
-            echo "No word cloud images generated, skipping Discord notification."
+            echo "No word cloud images processed for Discord notification."
           fi
+        # ★★★ ここまで修正 ★★★
 
       - name: Commit Summary and Database Changes
         run: |
