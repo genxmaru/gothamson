@@ -5,47 +5,17 @@ from wordcloud import WordCloud
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib import font_manager # ★フォントマネージャーをインポート
-from datetime import datetime, timedelta, timezone
-# import japanize_matplotlib # ← 今回は一旦コメントアウトし、直接指定で試します
+from matplotlib import font_manager
 
 KEYWORD_TRENDS_DB = os.path.join(os.path.dirname(__file__), 'data', 'keyword_trends.db')
 WORDCLOUD_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'data', 'wordclouds')
 
-# ★★★ フォントパスの取得処理を変更 ★★★
-def get_japanese_font_path():
-    # システムにインストールされているフォントからIPA Pゴシックを探す
-    font_paths = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
-    # 'ipagp.ttf' (IPA P Gothic) を優先的に探す
-    for path in font_paths:
-        if 'ipagp.ttf' in path.lower():
-            print(f"Found IPA P Gothic (ipagp.ttf) at: {path}")
-            return path
-    # 見つからなければ 'ipag.ttf' (IPA Gothic) を探す
-    for path in font_paths:
-        if 'ipag.ttf' in path.lower():
-            print(f"Found IPA Gothic (ipag.ttf) at: {path}")
-            return path
-    # それでも見つからなければ、fc-listでヒットした一般的な日本語フォントパスの候補
-    # (ただし、fc-listの結果とfont_managerが返すパスは必ずしも一致しない)
-    # news.ymlのfc-cache -fvの後なので、システムは認識しているはず
-    default_paths = [
-        '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf',
-        '/usr/share/fonts/truetype/fonts-japanese-gothic.ttf'
-    ]
-    for path in default_paths:
-        if os.path.exists(path):
-            print(f"Using fallback Japanese font: {path}")
-            return path
-            
-    print("Warning: Japanese font not found. WordCloud may not display Japanese characters correctly.")
-    return None # 見つからなければNoneを返す
-
-FONT_PATH = get_japanese_font_path()
-# ★★★ ここまで ★★★
+# --- 日本語フォントパスを取得 ---
+# news.yml で fonts-ipafont-gothic をインストールしているので、そのパスを指定
+# fc-list の結果と generate_wordclouds.py の実行ログから、以下のパスに存在することを確認済み
+FONT_PATH = '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'
 
 def get_latest_trends(db_path, trend_type, source_name):
-    # (この関数の中身は変更なし)
     conn = None
     keywords_data = {}
     try:
@@ -74,47 +44,64 @@ def generate_wordcloud(keywords_data, title, output_filepath):
         print(f"No data for '{title}', skipping word cloud generation.")
         return
 
-    font_path_to_use = FONT_PATH
-    if not font_path_to_use: # FONT_PATHがNone（見つからなかった）場合
-        print(f"Error: Japanese font path could not be determined. Attempting with default font (may cause garbled characters).")
-        # font_path=None とするとwordcloudのデフォルトが使われる
+    # フォントパスの存在確認
+    if not os.path.exists(FONT_PATH):
+        print(f"Error: Font file NOT FOUND at {FONT_PATH}. Word cloud cannot be generated with Japanese characters.")
+        # フォントが見つからない場合は、警告を出して処理を中断するか、
+        # または英語のみのフォントで生成を試みる（推奨されない）
+        # ここでは、日本語表示が目的なので、エラーとして扱うか、
+        # wordcloud ライブラリのデフォルトフォント（英語のみ）で生成を試みる。
+        # 今回は、エラーを出さずにデフォルトフォントで試行する（ただし文字化け警告は出る）
+        font_to_use = None 
+        print(f"Attempting to generate word cloud with default font (may cause garbled Japanese characters).")
     else:
-        print(f"Generating word cloud for '{title}' with font: {font_path_to_use}")
+        font_to_use = FONT_PATH
+        print(f"Generating word cloud for '{title}' with font: {font_to_use}")
 
     try:
-        wc = WordCloud(
-            font_path=font_path_to_use, 
+        wordcloud = WordCloud(
+            font_path=font_to_use, # ★★★ 必ずこのパスが使われるようにする ★★★
             background_color="white",
             max_words=100,
             width=1200,
             height=600,
             collocations=False,
             random_state=42,
-            # matplotlibの警告を抑制するために、font_pathがNoneでもエラーにならないようにする
-            # ただし、その場合は文字化けする
-            stopwords=set() # 必要ならストップワードを設定
-        )
-        wc.generate_from_frequencies(keywords_data)
+            stopwords=set() 
+        ).generate_from_frequencies(keywords_data)
+
         plt.figure(figsize=(12, 6))
-        plt.imshow(wc, interpolation='bilinear')
+        plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis("off")
-        # plt.title() は japanize_matplotlib を使わない場合、別途フォント指定が必要
-        # 今回はWordCloudライブラリのフォント指定に注力
-        if font_path_to_use:
-            prop = font_manager.FontProperties(fname=font_path_to_use)
-            plt.title(title, fontsize=16, fontproperties=prop)
-        else:
-            plt.title(title, fontsize=16) # フォント指定なし (文字化けの可能性)
+
+        # matplotlibのタイトルにも日本語フォントを適用 (japanize-matplotlib が確実)
+        # ただし、japanize_matplotlib を import していない場合は、個別にFontPropertiesで指定
+        if font_to_use:
+            try:
+                # japanize_matplotlib があれば、これだけでタイトルも日本語化されるはず
+                import japanize_matplotlib 
+                plt.title(title, fontsize=16)
+            except ImportError:
+                # japanize_matplotlib がない場合は、FontPropertiesで試みる
+                print("japanize-matplotlib not found, trying FontProperties for title.")
+                font_prop = font_manager.FontProperties(fname=font_to_use)
+                plt.title(title, fontsize=16, fontproperties=font_prop)
+        else: # フォントパスがなければデフォルト (英語のみ)
+             plt.title(title, fontsize=16)
 
         plt.tight_layout(pad=0)
         os.makedirs(WORDCLOUD_OUTPUT_DIR, exist_ok=True)
         plt.savefig(output_filepath, dpi=300, bbox_inches='tight')
         plt.close()
         print(f"Generated word cloud: {output_filepath}")
+
     except Exception as e:
         print(f"Error generating word cloud for '{title}': {e}")
-        if font_path_to_use and ("cannot open resource" in str(e) or "କ୍ଷ" in str(e)):
-             print(f"This might be an issue with the font file at '{font_path_to_use}'.")
+        if font_to_use and ("cannot open resource" in str(e).lower() or "unknown font format" in str(e).lower()):
+             print(f"Critical Error: The font file at '{font_to_use}' could not be opened or is not a valid font file.")
+        elif "Glyph" in str(e) and "missing from font(s)" in str(e):
+             print(f"Warning: Some characters were missing from the font. This might be okay if they are not Japanese characters.")
+
 
 if __name__ == "__main__":
     # (この部分も変更なし)
