@@ -34,9 +34,9 @@ jobs:
 
           echo "--- Installing MeCab and dictionary (trying naist-jdic or jumandic-utf8) ---"
           sudo apt-get install -y mecab libmecab-dev mecab-utils
-          if sudo apt-get install -y mecab-naist-jdic; then # mecab-naist-jdic パッケージ自体は mecab-naist-jdic-eucjp に依存
+          if sudo apt-get install -y mecab-naist-jdic; then
             echo "mecab-naist-jdic (and -eucjp) installed."
-            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/naist-jdic-eucjp" # ★★★ 修正点: 正しいソース辞書パスに変更 ★★★
+            MECAB_DIC_PATH_SRC="/usr/share/mecab/dic/naist-jdic-eucjp"
             MECAB_ENCODING_SRC="euc-jp"
           elif sudo apt-get install -y mecab-jumandic-utf8; then
             echo "mecab-jumandic-utf8 installed."
@@ -51,16 +51,16 @@ jobs:
 
           MECAB_DIC_PATH_COMPILED_UTF8="/usr/local/share/mecab-dic-compiled-utf8"
           sudo mkdir -p "$MECAB_DIC_PATH_COMPILED_UTF8"
-          sudo chown -R runner:runner "$MECAB_DIC_PATH_COMPILED_UTF8" # ディレクトリ自体の所有権を変更
+          sudo chown -R runner:runner "$MECAB_DIC_PATH_COMPILED_UTF8"
 
           DICRC_PATH_COMPILED="$MECAB_DIC_PATH_COMPILED_UTF8/dicrc"
 
           echo "--- Listing files in source dictionary directory ($MECAB_DIC_PATH_SRC) ---"
-          if [ -d "$MECAB_DIC_PATH_SRC" ]; then # ディレクトリ存在確認
+          if [ -d "$MECAB_DIC_PATH_SRC" ]; then
             ls -la "$MECAB_DIC_PATH_SRC"
           else
             echo "Source dictionary directory $MECAB_DIC_PATH_SRC NOT FOUND! Please check the path."
-            # exit 1 # ソースが見つからなければここで終了させるのも手
+            exit 1
           fi
           echo "-----------------------------------------------------------------------------"
 
@@ -68,25 +68,39 @@ jobs:
           MECAB_LIBEXEC_DIR=$(mecab-config --libexecdir)
           echo "MeCab libexec directory: $MECAB_LIBEXEC_DIR"
 
-          # mecab-dict-index でソース辞書からUTF-8辞書を新しい場所に生成
-          # -c オプションは存在しないため削除
           if sudo "$MECAB_LIBEXEC_DIR/mecab-dict-index" \
             -d "$MECAB_DIC_PATH_SRC" \
             -o "$MECAB_DIC_PATH_COMPILED_UTF8" \
             -f "$MECAB_ENCODING_SRC" \
             -t utf-8; then
             echo "mecab-dict-index completed successfully to $MECAB_DIC_PATH_COMPILED_UTF8."
-            echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo tee "$DICRC_PATH_COMPILED" > /dev/null
-            if [ -f "$DICRC_PATH_COMPILED" ]; then
-              echo "dicrc created at $DICRC_PATH_COMPILED"
+
+            # ★★★ ここから dicrc の内容を充実させる修正 ★★★
+            echo "--- Updating dicrc in compiled directory ---"
+            if [ -f "$MECAB_DIC_PATH_SRC/dicrc" ]; then
+              echo "Source dicrc found at $MECAB_DIC_PATH_SRC/dicrc. Copying and updating..."
+              # 1. ソースのdicrcをコンパイル先にコピー
+              sudo cp "$MECAB_DIC_PATH_SRC/dicrc" "$DICRC_PATH_COMPILED"
+              # 2. コピーしたdicrc内のdicdir行を新しいコンパイル済み辞書パスに書き換える
+              #    (元々dicdir行があればそれを置換、なければファイルの先頭に追加するイメージ)
+              #    まず、既存のdicdir行を削除 (あれば)
+              sudo sed -i '/^dicdir\s*=/d' "$DICRC_PATH_COMPILED"
+              #    新しいdicdir行をファイルの先頭に追加 (他のパラメータより前に来るように)
+              echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo awk -v new_line="dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" '{print} END {if(NR==0) print new_line}' "$DICRC_PATH_COMPILED" > temp_dicrc && sudo mv temp_dicrc "$DICRC_PATH_COMPILED"
+              #    もし元のdicrcに charset = EUC-JP のような行があれば、charset = UTF-8 に書き換える (または削除してMeCabに自動判別させる)
+              sudo sed -i 's/^charset\s*=\s*.*$/charset = utf-8/' "$DICRC_PATH_COMPILED"
+
+              echo "Dicrc updated. Content of new dicrc ($DICRC_PATH_COMPILED):"
               sudo cat "$DICRC_PATH_COMPILED"
             else
-              echo "Failed to create dicrc at $DICRC_PATH_COMPILED"
+              echo "Warning: Source dicrc ($MECAB_DIC_PATH_SRC/dicrc) not found. Creating minimal dicrc."
+              echo "dicdir = $MECAB_DIC_PATH_COMPILED_UTF8" | sudo tee "$DICRC_PATH_COMPILED" > /dev/null
             fi
+            # ★★★ ここまで ★★★
           else
             EXIT_CODE=$?
             echo "mecab-dict-index failed with exit code: $EXIT_CODE. Check if source dictionary and encoding are correct."
-            # exit $EXIT_CODE
+            exit $EXIT_CODE # コンパイル失敗時はここでジョブを止める
           fi
           echo "--- Dictionary compilation attempt finished ---"
 
