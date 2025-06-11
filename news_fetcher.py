@@ -40,15 +40,11 @@ def load_exclude_keywords(filepath):
 EXCLUDE_KEYWORDS = load_exclude_keywords(CONFIG_KEYWORDS_PATH)
 
 # 形態素解析器の初期化 (MeCab)
-MECAB_DIC_PATH = "/usr/local/share/mecab-dic-compiled-utf8"
-
 try:
-    tagger = MeCab.Tagger(f"-r /dev/null -d {MECAB_DIC_PATH}")
+    tagger = MeCab.Tagger()
 except RuntimeError as e:
-    print(f"Failed to initialize MeCab with specified path: {MECAB_DIC_PATH}")
-    print(f"Please ensure the directory '{MECAB_DIC_PATH}' exists and contains a valid MeCab dictionary (including 'dicrc', 'sys.dic', 'unk.dic', 'matrix.bin' etc.).")
-    print(f"Check the GitHub Actions logs for the 'Install MeCab system libraries and alternative dictionary' step to see if dictionary compilation was successful and files were created in the correct location.")
-    print(f"MeCab Error Details: {e}")
+    print("Failed to initialize MeCab.")
+    print("MeCab Error Details:", e)
     raise
 
 def extract_keywords(text):
